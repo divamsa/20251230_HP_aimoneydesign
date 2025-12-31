@@ -7,13 +7,13 @@
     <h1 class="page-title">カテゴリ作成</h1>
 
     @if($errors->any())
-        <div class="alert alert-danger">
+        <x-alert type="error" dismissible="false">
             <ul>
                 @foreach($errors->all() as $error)
                     <li>{{ $error }}</li>
                 @endforeach
             </ul>
-        </div>
+        </x-alert>
     @endif
 
     <form method="POST" action="{{ route('admin.categories.store') }}">

@@ -8,9 +8,7 @@
     <p class="page-subtitle">contactsテーブルの内容を一覧表示します</p>
 
     @if(session('success'))
-        <div class="alert alert-success">
-            {{ session('success') }}
-        </div>
+        <x-alert type="success" dismissible="true">{{ session('success') }}</x-alert>
     @endif
 
     <div class="card" style="margin-bottom: 1.5rem;">

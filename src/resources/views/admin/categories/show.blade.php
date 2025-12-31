@@ -7,9 +7,7 @@
     <h1 class="page-title">カテゴリ詳細</h1>
 
     @if(session('success'))
-        <div class="alert alert-success">
-            {{ session('success') }}
-        </div>
+        <x-alert type="success" dismissible="true">{{ session('success') }}</x-alert>
     @endif
 
     <div class="card">

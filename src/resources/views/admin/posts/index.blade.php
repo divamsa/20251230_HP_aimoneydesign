@@ -8,9 +8,7 @@
     <p class="page-subtitle">ブログ記事の一覧を表示します</p>
 
     @if(session('success'))
-        <div class="alert alert-success">
-            {{ session('success') }}
-        </div>
+        <x-alert type="success" dismissible="true">{{ session('success') }}</x-alert>
     @endif
 
     <div style="margin-bottom: 1.5rem;">

@@ -7,13 +7,13 @@
     <h1 class="page-title">ブログ記事編集</h1>
 
     @if($errors->any())
-        <div class="alert alert-danger">
+        <x-alert type="error" dismissible="false">
             <ul>
                 @foreach($errors->all() as $error)
                     <li>{{ $error }}</li>
                 @endforeach
             </ul>
-        </div>
+        </x-alert>
     @endif
 
     <form method="POST" action="{{ route('admin.posts.update', $post) }}" enctype="multipart/form-data">
@@ -66,8 +66,24 @@
         </div>
 
         <div class="form-group">
-            <label for="published_at">公開日時（未設定の場合は下書き）</label>
-            <input type="datetime-local" id="published_at" name="published_at" value="{{ old('published_at', $post->published_at ? $post->published_at->format('Y-m-d\TH:i') : '') }}">
+            <label for="published_at">公開日時</label>
+            <div style="display:flex; align-items:center; gap:1rem; flex-wrap:wrap;">
+                <input type="datetime-local" id="published_at" name="published_at" value="{{ old('published_at', $post->published_at ? $post->published_at->format('Y-m-d\TH:i') : '') }}" style="flex:1; min-width:200px;">
+                <button type="button" onclick="document.getElementById('published_at').value=''" class="btn" style="background:#64748b; white-space:nowrap;">クリア（下書きに）</button>
+                <button type="button" onclick="document.getElementById('published_at').value=new Date().toISOString().slice(0,16)" class="btn" style="background:#3b82f6; white-space:nowrap;">現在日時</button>
+            </div>
+            <p style="margin-top:.5rem; color:#666; font-size:.875rem;">
+                未設定の場合は下書きとして保存されます。公開日時を設定すると、その日時以降に公開されます。
+            </p>
+            @if($post->published_at)
+                <p style="margin-top:.5rem; color:#10b981; font-size:.875rem;">
+                    ✓ 現在公開中（公開日時: {{ $post->published_at->format('Y年m月d日 H:i') }}）
+                </p>
+            @else
+                <p style="margin-top:.5rem; color:#f59e0b; font-size:.875rem;">
+                    ⚠ 現在下書き状態です
+                </p>
+            @endif
         </div>
 
         <div style="margin-top: 1.5rem;">

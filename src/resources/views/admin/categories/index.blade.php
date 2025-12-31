@@ -8,15 +8,11 @@
     <p class="page-subtitle">ブログ記事のカテゴリを管理します</p>
 
     @if(session('success'))
-        <div class="alert alert-success">
-            {{ session('success') }}
-        </div>
+        <x-alert type="success" dismissible="true">{{ session('success') }}</x-alert>
     @endif
 
     @if(session('error'))
-        <div class="alert alert-danger">
-            {{ session('error') }}
-        </div>
+        <x-alert type="error" dismissible="true">{{ session('error') }}</x-alert>
     @endif
 
     <div style="margin-bottom: 1.5rem;">

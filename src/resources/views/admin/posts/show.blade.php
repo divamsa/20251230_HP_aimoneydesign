@@ -7,9 +7,7 @@
     <h1 class="page-title">ブログ記事詳細</h1>
 
     @if(session('success'))
-        <div class="alert alert-success">
-            {{ session('success') }}
-        </div>
+        <x-alert type="success" dismissible="true">{{ session('success') }}</x-alert>
     @endif
 
     <div class="card">
@@ -22,7 +20,7 @@
             <dt style="font-weight:bold;">カテゴリ:</dt>
             <dd>
                 @if($post->category)
-                    {{ $post->category->name }}
+                    <a href="{{ route('admin.categories.show', $post->category) }}" style="color:#3b82f6; text-decoration:none;">{{ $post->category->name }}</a>
                 @else
                     <span style="color:#999;">カテゴリなし</span>
                 @endif
@@ -30,11 +28,24 @@
             <dt style="font-weight:bold;">公開日時:</dt>
             <dd>
                 @if($post->published_at)
-                    {{ $post->published_at->format('Y-m-d H:i') }}
+                    <span style="color:#10b981; font-weight:bold;">{{ $post->published_at->format('Y-m-d H:i') }}</span>
+                    @if($post->published_at->isFuture())
+                        <span style="color:#f59e0b; margin-left:.5rem;">（予約公開）</span>
+                    @else
+                        <span style="color:#10b981; margin-left:.5rem;">（公開中）</span>
+                    @endif
                 @else
                     <span style="color:#999;">下書き</span>
                 @endif
             </dd>
+            @if($post->thumbnail_path)
+            <dt style="font-weight:bold;">サムネイル:</dt>
+            <dd>
+                <img src="{{ Storage::url($post->thumbnail_path) }}" 
+                     alt="サムネイル" 
+                     style="max-width:200px; height:auto; border-radius:4px; border:1px solid #e0e0e0;">
+            </dd>
+            @endif
             <dt style="font-weight:bold;">作成日時:</dt>
             <dd>{{ $post->created_at->format('Y-m-d H:i') }}</dd>
             <dt style="font-weight:bold;">更新日時:</dt>

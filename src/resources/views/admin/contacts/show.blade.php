@@ -8,19 +8,17 @@
     <p class="page-subtitle">ID: {{ $contact->id }}</p>
 
     @if(session('success'))
-        <div class="alert alert-success">
-            {{ session('success') }}
-        </div>
+        <x-alert type="success" dismissible="true">{{ session('success') }}</x-alert>
     @endif
 
     @if($errors->any())
-        <div class="alert alert-error">
+        <x-alert type="error" dismissible="false">
             <ul>
                 @foreach($errors->all() as $error)
                     <li>{{ $error }}</li>
                 @endforeach
             </ul>
-        </div>
+        </x-alert>
     @endif
 
     <div style="margin-bottom: 1rem;">
