@@ -1691,12 +1691,48 @@ X Serverの公式サイトおよびマニュアルから確認した結果、**L
     - 公開ページ: `blog/index.blade.php`（更新）, `blog/show.blade.php`（新規作成）
   - ✅ 動作確認完了（管理画面での記事作成・編集・削除、公開ページでの表示）
 
-- ✅ **Gitリポジトリの作成・プッシュ完了** ✅ 重要（2025年12月31日）
+- ✅ **Gitリポジトリの作成・初回プッシュ完了** ✅ 重要（2025年12月31日 午前）
   - ✅ GitHubリポジトリ作成: `20251230_HP_aimoneydesign`
   - ✅ GitHub URL: `https://github.com/divamsa/20251230_HP_aimoneydesign`
   - ✅ ブランチ: `main`
   - ✅ 初回コミット完了（153ファイル、19,407行追加）
   - ✅ `.gitignore`設定済み（`.env`ファイル等の機密情報を除外）
+  - ✅ 初回プッシュ完了
+
+---
+
+### 2025年12月31日（午後）
+
+#### 完了した作業
+- ✅ **フェーズ5: ブログ機能（CMS）の実装完了** ✅ 重要
+  - ✅ データベース設計（`posts` テーブル、`categories` テーブル）
+  - ✅ 管理画面のCRUD機能（作成・一覧・詳細・編集・削除）
+  - ✅ 公開ページ（一覧・詳細）
+  - ✅ ページネーション
+  - ✅ **カテゴリ機能の実装完了** ✅ 重要
+    - ✅ `categories` テーブルの作成
+    - ✅ カテゴリ管理機能（管理画面）
+    - ✅ カテゴリフィルター（公開ページ）
+  - ✅ 動作確認完了
+- ✅ **Gitリポジトリへのプッシュ完了** ✅ 重要
+  - ✅ ブログ機能とカテゴリ機能の実装をコミット・プッシュ
+  - ✅ コミットメッセージ: `feat: ブログ機能（CMS）とカテゴリ機能の実装完了`
+  - ✅ 31ファイル変更、3,875行追加、20行削除
+  - ✅ 主な追加ファイル:
+    - 要件定義書（`20251230_HP_aimoneydesign.md`）
+    - カテゴリ管理機能（`CategoryAdminController.php`, `Category.php`）
+    - カテゴリ管理画面のビュー（4ファイル）
+    - カテゴリ関連のマイグレーション（3ファイル）
+    - 画像生成サービス（`ImageGenerationService.php`）
+- ✅ **要件定義書の更新完了** ✅ 重要
+  - ✅ カテゴリ機能の実装完了を反映
+  - ✅ 次回の作業項目を更新
+  - ✅ Gitプッシュ完了を記録
+
+#### 決定事項
+- **ブログ機能**: 基本機能とカテゴリ機能が実装完了 ✅
+- **次回の作業**: カテゴリ機能の動作確認、検索機能、画像アップロード機能の実装
+- **X Server環境の設定**: ローカル開発完了後に実施（Cost Saveのため）
   - ✅ プッシュ完了
 
 #### 🔌 ポート番号設定（重要）
@@ -2977,12 +3013,16 @@ GOOGLE_ANALYTICS_ID=G-XXXXXXXXXX
 - [x] ブログ記事一覧表示 ✅ 完了（2025年12月31日）
 - [x] ブログ記事詳細表示 ✅ 完了（2025年12月31日）
 - [x] ページネーション ✅ 完了（2025年12月31日）
-- [ ] カテゴリ機能（オプション・後回し）
+- [x] カテゴリ機能 ✅ 完了（2025年12月31日）
+  - [x] `categories` テーブルの作成
+  - [x] カテゴリ管理機能（管理画面）
+  - [x] カテゴリフィルター（公開ページ）
 - [ ] 検索機能（オプション・後回し）
+- [ ] 画像アップロード機能（オプション・後回し）
 
 **✅ 実装完了** ✅ 重要（2025年12月31日）
-- ✅ `posts` テーブルのマイグレーション作成（`title`, `content`, `published_at`）
-- ✅ `Post` モデル作成（`$fillable`, `$casts`, `published()` スコープ）
+- ✅ `posts` テーブルのマイグレーション作成（`title`, `content`, `published_at`, `category_id`, `thumbnail_path`）
+- ✅ `Post` モデル作成（`$fillable`, `$casts`, `published()` スコープ, `category()` リレーション）
 - ✅ 管理画面のCRUD機能実装（`PostAdminController`）
   - 一覧: `GET /admin/posts` → `admin.posts.index`
   - 作成: `GET /admin/posts/create` → `admin.posts.create`, `POST /admin/posts` → `admin.posts.store`
@@ -2990,12 +3030,25 @@ GOOGLE_ANALYTICS_ID=G-XXXXXXXXXX
   - 編集: `GET /admin/posts/{post}/edit` → `admin.posts.edit`, `PUT /admin/posts/{post}` → `admin.posts.update`
   - 削除: `DELETE /admin/posts/{post}` → `admin.posts.destroy`
 - ✅ 公開ページの実装（`BlogController` 更新）
-  - 一覧: `GET /blog` → `blog.index`（公開済み記事のみ表示、ページネーション対応）
+  - 一覧: `GET /blog` → `blog.index`（公開済み記事のみ表示、ページネーション対応、カテゴリフィルター対応）
   - 詳細: `GET /blog/{post}` → `blog.show`（公開済み記事のみ表示）
+- ✅ カテゴリ機能の実装 ✅ 完了（2025年12月31日）
+  - ✅ `categories` テーブルのマイグレーション作成（`name`, `slug`）
+  - ✅ `Category` モデル作成（`$fillable`, `posts()` リレーション）
+  - ✅ カテゴリ管理機能（`CategoryAdminController`）
+    - 一覧: `GET /admin/categories` → `admin.categories.index`
+    - 作成: `GET /admin/categories/create` → `admin.categories.create`, `POST /admin/categories` → `admin.categories.store`
+    - 詳細: `GET /admin/categories/{category}` → `admin.categories.show`
+    - 編集: `GET /admin/categories/{category}/edit` → `admin.categories.edit`, `PUT /admin/categories/{category}` → `admin.categories.update`
+    - 削除: `DELETE /admin/categories/{category}` → `admin.categories.destroy`
+  - ✅ カテゴリフィルター（公開ページ）
+    - ブログ一覧ページでカテゴリ別にフィルター可能
+    - カテゴリボタンで絞り込み表示
 - ✅ ビュー作成
   - 管理画面: `admin/posts/index.blade.php`, `create.blade.php`, `show.blade.php`, `edit.blade.php`
-  - 公開ページ: `blog/index.blade.php`（更新）, `blog/show.blade.php`（新規作成）
-- ✅ 動作確認完了（管理画面での記事作成・編集・削除、公開ページでの表示）
+  - 管理画面（カテゴリ）: `admin/categories/index.blade.php`, `create.blade.php`, `show.blade.php`, `edit.blade.php`
+  - 公開ページ: `blog/index.blade.php`（更新、カテゴリフィルター追加）, `blog/show.blade.php`（新規作成）
+- ✅ 動作確認完了（管理画面での記事作成・編集・削除、公開ページでの表示、カテゴリ機能）
 
 ---
 
@@ -3095,14 +3148,15 @@ GOOGLE_ANALYTICS_ID=G-XXXXXXXXXX
      - ✅ お問い合わせ管理画面（一覧・詳細・ステータス更新）
      - ✅ 管理画面の本番用ロック設定（`ADMIN_EMAILS`）
      - ✅ 動作確認完了（許可されたメールアドレスのみアクセス可能）
-   - ⏳ **フェーズ5: ブログ機能（CMS）** - 次のステップ
-     - ブログ記事のデータベース設計
-     - ブログ記事のCRUD機能（管理画面）
-     - ブログ記事一覧表示
-     - ブログ記事詳細表示
-     - カテゴリ機能
-     - ページネーション
-     - 検索機能（オプション）
+   - ✅ **フェーズ5: ブログ機能（CMS）** ✅ **完了**
+     - ✅ ブログ記事のデータベース設計
+     - ✅ ブログ記事のCRUD機能（管理画面）
+     - ✅ ブログ記事一覧表示
+     - ✅ ブログ記事詳細表示
+     - ✅ カテゴリ機能（カテゴリ管理、カテゴリフィルター）
+     - ✅ ページネーション
+     - [ ] 検索機能（オプション・次回実装予定）
+     - [ ] 画像アップロード機能（オプション・次回実装予定）
 
 **⏰ 後回し可能: X Server環境の設定（開発完了後）**
 3. **X Server環境の実際の設定** ⚠️ **開発完了後でOK**
@@ -3135,21 +3189,37 @@ GOOGLE_ANALYTICS_ID=G-XXXXXXXXXX
 
 ### ✅ 今回完了した作業
 - ✅ **フェーズ5: ブログ機能（CMS）の実装完了** ✅ 重要（2025年12月31日）
-  - ✅ データベース設計（`posts` テーブル）
+  - ✅ データベース設計（`posts` テーブル、`categories` テーブル）
   - ✅ 管理画面のCRUD機能（作成・一覧・詳細・編集・削除）
   - ✅ 公開ページ（一覧・詳細）
   - ✅ ページネーション
+  - ✅ **カテゴリ機能の実装完了** ✅ 重要（2025年12月31日）
+    - ✅ `categories` テーブルの作成
+    - ✅ カテゴリ管理機能（管理画面）
+    - ✅ カテゴリフィルター（公開ページ）
   - ✅ 動作確認完了
+- ✅ **Gitリポジトリへのプッシュ完了** ✅ 重要（2025年12月31日）
+  - ✅ ブログ機能とカテゴリ機能の実装をコミット・プッシュ
+  - ✅ コミットメッセージ: `feat: ブログ機能（CMS）とカテゴリ機能の実装完了`
+  - ✅ 31ファイル変更、3,875行追加
 
 ### 🚀 次回から始める作業（優先順位順）
 
 #### 1. **ブログ機能の拡張（オプション）**（必要に応じて）
-- [ ] カテゴリ機能の実装
-  - `categories` テーブルの作成
-  - カテゴリ管理機能（管理画面）
-  - カテゴリフィルター（公開ページ）
+- [x] カテゴリ機能の実装 ✅ 完了（2025年12月31日）
+- [ ] カテゴリ機能の動作確認・テスト
+  - [ ] 管理画面でカテゴリの作成・編集・削除が正常に動作するか確認
+  - [ ] ブログ記事作成時にカテゴリを選択できるか確認
+  - [ ] ブログ一覧ページでカテゴリフィルターが正常に動作するか確認
 - [ ] 検索機能の実装（公開ページ）
+  - [ ] ブログ一覧ページに検索フォームを追加
+  - [ ] タイトル・本文から検索できる機能を実装
+  - [ ] 検索結果の表示とページネーション
 - [ ] 画像アップロード機能（ブログ記事に画像を追加）
+  - [ ] 画像アップロード機能の実装
+  - [ ] サムネイル画像機能の実装（`thumbnail_path`カラムは既に追加済み）
+  - [ ] 画像の保存先設定（`storage/app/public/posts`）
+  - [ ] 画像の表示機能
 
 #### 2. **その他のオプション機能**（必要に応じて）
 - [ ] CSVエクスポート機能（お問い合わせ管理画面）
@@ -3168,6 +3238,17 @@ GOOGLE_ANALYTICS_ID=G-XXXXXXXXXX
 - ✅ 初回コミット完了（153ファイル、19,407行追加）
 - ✅ `.gitignore`設定済み（`.env`ファイル等の機密情報を除外）
 
+**✅ Gitプッシュ完了** ✅ 重要（2025年12月31日）
+- ✅ ブログ機能とカテゴリ機能の実装をコミット・プッシュ
+- ✅ コミットメッセージ: `feat: ブログ機能（CMS）とカテゴリ機能の実装完了`
+- ✅ 31ファイル変更、3,875行追加、20行削除
+- ✅ 主な追加ファイル:
+  - 要件定義書（`20251230_HP_aimoneydesign.md`）
+  - カテゴリ管理機能（`CategoryAdminController.php`, `Category.php`）
+  - カテゴリ管理画面のビュー（4ファイル）
+  - カテゴリ関連のマイグレーション（3ファイル）
+  - 画像生成サービス（`ImageGenerationService.php`）
+
 #### 4. **X Server環境の設定**（開発完了後）
 - [ ] X Serverのサーバーパネルにログイン
 - [ ] PHPバージョンを8.2以上に設定
@@ -3181,5 +3262,5 @@ GOOGLE_ANALYTICS_ID=G-XXXXXXXXXX
 ---
 
 *作成日: 2025年12月29日*  
-*最終更新: 2025年12月31日（Gitリポジトリ作成・プッシュ完了）*
+*最終更新: 2025年12月31日（ブログ機能・カテゴリ機能実装完了、Gitプッシュ完了）*
 
