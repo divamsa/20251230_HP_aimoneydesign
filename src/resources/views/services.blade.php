@@ -282,7 +282,7 @@
                 <div class="flow-step" data-step="5">
                     <div class="flow-step-content">
                         <div class="card-bg-image">
-                            <img src="https://images.unsplash.com/photo-1522202176988-66270c4a4d14?auto=format&fit=crop&q=80&w=1000" alt="Support Maintenance">
+                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000" alt="Support Maintenance">
                         </div>
                         <div class="flow-step-number">5</div>
                         <div class="flow-step-progress">
