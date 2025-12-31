@@ -42,7 +42,7 @@
                             <td style="padding:.75rem; border-bottom:1px solid #f1f5f9;">{{ $category->id }}</td>
                             <td style="padding:.75rem; border-bottom:1px solid #f1f5f9;">{{ $category->name }}</td>
                             <td style="padding:.75rem; border-bottom:1px solid #f1f5f9;">{{ $category->slug }}</td>
-                            <td style="padding:.75rem; border-bottom:1px solid #f1f5f9;">{{ $category->posts()->count() }}</td>
+                            <td style="padding:.75rem; border-bottom:1px solid #f1f5f9;">{{ $category->posts_count }}</td>
                             <td style="padding:.75rem; border-bottom:1px solid #f1f5f9;">
                                 <a class="btn" href="{{ route('admin.categories.show', $category) }}">詳細</a>
                                 <a class="btn" href="{{ route('admin.categories.edit', $category) }}" style="margin-left:.5rem; background:#3b82f6;">編集</a>

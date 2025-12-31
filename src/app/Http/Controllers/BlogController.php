@@ -14,10 +14,17 @@ class BlogController extends Controller
     public function index(Request $request)
     {
         $categoryId = $request->query('category');
+        $search = $request->query('search');
 
         $posts = Post::published()
             ->with('category')
             ->when($categoryId, fn ($q) => $q->where('category_id', $categoryId))
+            ->when($search, function ($q) use ($search) {
+                return $q->where(function ($query) use ($search) {
+                    $query->where('title', 'like', "%{$search}%")
+                        ->orWhere('content', 'like', "%{$search}%");
+                });
+            })
             ->orderByDesc('published_at')
             ->paginate(10)
             ->withQueryString();
@@ -28,6 +35,7 @@ class BlogController extends Controller
             'posts' => $posts,
             'categories' => $categories,
             'selectedCategoryId' => $categoryId,
+            'search' => $search,
         ]);
     }
 

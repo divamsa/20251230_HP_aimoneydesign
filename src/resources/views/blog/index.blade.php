@@ -36,21 +36,40 @@
     <h1 class="page-title">ブログ・お知らせ</h1>
     <p class="page-subtitle">ブログ記事一覧</p>
     
-    @if($categories->count() > 0)
-        <div class="card" style="margin-bottom: 1.5rem;">
-            <h2 class="section-title">カテゴリで絞り込み</h2>
+    <div class="card" style="margin-bottom: 1.5rem;">
+        <h2 class="section-title">検索</h2>
+        <form method="GET" action="{{ route('blog.index') }}" style="display:flex; gap:.5rem; margin-bottom:1rem;">
+            <input type="text" 
+                   name="search" 
+                   value="{{ $search }}" 
+                   placeholder="タイトル・本文から検索..." 
+                   style="flex:1; padding:.75rem; border:1px solid #e0e0e0; border-radius:4px;">
+            <button type="submit" class="btn">検索</button>
+            @if($search)
+                <a href="{{ route('blog.index', ['category' => $selectedCategoryId]) }}" class="btn" style="background:#64748b;">クリア</a>
+            @endif
+        </form>
+        
+        @if($categories->count() > 0)
+            <h3 style="margin-bottom:.5rem; font-size:1rem;">カテゴリで絞り込み</h3>
             <div style="display:flex; flex-wrap:wrap; gap:.5rem;">
-                <a href="{{ route('blog.index') }}" class="btn" style="{{ !$selectedCategoryId ? 'background:#3b82f6; color:white;' : '' }}">
+                <a href="{{ route('blog.index', ['search' => $search]) }}" class="btn" style="{{ !$selectedCategoryId ? 'background:#3b82f6; color:white;' : '' }}">
                     すべて
                 </a>
                 @foreach($categories as $category)
-                    <a href="{{ route('blog.index', ['category' => $category->id]) }}" 
+                    <a href="{{ route('blog.index', ['category' => $category->id, 'search' => $search]) }}" 
                        class="btn" 
                        style="{{ $selectedCategoryId == $category->id ? 'background:#3b82f6; color:white;' : '' }}">
                         {{ $category->name }}
                     </a>
                 @endforeach
             </div>
+        @endif
+    </div>
+    
+    @if($search)
+        <div class="alert alert-info" style="margin-bottom: 1.5rem;">
+            「{{ $search }}」の検索結果: {{ $posts->total() }}件
         </div>
     @endif
     

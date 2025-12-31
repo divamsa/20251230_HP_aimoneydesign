@@ -14,7 +14,10 @@ class CategoryAdminController extends Controller
      */
     public function index()
     {
-        $categories = Category::orderBy('name')->get();
+        // N+1問題を回避するため、記事数を事前に取得
+        $categories = Category::withCount('posts')
+            ->orderBy('name')
+            ->get();
 
         return view('admin.categories.index', [
             'categories' => $categories,
@@ -57,8 +60,14 @@ class CategoryAdminController extends Controller
      */
     public function show(Category $category)
     {
+        // このカテゴリに紐づく記事を取得
+        $posts = $category->posts()
+            ->orderByDesc('created_at')
+            ->paginate(20);
+
         return view('admin.categories.show', [
             'category' => $category,
+            'posts' => $posts,
         ]);
     }
 
