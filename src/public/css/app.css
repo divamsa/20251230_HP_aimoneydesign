@@ -1087,3 +1087,834 @@ body.menu-open {
         grid-template-columns: 1fr;
     }
 }
+
+/* ============================================
+   サービスページ: インタラクティブタブシステム
+   ============================================ */
+
+.services-detail {
+    margin: 4rem 0;
+}
+
+.service-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    position: relative;
+    border-bottom: 2px solid #E5E7EB;
+    padding-bottom: 0.5rem;
+}
+
+.service-tab {
+    background: none;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #6B7280;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.service-tab:hover {
+    color: #374151;
+}
+
+.service-tab.active {
+    color: #374151;
+}
+
+.tab-icon {
+    font-size: 1.5rem;
+}
+
+.tab-indicator {
+    position: absolute;
+    bottom: -2px;
+    height: 3px;
+    background: linear-gradient(90deg, #2563EB, #10B981, #8B5CF6);
+    border-radius: 3px 3px 0 0;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    z-index: 1;
+}
+
+.service-tab-content {
+    position: relative;
+    min-height: 500px;
+}
+
+.service-content {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.service-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   サービスページ: 3Dカードエフェクト
+   ============================================ */
+
+.service-detail-card {
+    background: #FFFFFF;
+    border-radius: 24px;
+    padding: 3rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.service-card-3d {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.service-card-3d:hover {
+    transform: translateY(-10px) rotateX(2deg) rotateY(2deg);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.service-detail-card .card-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.service-detail-card .card-bg-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.15;
+    filter: grayscale(40%) brightness(1.1) contrast(1.2);
+    transition: transform 0.6s ease;
+}
+
+.service-card-3d:hover .card-bg-image img {
+    transform: scale(1.1);
+}
+
+.service-detail-card > *:not(.card-bg-image) {
+    position: relative;
+    z-index: 1;
+}
+
+.service-detail-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #374151;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.9);
+}
+
+.service-detail-description {
+    font-size: 1.25rem;
+    color: #6B7280;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    text-shadow: 0 1px 5px rgba(255, 255, 255, 0.8);
+}
+
+.service-detail-content {
+    margin-top: 2rem;
+}
+
+.service-detail-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #374151;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+.service-detail-content h3:first-child {
+    margin-top: 0;
+}
+
+.service-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.service-list li {
+    padding: 0.75rem 0;
+    font-size: 1.1rem;
+    color: #374151;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.service-list li:hover {
+    transform: translateX(5px);
+    color: #1F2937;
+}
+
+.check-icon {
+    position: absolute;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    background: linear-gradient(135deg, #2563EB, #10B981);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+    animation: checkPulse 2s ease-in-out infinite;
+}
+
+@keyframes checkPulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.5);
+    }
+}
+
+.service-detail-content p {
+    font-size: 1.1rem;
+    color: #6B7280;
+    line-height: 1.8;
+    margin-top: 0.5rem;
+}
+
+/* ============================================
+   サービスページ: スクロールアニメーション
+   ============================================ */
+
+.service-content,
+.industry-solutions,
+.implementation-flow {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.service-content.animated,
+.industry-solutions.animated,
+.implementation-flow.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.solution-card,
+.flow-step {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.solution-card.animated,
+.flow-step.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ============================================
+   サービスページ: インタラクティブタイムライン
+   ============================================ */
+
+.implementation-flow {
+    margin: 5rem 0;
+    padding: 3rem 0;
+    background: linear-gradient(to bottom, #F3F4F6 0%, #FFFFFF 100%);
+    border-radius: 32px;
+}
+
+.timeline-container {
+    position: relative;
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 2rem 0;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, #2563EB, #10B981, #8B5CF6);
+    transform: translateX(-50%);
+    border-radius: 2px;
+    z-index: 0;
+}
+
+.flow-steps {
+    position: relative;
+    z-index: 1;
+}
+
+.flow-step {
+    position: relative;
+    margin-bottom: 4rem;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.6s ease-out;
+}
+
+.flow-step:nth-child(even) {
+    transform: translateX(50px);
+}
+
+.flow-step.animated {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.flow-step:nth-child(even) .flow-step-content {
+    margin-left: auto;
+    text-align: right;
+}
+
+.flow-step-content {
+    max-width: 45%;
+    background: #FFFFFF;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.flow-step-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.flow-step:nth-child(even) .flow-step-content {
+    margin-left: auto;
+}
+
+.flow-step-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    animation: iconFloat 3s ease-in-out infinite;
+}
+
+@keyframes iconFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.flow-step-number {
+    position: absolute;
+    left: -60px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #2563EB, #10B981);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.flow-step:nth-child(even) .flow-step-number {
+    left: auto;
+    right: -60px;
+}
+
+.flow-step-content:hover .flow-step-number {
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6);
+}
+
+.flow-step-progress {
+    width: 100%;
+    height: 6px;
+    background: #E5E7EB;
+    border-radius: 3px;
+    margin: 1rem 0;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #2563EB, #10B981);
+    border-radius: 3px;
+    width: 0;
+    transition: width 1s ease-out;
+    position: relative;
+}
+
+.progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.flow-step-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #374151;
+    margin-bottom: 0.75rem;
+}
+
+.flow-step-description {
+    color: #6B7280;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.flow-step-detail-btn {
+    background: linear-gradient(135deg, #2563EB, #10B981);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.flow-step-detail-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.flow-step-detail-btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.flow-step-detail-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+}
+
+/* レスポンシブ: タイムライン */
+@media (max-width: 768px) {
+    .timeline-line {
+        left: 30px;
+    }
+    
+    .flow-step-content {
+        max-width: calc(100% - 80px);
+        margin-left: 80px !important;
+        text-align: left !important;
+    }
+    
+    .flow-step-number {
+        left: -60px !important;
+        right: auto !important;
+    }
+}
+
+/* ============================================
+   サービスページ: マイクロインタラクション
+   ============================================ */
+
+/* ボタンのリップルエフェクト */
+.btn-ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-ripple::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn-ripple:active::after {
+    width: 300px;
+    height: 300px;
+}
+
+/* リンクのアンダーラインアニメーション */
+.service-link,
+.case-link {
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.service-link::after,
+.case-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #2563EB, #10B981);
+    transition: width 0.3s ease;
+}
+
+.service-link:hover::after,
+.case-link:hover::after {
+    width: 100%;
+}
+
+.service-link:hover,
+.case-link:hover {
+    transform: translateX(5px);
+    color: #2563EB;
+}
+
+/* チェックリストアイテムのアニメーション */
+.service-list li {
+    position: relative;
+    overflow: hidden;
+}
+
+.service-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    background: linear-gradient(90deg, rgba(37, 99, 235, 0.1), transparent);
+    transition: width 0.3s ease;
+}
+
+.service-list li:hover::before {
+    width: 100%;
+}
+
+/* カードのホバー時のリフトエフェクト */
+.solution-card {
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.solution-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* 数値カウントアップアニメーション（将来的に使用可能） */
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* フェードインアニメーションの強化 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* ============================================
+   サービスページ: 動的な背景パターン
+   ============================================ */
+
+.services-detail {
+    position: relative;
+    overflow: hidden;
+}
+
+.services-detail::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.03) 0%, rgba(16, 185, 129, 0.03) 50%, rgba(139, 92, 246, 0.03) 100%);
+    background-size: 200% 200%;
+    animation: gradientShift 15s ease infinite;
+    z-index: 0;
+    pointer-events: none;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.services-detail > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* 幾何学パターン */
+.industry-solutions {
+    position: relative;
+    overflow: hidden;
+    background: #F3F4F6;
+    padding: 4rem 0;
+    border-radius: 32px;
+}
+
+.industry-solutions::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background-image: 
+        radial-gradient(circle at 20% 50%, rgba(37, 99, 235, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+    animation: patternRotate 20s linear infinite;
+    z-index: 0;
+    pointer-events: none;
+}
+
+@keyframes patternRotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.industry-solutions > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* セクションごとの背景テーマ */
+.implementation-flow::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%),
+        linear-gradient(-45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+    background-size: 60px 60px;
+    opacity: 0.3;
+    animation: patternMove 20s linear infinite;
+    z-index: 0;
+    pointer-events: none;
+}
+
+@keyframes patternMove {
+    from {
+        background-position: 0 0, 0 0;
+    }
+    to {
+        background-position: 60px 60px, -60px -60px;
+    }
+}
+
+.implementation-flow > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================
+   サービスページ: パララックススクロール効果
+   ============================================ */
+
+.service-detail-card .card-bg-image {
+    will-change: transform;
+}
+
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    will-change: transform;
+}
+
+.parallax-slow {
+    transition: transform 0.1s ease-out;
+}
+
+.parallax-medium {
+    transition: transform 0.15s ease-out;
+}
+
+.parallax-fast {
+    transition: transform 0.2s ease-out;
+}
+
+/* ============================================
+   サービスページ: スティッキーサイドバーナビゲーション
+   ============================================ */
+
+.sticky-sidebar-nav {
+    position: fixed;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 1.5rem 1rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.sticky-sidebar-nav.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sidebar-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.sidebar-nav-list li {
+    margin: 0;
+}
+
+.nav-link {
+    display: block;
+    padding: 0.75rem 1.25rem;
+    color: #6B7280;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+    white-space: nowrap;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 0;
+    background: linear-gradient(135deg, #2563EB, #10B981);
+    border-radius: 0 2px 2px 0;
+    transition: height 0.3s ease;
+}
+
+.nav-link:hover {
+    background: rgba(37, 99, 235, 0.1);
+    color: #2563EB;
+    transform: translateX(-5px);
+}
+
+.nav-link.active {
+    color: #2563EB;
+    background: rgba(37, 99, 235, 0.1);
+}
+
+.nav-link.active::before {
+    height: 80%;
+}
+
+/* モバイルでは非表示 */
+@media (max-width: 1024px) {
+    .sticky-sidebar-nav {
+        display: none;
+    }
+}

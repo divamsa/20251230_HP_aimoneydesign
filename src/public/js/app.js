@@ -164,11 +164,297 @@ function initMobileMenu() {
     });
 }
 
+// ============================================
+// サービスページ: インタラクティブタブシステム
+// ============================================
+
+function initServiceTabs() {
+    const tabs = document.querySelectorAll('.service-tab');
+    const contents = document.querySelectorAll('.service-content');
+    const indicator = document.querySelector('.tab-indicator');
+    
+    if (!tabs.length || !indicator) return;
+    
+    // 初期位置を設定
+    const activeTab = document.querySelector('.service-tab.active');
+    if (activeTab) {
+        updateTabIndicator(activeTab, indicator);
+    }
+    
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const targetTab = tab.dataset.tab;
+            const targetColor = tab.dataset.color;
+            
+            // タブのアクティブ状態を更新
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            
+            // コンテンツの表示を切り替え
+            contents.forEach(content => {
+                content.classList.remove('active');
+                if (content.id === targetTab) {
+                    content.classList.add('active');
+                    content.classList.add('animated');
+                }
+            });
+            
+            // インジケーターをアニメーション
+            updateTabIndicator(tab, indicator);
+            
+            // カードの背景色を変更（オプション）
+            const card = document.querySelector(`.service-card-3d[data-service="${targetTab}"]`);
+            if (card) {
+                card.style.borderTop = `4px solid ${targetColor}`;
+            }
+        });
+    });
+}
+
+function updateTabIndicator(tab, indicator) {
+    const tabRect = tab.getBoundingClientRect();
+    const containerRect = tab.closest('.service-tabs').getBoundingClientRect();
+    const left = tabRect.left - containerRect.left;
+    const width = tabRect.width;
+    
+    indicator.style.left = `${left}px`;
+    indicator.style.width = `${width}px`;
+}
+
+// ============================================
+// サービスページ: スクロールアニメーション
+// ============================================
+
+function initServiceScrollAnimation() {
+    const animatedSections = document.querySelectorAll('.service-content, .industry-solutions, .implementation-flow');
+    const animatedCards = document.querySelectorAll('.solution-card, .flow-step');
+    
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animated');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+    
+    animatedSections.forEach(section => {
+        observer.observe(section);
+    });
+    
+    animatedCards.forEach(card => {
+        observer.observe(card);
+    });
+}
+
+// ============================================
+// サービスページ: 3Dカードエフェクト
+// ============================================
+
+function init3DCardEffect() {
+    const cards = document.querySelectorAll('.service-card-3d');
+    
+    cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const rotateX = (y - centerY) / 20;
+            const rotateY = (centerX - x) / 20;
+            
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+        });
+    });
+}
+
+// ============================================
+// サービスページ: パララックススクロール効果
+// ============================================
+
+function initParallax() {
+    const parallaxElements = document.querySelectorAll('.card-bg-image img');
+    
+    if (!parallaxElements.length) return;
+    
+    let ticking = false;
+    
+    function updateParallax() {
+        parallaxElements.forEach(element => {
+            const card = element.closest('.service-card-3d');
+            if (!card) return;
+            
+            const rect = card.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            const elementTop = rect.top;
+            const elementHeight = rect.height;
+            
+            // 要素がビューポート内にある場合のみパララックスを適用
+            if (elementTop < windowHeight && elementTop + elementHeight > 0) {
+                const scrolled = window.pageYOffset;
+                const rate = scrolled * -0.3; // パララックスの速度
+                element.style.transform = `translateY(${rate}px) scale(1.1)`;
+            }
+        });
+        
+        ticking = false;
+    }
+    
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(updateParallax);
+            ticking = true;
+        }
+    });
+    
+    // 初期化
+    updateParallax();
+}
+
+// ============================================
+// サービスページ: スティッキーサイドバーナビゲーション
+// ============================================
+
+function initStickySidebarNav() {
+    const sidebarNav = document.getElementById('stickyNav');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('#services, #solutions, #flow');
+    
+    if (!sidebarNav || !navLinks.length) return;
+    
+    // スクロール時に表示/非表示を切り替え
+    function toggleSidebar() {
+        if (window.scrollY > 300) {
+            sidebarNav.classList.add('visible');
+        } else {
+            sidebarNav.classList.remove('visible');
+        }
+    }
+    
+    // アクティブなセクションをハイライト
+    function updateActiveSection() {
+        let currentSection = '';
+        
+        sections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top <= 200 && rect.bottom >= 200) {
+                currentSection = section.id;
+            }
+        });
+        
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.dataset.section === currentSection) {
+                link.classList.add('active');
+            }
+        });
+    }
+    
+    // スムーズスクロール
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.dataset.section;
+            const targetSection = document.getElementById(targetId);
+            
+            if (targetSection) {
+                const offsetTop = targetSection.offsetTop - 100;
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    window.addEventListener('scroll', () => {
+        toggleSidebar();
+        updateActiveSection();
+    });
+    
+    // 初期化
+    toggleSidebar();
+    updateActiveSection();
+}
+
+// ============================================
+// サービスページ: インタラクティブタイムライン
+// ============================================
+
+function initTimeline() {
+    const timelineSteps = document.querySelectorAll('.flow-step');
+    const progressBars = document.querySelectorAll('.progress-bar');
+    
+    if (!timelineSteps.length) return;
+    
+    const observerOptions = {
+        threshold: 0.3,
+        rootMargin: '0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const step = entry.target;
+                step.classList.add('animated');
+                
+                // プログレスバーをアニメーション
+                const progressBar = step.querySelector('.progress-bar');
+                if (progressBar) {
+                    const progress = progressBar.dataset.progress;
+                    setTimeout(() => {
+                        progressBar.style.width = `${progress}%`;
+                    }, 300);
+                }
+                
+                observer.unobserve(step);
+            }
+        });
+    }, observerOptions);
+    
+    timelineSteps.forEach(step => {
+        observer.observe(step);
+    });
+    
+    // 詳細ボタンのクリックイベント
+    const detailButtons = document.querySelectorAll('.flow-step-detail-btn');
+    detailButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const modalId = btn.dataset.modal;
+            // モーダル表示（将来的に実装可能）
+            console.log(`詳細モーダルを表示: ${modalId}`);
+        });
+    });
+}
+
 // ページ読み込み時に初期化
 document.addEventListener('DOMContentLoaded', () => {
     initCounterAnimation();
     initScrollAnimation();
     initScrollHeader();
     initMobileMenu();
+    
+    // サービスページ専用の初期化
+    if (document.querySelector('.service-tabs')) {
+        initServiceTabs();
+        initServiceScrollAnimation();
+        init3DCardEffect();
+        initTimeline();
+        initParallax();
+        initStickySidebarNav();
+    }
 });
 
