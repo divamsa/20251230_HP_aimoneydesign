@@ -53,6 +53,7 @@
     @stack('styles')
 </head>
 <body>
+    <script src="{{ asset('js/app.js') }}" defer></script>
     <header class="header">
         <div class="container">
             <div class="header-content">
