@@ -1468,9 +1468,8 @@ body.menu-open {
 
 .flow-step-number {
     position: absolute;
-    left: -60px;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 1rem;
+    left: 1rem;
     width: 50px;
     height: 50px;
     background: linear-gradient(135deg, #2563EB, #10B981);
@@ -1487,12 +1486,13 @@ body.menu-open {
 }
 
 .flow-step:nth-child(even) .flow-step-number {
-    left: auto;
-    right: -60px;
+    top: 1rem;
+    left: 1rem;
+    right: auto;
 }
 
 .flow-step-content:hover .flow-step-number {
-    transform: translateY(-50%) scale(1.1);
+    transform: scale(1.1);
     box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6);
 }
 
@@ -1592,13 +1592,14 @@ body.menu-open {
     }
     
     .flow-step-content {
-        max-width: calc(100% - 80px);
-        margin-left: 80px !important;
+        max-width: calc(100% - 20px);
+        margin-left: 20px !important;
         text-align: left !important;
     }
     
     .flow-step-number {
-        left: -60px !important;
+        top: 1rem !important;
+        left: 1rem !important;
         right: auto !important;
     }
 }
