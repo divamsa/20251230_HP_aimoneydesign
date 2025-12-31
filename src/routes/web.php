@@ -3,6 +3,7 @@
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\Admin\ContactAdminController;
 use App\Http\Controllers\Admin\PostAdminController;
+use App\Http\Controllers\Admin\CategoryAdminController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CaseController;
 use App\Http\Controllers\ContactController;
@@ -69,6 +70,9 @@ Route::prefix('admin')
         
         // Posts (Blog)
         Route::resource('posts', PostAdminController::class);
+        
+        // Categories
+        Route::resource('categories', CategoryAdminController::class);
     });
 
 require __DIR__.'/auth.php';

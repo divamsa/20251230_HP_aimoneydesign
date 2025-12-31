@@ -25,6 +25,18 @@
         </div>
 
         <div class="form-group">
+            <label for="category_id">カテゴリ</label>
+            <select id="category_id" name="category_id">
+                <option value="">カテゴリなし</option>
+                @foreach($categories as $category)
+                    <option value="{{ $category->id }}" @selected(old('category_id', $post->category_id) == $category->id)>
+                        {{ $category->name }}
+                    </option>
+                @endforeach
+            </select>
+        </div>
+
+        <div class="form-group">
             <label for="content">本文 <span style="color:red;">*</span></label>
             <textarea id="content" name="content" rows="15" required>{{ old('content', $post->content) }}</textarea>
         </div>

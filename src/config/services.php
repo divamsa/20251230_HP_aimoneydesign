@@ -37,4 +37,6 @@ return [
 
     'google_analytics_id' => env('GOOGLE_ANALYTICS_ID', ''),
 
+    'google_api_key' => env('GOOGLE_API_KEY', ''),
+
 ];

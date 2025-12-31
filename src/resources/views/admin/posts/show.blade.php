@@ -19,6 +19,14 @@
             <dd>{{ $post->id }}</dd>
             <dt style="font-weight:bold;">タイトル:</dt>
             <dd>{{ $post->title }}</dd>
+            <dt style="font-weight:bold;">カテゴリ:</dt>
+            <dd>
+                @if($post->category)
+                    {{ $post->category->name }}
+                @else
+                    <span style="color:#999;">カテゴリなし</span>
+                @endif
+            </dd>
             <dt style="font-weight:bold;">公開日時:</dt>
             <dd>
                 @if($post->published_at)

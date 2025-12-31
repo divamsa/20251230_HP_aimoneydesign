@@ -13,6 +13,8 @@ class Post extends Model
         'title',
         'content',
         'published_at',
+        'category_id',
+        'thumbnail_path',
     ];
 
     /**
@@ -21,6 +23,14 @@ class Post extends Model
     protected $casts = [
         'published_at' => 'datetime',
     ];
+
+    /**
+     * この記事が属するカテゴリを取得
+     */
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 
     /**
      * 公開済みの記事のみを取得するスコープ

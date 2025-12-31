@@ -25,6 +25,7 @@
                     <tr>
                         <th style="text-align:left; padding:.75rem; border-bottom:1px solid #e0e0e0;">ID</th>
                         <th style="text-align:left; padding:.75rem; border-bottom:1px solid #e0e0e0;">タイトル</th>
+                        <th style="text-align:left; padding:.75rem; border-bottom:1px solid #e0e0e0;">カテゴリ</th>
                         <th style="text-align:left; padding:.75rem; border-bottom:1px solid #e0e0e0;">公開日時</th>
                         <th style="text-align:left; padding:.75rem; border-bottom:1px solid #e0e0e0;">作成日時</th>
                         <th style="text-align:left; padding:.75rem; border-bottom:1px solid #e0e0e0;">操作</th>
@@ -35,6 +36,13 @@
                         <tr>
                             <td style="padding:.75rem; border-bottom:1px solid #f1f5f9;">{{ $post->id }}</td>
                             <td style="padding:.75rem; border-bottom:1px solid #f1f5f9;">{{ $post->title }}</td>
+                            <td style="padding:.75rem; border-bottom:1px solid #f1f5f9;">
+                                @if($post->category)
+                                    {{ $post->category->name }}
+                                @else
+                                    <span style="color:#999;">カテゴリなし</span>
+                                @endif
+                            </td>
                             <td style="padding:.75rem; border-bottom:1px solid #f1f5f9;">
                                 @if($post->published_at)
                                     {{ $post->published_at->format('Y-m-d H:i') }}
@@ -50,7 +58,7 @@
                         </tr>
                     @empty
                         <tr>
-                            <td colspan="5" style="padding:1rem;">データがありません</td>
+                            <td colspan="6" style="padding:1rem;">データがありません</td>
                         </tr>
                     @endforelse
                 </tbody>

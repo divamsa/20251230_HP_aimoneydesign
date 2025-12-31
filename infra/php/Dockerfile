@@ -31,3 +31,5 @@ RUN groupadd -g 1000 appuser && \
 USER appuser
 WORKDIR /data
 
+
+

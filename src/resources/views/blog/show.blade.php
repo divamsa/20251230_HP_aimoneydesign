@@ -44,9 +44,23 @@
     </div>
 
     <article class="card">
+        @if($post->thumbnail_path)
+            <div style="margin-bottom: 2rem;">
+                <img src="{{ Storage::url($post->thumbnail_path) }}" 
+                     alt="{{ $post->title }}" 
+                     style="width:100%; max-height:400px; object-fit:cover; border-radius:8px;">
+            </div>
+        @endif
         <h1 class="page-title">{{ $post->title }}</h1>
         <p style="color:#666; margin-bottom:2rem;">
             {{ $post->published_at->format('Y年m月d日') }}
+            @if($post->category)
+                <span style="margin-left:1rem;">
+                    <a href="{{ route('blog.index', ['category' => $post->category->id]) }}" style="color:#3b82f6; text-decoration:none;">
+                        {{ $post->category->name }}
+                    </a>
+                </span>
+            @endif
         </p>
         <div style="white-space:pre-wrap; line-height:1.8;">{{ $post->content }}</div>
     </article>
