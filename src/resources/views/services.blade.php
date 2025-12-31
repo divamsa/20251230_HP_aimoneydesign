@@ -266,7 +266,7 @@
                 <div class="flow-step" data-step="4">
                     <div class="flow-step-content">
                         <div class="card-bg-image">
-                            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=1000" alt="Implementation Development">
+                            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1000" alt="Implementation Development">
                         </div>
                         <div class="flow-step-number">4</div>
                         <div class="flow-step-progress">
