@@ -9,8 +9,8 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
     line-height: 1.6;
-    color: #1E293B;
-    background-color: #FAFAFA;
+    color: #374151;
+    background-color: #FFFFFF;
 }
 
 .container {
@@ -21,8 +21,8 @@ body {
 
 /* ヘッダー */
 .header {
-    background-color: #FAFAFA;
-    border-bottom: 1px solid #e0e0e0;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #e5e7eb;
     padding: 1rem 0;
     position: sticky;
     top: 0;
@@ -32,7 +32,7 @@ body {
 }
 
 .header.scrolled {
-    background-color: rgba(250, 250, 250, 0.95);
+    background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     padding: 0.75rem 0;
@@ -47,13 +47,13 @@ body {
 .logo a {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #5B21B6;
+    color: #2563EB;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .logo a:hover {
-    color: #4C1D95;
+    color: #1D4ED8;
 }
 
 /* ナビゲーション */
@@ -70,7 +70,7 @@ body {
 }
 
 .nav-list a {
-    color: #1E293B;
+    color: #374151;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
@@ -79,13 +79,13 @@ body {
 }
 
 .nav-list a:hover {
-    color: #5B21B6;
-    border-bottom-color: #5B21B6;
+    color: #2563EB;
+    border-bottom-color: #2563EB;
 }
 
 .nav-list a.active {
-    color: #5B21B6;
-    border-bottom-color: #5B21B6;
+    color: #2563EB;
+    border-bottom-color: #2563EB;
 }
 
 /* ハンバーガーメニュー */
@@ -106,7 +106,7 @@ body {
 .hamburger span {
     width: 100%;
     height: 3px;
-    background-color: #1E293B;
+    background-color: #374151;
     border-radius: 3px;
     transition: all 0.3s ease;
     transform-origin: center;
@@ -157,29 +157,28 @@ body.menu-open {
 
 /* フッター */
 .footer {
-    background-color: #FAFAFA;
-    border-top: 1px solid #e0e0e0;
+    background-color: #FFFFFF;
+    border-top: 1px solid #e5e7eb;
     padding: 2rem 0;
     margin-top: 4rem;
     text-align: center;
-    color: #1E293B;
+    color: #374151;
 }
 
 /* ページタイトル */
 .page-title {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #1E293B;
+    color: #374151;
     margin-bottom: 1rem;
     text-align: center;
 }
 
 .page-subtitle {
     font-size: 1.2rem;
-    color: #1E293B;
+    color: #6B7280;
     text-align: center;
     margin-bottom: 3rem;
-    opacity: 0.8;
 }
 
 /* セクション */
@@ -190,7 +189,7 @@ body.menu-open {
 .section-title {
     font-size: 2rem;
     font-weight: bold;
-    color: #1E293B;
+    color: #374151;
     margin-bottom: 1.5rem;
 }
 
@@ -198,7 +197,7 @@ body.menu-open {
 .btn {
     display: inline-block;
     padding: 0.75rem 2rem;
-    background-color: #5B21B6;
+    background-color: #2563EB;
     color: #fff;
     text-decoration: none;
     border-radius: 0.5rem;
@@ -209,17 +208,16 @@ body.menu-open {
 }
 
 .btn:hover {
-    background-color: #4C1D95;
+    background-color: #1D4ED8;
 }
 
 .btn-secondary {
-    background-color: #5B21B6;
-    opacity: 0.8;
+    background-color: #374151;
+    color: #fff;
 }
 
 .btn-secondary:hover {
-    background-color: #4C1D95;
-    opacity: 1;
+    background-color: #1F2937;
 }
 
 /* カード */
@@ -310,7 +308,7 @@ body.menu-open {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 500;
-    color: #1E293B;
+    color: #374151;
 }
 
 .form-group .required {
@@ -338,7 +336,7 @@ body.menu-open {
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #5B21B6;
+    border-color: #2563EB;
 }
 
 .form-group textarea {
@@ -481,7 +479,7 @@ body.menu-open {
    ============================================ */
 
 .hero {
-    background: linear-gradient(135deg, #5B21B6 0%, #4C1D95 100%);
+    background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
     color: #fff;
     padding: 8rem 0 6rem;
     position: relative;
@@ -558,21 +556,21 @@ body.menu-open {
 
 /* ボタンの改善 */
 .btn-primary {
-    background: linear-gradient(135deg, #fff 0%, #f0f0f0 100%);
-    color: #5B21B6;
+    background: #2563EB;
+    color: #fff;
     font-weight: 600;
     padding: 1rem 2.5rem;
     font-size: 1.125rem;
-    border-radius: 50px;
-    box-shadow: 0 4px 15px rgba(91, 33, 182, 0.3);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
     transition: all 0.3s ease;
     transform: translateY(0);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(91, 33, 182, 0.4);
-    background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+    background: #1D4ED8;
 }
 
 .btn-secondary {
@@ -601,7 +599,7 @@ body.menu-open {
 
 .stats {
     padding: 5rem 0;
-    background: linear-gradient(to bottom, #FAFAFA 0%, #fff 100%);
+    background: #FFFFFF;
 }
 
 .stats-grid {
@@ -629,7 +627,7 @@ body.menu-open {
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, #5B21B6 0%, #4C1D95 100%);
+    background: linear-gradient(90deg, #2563EB 0%, #1D4ED8 100%);
     transform: scaleX(0);
     transition: transform 0.3s ease;
 }
@@ -657,7 +655,7 @@ body.menu-open {
 .stat-number {
     font-size: 3.5rem;
     font-weight: 800;
-    color: #5B21B6;
+    color: #2563EB;
     margin-bottom: 0.5rem;
     line-height: 1;
     min-height: 4rem;
@@ -668,9 +666,8 @@ body.menu-open {
 
 .stat-label {
     font-size: 1.125rem;
-    color: #1E293B;
+    color: #374151;
     font-weight: 500;
-    opacity: 0.8;
 }
 
 /* ============================================
@@ -679,15 +676,14 @@ body.menu-open {
 
 .services-preview {
     padding: 5rem 0;
-    background: #FFFFFF;
+    background: #F9FAFB;
 }
 
 .section-subtitle {
     text-align: center;
     font-size: 1.25rem;
-    color: #1E293B;
+    color: #6B7280;
     margin-bottom: 3rem;
-    opacity: 0.8;
 }
 
 .services-grid {
@@ -715,15 +711,15 @@ body.menu-open {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(91, 33, 182, 0.05) 0%, rgba(76, 29, 149, 0.05) 100%);
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(29, 78, 216, 0.05) 100%);
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
 .service-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 8px 30px rgba(91, 33, 182, 0.15);
-    border-color: #5B21B6;
+    box-shadow: 0 8px 30px rgba(37, 99, 235, 0.15);
+    border-color: #2563EB;
 }
 
 .service-card:hover::after {
@@ -744,19 +740,18 @@ body.menu-open {
 .service-title {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #1E293B;
+    color: #374151;
     margin-bottom: 1rem;
 }
 
 .service-description {
-    color: #1E293B;
+    color: #6B7280;
     line-height: 1.7;
     margin-bottom: 1.5rem;
-    opacity: 0.8;
 }
 
 .service-link {
-    color: #5B21B6;
+    color: #2563EB;
     font-weight: 600;
     text-decoration: none;
     display: inline-flex;
@@ -768,7 +763,7 @@ body.menu-open {
 }
 
 .service-link:hover {
-    color: #4C1D95;
+    color: #1D4ED8;
     gap: 0.75rem;
 }
 
@@ -783,7 +778,7 @@ body.menu-open {
 
 .cases-preview {
     padding: 5rem 0;
-    background: linear-gradient(to bottom, #fff 0%, #FAFAFA 100%);
+    background: #FFFFFF;
 }
 
 .cases-grid {
@@ -811,7 +806,7 @@ body.menu-open {
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, #5B21B6 0%, #4C1D95 100%);
+    background: linear-gradient(90deg, #2563EB 0%, #1D4ED8 100%);
     transform: scaleX(0);
     transition: transform 0.3s ease;
 }
@@ -828,7 +823,7 @@ body.menu-open {
 .case-category {
     display: inline-block;
     padding: 0.5rem 1rem;
-    background: linear-gradient(135deg, #5B21B6 0%, #4C1D95 100%);
+    background: #2563EB;
     color: #fff;
     border-radius: 20px;
     font-size: 0.875rem;
@@ -839,19 +834,18 @@ body.menu-open {
 .case-title {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #1E293B;
+    color: #374151;
     margin-bottom: 1rem;
 }
 
 .case-description {
-    color: #1E293B;
+    color: #6B7280;
     line-height: 1.7;
     margin-bottom: 1.5rem;
-    opacity: 0.8;
 }
 
 .case-link {
-    color: #5B21B6;
+    color: #2563EB;
     font-weight: 600;
     text-decoration: none;
     display: inline-flex;
@@ -861,7 +855,7 @@ body.menu-open {
 }
 
 .case-link:hover {
-    color: #4C1D95;
+    color: #1D4ED8;
     gap: 0.75rem;
 }
 
@@ -871,7 +865,7 @@ body.menu-open {
 
 .cta {
     padding: 6rem 0;
-    background: linear-gradient(135deg, #5B21B6 0%, #4C1D95 100%);
+    background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
     color: #fff;
     text-align: center;
     position: relative;
