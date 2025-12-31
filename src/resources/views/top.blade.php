@@ -110,16 +110,14 @@
                 <div class="card-bg-image">
                     <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1000" alt="Consulting Business">
                 </div>
-                <div class="service-icon">🤖</div>
                 <h3 class="service-title">生成AI導入コンサルティング</h3>
                 <p class="service-description">企業の課題に合わせた生成AI導入戦略の策定から実装まで、トータルサポートを提供します。</p>
                 <a href="{{ route('services') }}" class="service-link">詳細を見る →</a>
             </div>
             <div class="service-card">
                 <div class="card-bg-image">
-                    <img src="https://images.unsplash.com/photo-1522202176988-66270c4a4d14?auto=format&fit=crop&q=80&w=1000" alt="Education Training">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=1000" alt="Training Seminar with Instructor and Students">
                 </div>
-                <div class="service-icon">📚</div>
                 <h3 class="service-title">生成AI研修・セミナー</h3>
                 <p class="service-description">従業員向けの生成AI活用研修や、経営層向けのセミナーを実施します。</p>
                 <a href="{{ route('services') }}" class="service-link">詳細を見る →</a>
@@ -128,7 +126,6 @@
                 <div class="card-bg-image">
                     <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=1000" alt="Development Coding">
                 </div>
-                <div class="service-icon">🛠️</div>
                 <h3 class="service-title">生成AIシステム開発</h3>
                 <p class="service-description">企業固有の業務プロセスに合わせた生成AIシステムの開発をサポートします。</p>
                 <a href="{{ route('services') }}" class="service-link">詳細を見る →</a>
