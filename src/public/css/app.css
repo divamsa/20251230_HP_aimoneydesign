@@ -1401,8 +1401,8 @@ body.menu-open {
 
 .flow-step-content {
     max-width: 45%;
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
     padding: 2rem;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -1422,6 +1422,7 @@ body.menu-open {
     pointer-events: none;
     display: block !important;
     overflow: hidden;
+    background-color: transparent !important;
 }
 
 .flow-step-content .card-bg-image img {
@@ -1431,12 +1432,13 @@ body.menu-open {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
-    opacity: 0.5 !important;
-    filter: grayscale(50%) brightness(0.95) contrast(1.2) saturate(1.1);
+    opacity: 0.6 !important;
+    filter: grayscale(40%) brightness(1.0) contrast(1.3) saturate(1.2);
     display: block !important;
     min-width: 100% !important;
     min-height: 100% !important;
     z-index: 0 !important;
+    background-color: transparent !important;
 }
 
 .flow-step-content > *:not(.card-bg-image) {
