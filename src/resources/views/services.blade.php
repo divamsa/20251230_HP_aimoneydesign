@@ -218,7 +218,7 @@
                 <div class="flow-step" data-step="1">
                     <div class="flow-step-content">
                         <div class="card-bg-image">
-                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1000" alt="Contact Consultation">
+                            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&q=80&w=1000" alt="Contact Consultation">
                         </div>
                         <div class="flow-step-number">1</div>
                         <div class="flow-step-progress">
