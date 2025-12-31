@@ -22,7 +22,7 @@ body {
 /* ヘッダー */
 .header {
     background-color: #FFFFFF;
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 1px solid #E5E7EB;
     padding: 1rem 0;
     position: sticky;
     top: 0;
@@ -47,13 +47,13 @@ body {
 .logo a {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #F97316;
+    color: #374151;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .logo a:hover {
-    color: #EA580C;
+    color: #1F2937;
 }
 
 /* ナビゲーション */
@@ -79,13 +79,13 @@ body {
 }
 
 .nav-list a:hover {
-    color: #F97316;
-    border-bottom-color: #F97316;
+    color: #1F2937;
+    border-bottom-color: #1F2937;
 }
 
 .nav-list a.active {
-    color: #F97316;
-    border-bottom-color: #F97316;
+    color: #1F2937;
+    border-bottom-color: #1F2937;
 }
 
 /* ハンバーガーメニュー */
@@ -158,7 +158,7 @@ body.menu-open {
 /* フッター */
 .footer {
     background-color: #FFFFFF;
-    border-top: 1px solid #e5e7eb;
+    border-top: 1px solid #E5E7EB;
     padding: 2rem 0;
     margin-top: 4rem;
     text-align: center;
@@ -197,7 +197,7 @@ body.menu-open {
 .btn {
     display: inline-block;
     padding: 0.75rem 2rem;
-    background-color: #F97316;
+    background-color: #374151;
     color: #fff;
     text-decoration: none;
     border-radius: 0.5rem;
@@ -208,16 +208,17 @@ body.menu-open {
 }
 
 .btn:hover {
-    background-color: #EA580C;
+    background-color: #1F2937;
 }
 
 .btn-secondary {
     background-color: #374151;
-    color: #fff;
+    opacity: 0.8;
 }
 
 .btn-secondary:hover {
     background-color: #1F2937;
+    opacity: 1;
 }
 
 /* カード */
@@ -336,7 +337,7 @@ body.menu-open {
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #F97316;
+    border-color: #374151;
 }
 
 .form-group textarea {
@@ -479,7 +480,7 @@ body.menu-open {
    ============================================ */
 
 .hero {
-    background: linear-gradient(135deg, #F97316 0%, #EA580C 100%);
+    background: linear-gradient(135deg, #1F2937 0%, #111827 100%);
     color: #fff;
     padding: 8rem 0 6rem;
     position: relative;
@@ -556,21 +557,21 @@ body.menu-open {
 
 /* ボタンの改善 */
 .btn-primary {
-    background: #fff;
-    color: #F97316;
+    background: linear-gradient(135deg, #fff 0%, #f0f0f0 100%);
+    color: #374151;
     font-weight: 600;
     padding: 1rem 2.5rem;
     font-size: 1.125rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(55, 65, 81, 0.3);
     transition: all 0.3s ease;
     transform: translateY(0);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(249, 115, 22, 0.4);
-    background: #f8f8f8;
+    box-shadow: 0 6px 20px rgba(55, 65, 81, 0.4);
+    background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%);
 }
 
 .btn-secondary {
@@ -599,7 +600,7 @@ body.menu-open {
 
 .stats {
     padding: 5rem 0;
-    background: #FFFFFF;
+    background: linear-gradient(to bottom, #F3F4F6 0%, #fff 100%);
 }
 
 .stats-grid {
@@ -627,7 +628,7 @@ body.menu-open {
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, #F97316 0%, #EA580C 100%);
+    background: linear-gradient(90deg, #374151 0%, #1F2937 100%);
     transform: scaleX(0);
     transition: transform 0.3s ease;
 }
@@ -655,7 +656,7 @@ body.menu-open {
 .stat-number {
     font-size: 3.5rem;
     font-weight: 800;
-    color: #F97316;
+    color: #374151;
     margin-bottom: 0.5rem;
     line-height: 1;
     min-height: 4rem;
@@ -668,6 +669,7 @@ body.menu-open {
     font-size: 1.125rem;
     color: #374151;
     font-weight: 500;
+    opacity: 0.7;
 }
 
 /* ============================================
@@ -676,7 +678,7 @@ body.menu-open {
 
 .services-preview {
     padding: 5rem 0;
-    background: #F9FAFB;
+    background: #F3F4F6;
 }
 
 .section-subtitle {
@@ -711,15 +713,15 @@ body.menu-open {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(249, 115, 22, 0.05) 0%, rgba(234, 88, 12, 0.05) 100%);
+    background: linear-gradient(135deg, rgba(55, 65, 81, 0.05) 0%, rgba(31, 41, 55, 0.05) 100%);
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
 .service-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 8px 30px rgba(249, 115, 22, 0.15);
-    border-color: #F97316;
+    box-shadow: 0 8px 30px rgba(55, 65, 81, 0.15);
+    border-color: #374151;
 }
 
 .service-card:hover::after {
@@ -751,7 +753,7 @@ body.menu-open {
 }
 
 .service-link {
-    color: #F97316;
+    color: #374151;
     font-weight: 600;
     text-decoration: none;
     display: inline-flex;
@@ -763,7 +765,7 @@ body.menu-open {
 }
 
 .service-link:hover {
-    color: #EA580C;
+    color: #1F2937;
     gap: 0.75rem;
 }
 
@@ -778,7 +780,7 @@ body.menu-open {
 
 .cases-preview {
     padding: 5rem 0;
-    background: #FFFFFF;
+    background: linear-gradient(to bottom, #fff 0%, #F3F4F6 100%);
 }
 
 .cases-grid {
@@ -806,7 +808,7 @@ body.menu-open {
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, #F97316 0%, #EA580C 100%);
+    background: linear-gradient(90deg, #374151 0%, #1F2937 100%);
     transform: scaleX(0);
     transition: transform 0.3s ease;
 }
@@ -823,7 +825,7 @@ body.menu-open {
 .case-category {
     display: inline-block;
     padding: 0.5rem 1rem;
-    background: #F97316;
+    background: linear-gradient(135deg, #374151 0%, #1F2937 100%);
     color: #fff;
     border-radius: 20px;
     font-size: 0.875rem;
@@ -845,7 +847,7 @@ body.menu-open {
 }
 
 .case-link {
-    color: #F97316;
+    color: #374151;
     font-weight: 600;
     text-decoration: none;
     display: inline-flex;
@@ -855,7 +857,7 @@ body.menu-open {
 }
 
 .case-link:hover {
-    color: #EA580C;
+    color: #1F2937;
     gap: 0.75rem;
 }
 
@@ -865,7 +867,7 @@ body.menu-open {
 
 .cta {
     padding: 6rem 0;
-    background: linear-gradient(135deg, #F97316 0%, #EA580C 100%);
+    background: linear-gradient(135deg, #1F2937 0%, #111827 100%);
     color: #fff;
     text-align: center;
     position: relative;
