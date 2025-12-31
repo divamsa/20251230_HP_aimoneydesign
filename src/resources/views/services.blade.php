@@ -234,7 +234,7 @@
                 <div class="flow-step" data-step="2">
                     <div class="flow-step-content">
                         <div class="card-bg-image">
-                            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=1000" alt="Analysis Research">
+                            <img src="https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&fit=crop&q=80&w=1000" alt="Analysis Research">
                         </div>
                         <div class="flow-step-number">2</div>
                         <div class="flow-step-progress">
@@ -266,7 +266,7 @@
                 <div class="flow-step" data-step="4">
                     <div class="flow-step-content">
                         <div class="card-bg-image">
-                            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1000" alt="Implementation Development">
+                            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=1000" alt="Implementation Development">
                         </div>
                         <div class="flow-step-number">4</div>
                         <div class="flow-step-progress">
@@ -282,7 +282,7 @@
                 <div class="flow-step" data-step="5">
                     <div class="flow-step-content">
                         <div class="card-bg-image">
-                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000" alt="Support Maintenance">
+                            <img src="https://images.unsplash.com/photo-1522202176988-66270c4a4d14?auto=format&fit=crop&q=80&w=1000" alt="Support Maintenance">
                         </div>
                         <div class="flow-step-number">5</div>
                         <div class="flow-step-progress">
