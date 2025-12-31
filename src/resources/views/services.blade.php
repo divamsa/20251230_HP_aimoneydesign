@@ -234,7 +234,7 @@
                 <div class="flow-step" data-step="2">
                     <div class="flow-step-content">
                         <div class="card-bg-image">
-                            <img src="{{ asset('images/flow-steps/analysis-issue-extraction.png') }}" alt="現状分析・課題抽出" loading="eager" onerror="this.style.display='none'; console.error('画像の読み込みに失敗しました:', this.src);">
+                            <img src="{{ asset('images/flow-steps/現状分析　課題抽出　0.35 .png') }}" alt="現状分析・課題抽出" loading="eager" onerror="this.style.display='none'; console.error('画像の読み込みに失敗しました:', this.src);">
                         </div>
                         <div class="flow-step-number">2</div>
                         <div class="flow-step-progress">
@@ -282,7 +282,7 @@
                 <div class="flow-step" data-step="5">
                     <div class="flow-step-content">
                         <div class="card-bg-image">
-                            <img src="https://images.unsplash.com/photo-1522202176988-66270c4a4d14?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Support Maintenance" loading="eager" onerror="this.style.display='none'; console.error('画像の読み込みに失敗しました:', this.src);">
+                            <img src="{{ asset('images/flow-steps/運用サポート0.35.png') }}" alt="運用サポート" loading="eager" onerror="this.style.display='none'; console.error('画像の読み込みに失敗しました:', this.src);">
                         </div>
                         <div class="flow-step-number">5</div>
                         <div class="flow-step-progress">
