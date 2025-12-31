@@ -78,15 +78,12 @@
     <section class="services-detail">
         <div class="service-tabs">
             <button class="service-tab active" data-tab="consulting" data-color="#2563EB">
-                <span class="tab-icon">🤖</span>
                 <span class="tab-text">コンサルティング</span>
             </button>
             <button class="service-tab" data-tab="training" data-color="#10B981">
-                <span class="tab-icon">📚</span>
                 <span class="tab-text">研修・セミナー</span>
             </button>
             <button class="service-tab" data-tab="development" data-color="#8B5CF6">
-                <span class="tab-icon">🛠️</span>
                 <span class="tab-text">システム開発</span>
             </button>
             <div class="tab-indicator"></div>
