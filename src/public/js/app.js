@@ -110,11 +110,33 @@ function initMobileMenu() {
     // ハンバーガーボタンをナビゲーションの前に挿入
     nav.insertBefore(hamburger, navList);
     
+    // オーバーレイを作成
+    const overlay = document.createElement('div');
+    overlay.className = 'menu-overlay';
+    
     // クリックイベント
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('active');
         navList.classList.toggle('active');
         document.body.classList.toggle('menu-open');
+        
+        if (navList.classList.contains('active')) {
+            document.body.appendChild(overlay);
+        } else {
+            if (overlay.parentNode) {
+                overlay.parentNode.removeChild(overlay);
+            }
+        }
+    });
+    
+    // オーバーレイをクリックしたら閉じる
+    overlay.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navList.classList.remove('active');
+        document.body.classList.remove('menu-open');
+        if (overlay.parentNode) {
+            overlay.parentNode.removeChild(overlay);
+        }
     });
     
     // メニューリンクをクリックしたら閉じる
@@ -123,6 +145,9 @@ function initMobileMenu() {
             hamburger.classList.remove('active');
             navList.classList.remove('active');
             document.body.classList.remove('menu-open');
+            if (overlay.parentNode) {
+                overlay.parentNode.removeChild(overlay);
+            }
         });
     });
     
@@ -132,6 +157,9 @@ function initMobileMenu() {
             hamburger.classList.remove('active');
             navList.classList.remove('active');
             document.body.classList.remove('menu-open');
+            if (overlay.parentNode) {
+                overlay.parentNode.removeChild(overlay);
+            }
         }
     });
 }
