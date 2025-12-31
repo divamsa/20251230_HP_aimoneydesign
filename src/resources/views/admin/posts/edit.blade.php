@@ -16,7 +16,7 @@
         </div>
     @endif
 
-    <form method="POST" action="{{ route('admin.posts.update', $post) }}">
+    <form method="POST" action="{{ route('admin.posts.update', $post) }}" enctype="multipart/form-data">
         @csrf
         @method('PUT')
         <div class="form-group">
@@ -34,6 +34,30 @@
                     </option>
                 @endforeach
             </select>
+        </div>
+
+        <div class="form-group">
+            <label for="thumbnail">サムネイル画像</label>
+            @if($post->thumbnail_path)
+                <div style="margin-bottom:1rem;">
+                    <img src="{{ Storage::url($post->thumbnail_path) }}" 
+                         alt="現在のサムネイル" 
+                         style="max-width:400px; height:auto; border-radius:8px; border:1px solid #e0e0e0;">
+                </div>
+            @endif
+            <input type="file" id="thumbnail" name="thumbnail" accept="image/jpeg,image/png,image/gif,image/webp">
+            <p style="margin-top:.5rem; color:#666; font-size:.875rem;">
+                対応形式: JPEG, PNG, GIF, WebP（推奨サイズ: 1200x675px、16:9のアスペクト比）
+            </p>
+            <p style="margin-top:.5rem; color:#999; font-size:.875rem;">
+                新しい画像をアップロードすると、既存の画像が置き換えられます。
+            </p>
+            @if($post->thumbnail_path)
+                <label style="display:flex; align-items:center; margin-top:.5rem;">
+                    <input type="checkbox" name="remove_thumbnail" value="1">
+                    <span style="margin-left:.5rem;">画像を削除する</span>
+                </label>
+            @endif
         </div>
 
         <div class="form-group">

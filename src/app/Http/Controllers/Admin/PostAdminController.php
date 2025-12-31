@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Models\Post;
 use App\Services\ImageGenerationService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class PostAdminController extends Controller
 {
@@ -46,26 +47,41 @@ class PostAdminController extends Controller
             'content' => ['required', 'string'],
             'published_at' => ['nullable', 'date'],
             'category_id' => ['nullable', 'exists:categories,id'],
+            'thumbnail' => ['nullable', 'image', 'mimes:jpeg,png,gif,webp', 'max:5120'], // 最大5MB
         ], [
             'title.required' => 'タイトルを入力してください。',
             'title.max' => 'タイトルは255文字以内で入力してください。',
             'content.required' => '本文を入力してください。',
             'category_id.exists' => '選択されたカテゴリは無効です。',
+            'thumbnail.image' => '画像ファイルを選択してください。',
+            'thumbnail.mimes' => '画像形式はJPEG、PNG、GIF、WebPのいずれかです。',
+            'thumbnail.max' => '画像サイズは5MB以下にしてください。',
         ]);
 
-        // サムネイル画像を生成
-        $imageService = app(ImageGenerationService::class);
-        $thumbnailPath = $imageService->generateThumbnail($validated['title']);
-
-        if ($thumbnailPath) {
+        // 画像がアップロードされた場合
+        if ($request->hasFile('thumbnail')) {
+            $thumbnailPath = $request->file('thumbnail')->store('posts', 'public');
             $validated['thumbnail_path'] = $thumbnailPath;
+        } else {
+            // 画像がアップロードされていない場合、タイトルから自動生成
+            $imageService = app(ImageGenerationService::class);
+            $thumbnailPath = $imageService->generateThumbnail($validated['title']);
+
+            if ($thumbnailPath) {
+                $validated['thumbnail_path'] = $thumbnailPath;
+            }
         }
 
         Post::create($validated);
 
+        $message = 'ブログ記事を作成しました。';
+        if (isset($validated['thumbnail_path'])) {
+            $message .= $request->hasFile('thumbnail') ? ' サムネイル画像をアップロードしました。' : ' サムネイル画像も生成されました。';
+        }
+
         return redirect()
             ->route('admin.posts.index')
-            ->with('success', 'ブログ記事を作成しました。' . ($thumbnailPath ? ' サムネイル画像も生成されました。' : ''));
+            ->with('success', $message);
     }
 
     /**
@@ -103,18 +119,41 @@ class PostAdminController extends Controller
             'content' => ['required', 'string'],
             'published_at' => ['nullable', 'date'],
             'category_id' => ['nullable', 'exists:categories,id'],
+            'thumbnail' => ['nullable', 'image', 'mimes:jpeg,png,gif,webp', 'max:5120'], // 最大5MB
+            'remove_thumbnail' => ['nullable', 'boolean'],
         ], [
             'title.required' => 'タイトルを入力してください。',
             'title.max' => 'タイトルは255文字以内で入力してください。',
             'content.required' => '本文を入力してください。',
             'category_id.exists' => '選択されたカテゴリは無効です。',
+            'thumbnail.image' => '画像ファイルを選択してください。',
+            'thumbnail.mimes' => '画像形式はJPEG、PNG、GIF、WebPのいずれかです。',
+            'thumbnail.max' => '画像サイズは5MB以下にしてください。',
         ]);
 
-        // タイトルが変更された場合、新しいサムネイル画像を生成
-        if ($post->title !== $validated['title']) {
-            $imageService = app(ImageGenerationService::class);
+        $imageService = app(ImageGenerationService::class);
+
+        // 画像を削除する場合
+        if ($request->has('remove_thumbnail') && $request->remove_thumbnail) {
+            if ($post->thumbnail_path) {
+                $imageService->deleteThumbnail($post->thumbnail_path);
+                $validated['thumbnail_path'] = null;
+            }
+        }
+        // 新しい画像がアップロードされた場合
+        elseif ($request->hasFile('thumbnail')) {
+            // 既存の画像を削除
+            if ($post->thumbnail_path) {
+                $imageService->deleteThumbnail($post->thumbnail_path);
+            }
             
-            // 既存のサムネイルを削除
+            // 新しい画像を保存
+            $thumbnailPath = $request->file('thumbnail')->store('posts', 'public');
+            $validated['thumbnail_path'] = $thumbnailPath;
+        }
+        // タイトルが変更された場合、自動生成された画像を再生成
+        elseif ($post->title !== $validated['title'] && $post->thumbnail_path && strpos($post->thumbnail_path, 'thumbnails/') === 0) {
+            // 既存のサムネイルを削除（自動生成されたもののみ）
             $imageService->deleteThumbnail($post->thumbnail_path);
             
             // 新しいサムネイルを生成

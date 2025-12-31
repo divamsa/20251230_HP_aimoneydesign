@@ -16,7 +16,7 @@
         </div>
     @endif
 
-    <form method="POST" action="{{ route('admin.posts.store') }}">
+    <form method="POST" action="{{ route('admin.posts.store') }}" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
             <label for="title">タイトル <span style="color:red;">*</span></label>
@@ -33,6 +33,17 @@
                     </option>
                 @endforeach
             </select>
+        </div>
+
+        <div class="form-group">
+            <label for="thumbnail">サムネイル画像</label>
+            <input type="file" id="thumbnail" name="thumbnail" accept="image/jpeg,image/png,image/gif,image/webp">
+            <p style="margin-top:.5rem; color:#666; font-size:.875rem;">
+                対応形式: JPEG, PNG, GIF, WebP（推奨サイズ: 1200x675px、16:9のアスペクト比）
+            </p>
+            <p style="margin-top:.5rem; color:#999; font-size:.875rem;">
+                画像をアップロードしない場合、タイトルから自動生成されます。
+            </p>
         </div>
 
         <div class="form-group">
