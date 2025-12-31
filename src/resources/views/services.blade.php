@@ -217,7 +217,9 @@
             <div class="flow-steps">
                 <div class="flow-step" data-step="1">
                     <div class="flow-step-content">
-                        <div class="flow-step-icon">📞</div>
+                        <div class="card-bg-image">
+                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1000" alt="Contact Consultation">
+                        </div>
                         <div class="flow-step-number">1</div>
                         <div class="flow-step-progress">
                             <div class="progress-bar" data-progress="20"></div>
@@ -231,7 +233,9 @@
                 </div>
                 <div class="flow-step" data-step="2">
                     <div class="flow-step-content">
-                        <div class="flow-step-icon">🔍</div>
+                        <div class="card-bg-image">
+                            <img src="https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&fit=crop&q=80&w=1000" alt="Analysis Research">
+                        </div>
                         <div class="flow-step-number">2</div>
                         <div class="flow-step-progress">
                             <div class="progress-bar" data-progress="40"></div>
@@ -245,7 +249,9 @@
                 </div>
                 <div class="flow-step" data-step="3">
                     <div class="flow-step-content">
-                        <div class="flow-step-icon">📋</div>
+                        <div class="card-bg-image">
+                            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1000" alt="Planning Strategy">
+                        </div>
                         <div class="flow-step-number">3</div>
                         <div class="flow-step-progress">
                             <div class="progress-bar" data-progress="60"></div>
@@ -259,7 +265,9 @@
                 </div>
                 <div class="flow-step" data-step="4">
                     <div class="flow-step-content">
-                        <div class="flow-step-icon">🚀</div>
+                        <div class="card-bg-image">
+                            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=1000" alt="Implementation Development">
+                        </div>
                         <div class="flow-step-number">4</div>
                         <div class="flow-step-progress">
                             <div class="progress-bar" data-progress="80"></div>
@@ -273,7 +281,9 @@
                 </div>
                 <div class="flow-step" data-step="5">
                     <div class="flow-step-content">
-                        <div class="flow-step-icon">✨</div>
+                        <div class="card-bg-image">
+                            <img src="https://images.unsplash.com/photo-1522202176988-66270c4a4d14?auto=format&fit=crop&q=80&w=1000" alt="Support Maintenance">
+                        </div>
                         <div class="flow-step-number">5</div>
                         <div class="flow-step-progress">
                             <div class="progress-bar" data-progress="100"></div>
