@@ -521,7 +521,7 @@ body.menu-open {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0;
+    z-index: 1; /* 最背面 */
     pointer-events: none;
 }
 
@@ -529,20 +529,50 @@ body.menu-open {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.05; /* カード内背景は5% */
-    filter: grayscale(100%);
+    opacity: 0.25; /* 背景画像をより浮き上がらせる（25%） */
+    filter: grayscale(60%) brightness(0.9) contrast(1.1); /* グレースケールを弱めて色を少し残し、コントラストを上げる */
 }
 
 .stat-card, .service-card, .case-card {
     position: relative;
     overflow: hidden;
-    background-color: rgba(255, 255, 255, 0.9) !important; /* 背景画像を透かしつつ文字を読みやすく */
-    backdrop-filter: blur(5px);
+    background-color: #ffffff !important; /* カード自体は白 */
+    border: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    min-height: 200px;
 }
 
-.stat-card > *, .service-card > *, .case-card > * {
+/* カード内のテキストを確実に前面に出す */
+.stat-card > *:not(.card-bg-image), 
+.service-card > *:not(.card-bg-image), 
+.case-card > *:not(.card-bg-image) {
     position: relative;
-    z-index: 1;
+    z-index: 2; /* 画像より前面 */
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--main-color); /* メインカラー（ダークグレー）を適用 */
+    line-height: 1.2;
+    margin: 0.5rem 0;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* 文字の周りに白い光彩を入れて読みやすく */
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+.stat-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
 }
 
 /* 既存のbg-iconは削除または非表示 */
