@@ -170,24 +170,36 @@
         <p class="section-subtitle">各業界の課題に合わせた生成AI導入支援</p>
         <div class="solutions-grid">
             <div class="solution-card">
+                <div class="card-bg-image">
+                    <img src="https://images.unsplash.com/photo-1575517111478-7f6afd0973db?auto=format&fit=crop&q=80&w=1000" alt="Government Building">
+                </div>
                 <h3 class="solution-title">地方自治体</h3>
                 <p class="solution-description">
                     住民対応業務の効率化、文書作成の自動化、情報発信の強化など、自治体業務のDXをサポートします。
                 </p>
             </div>
             <div class="solution-card">
+                <div class="card-bg-image">
+                    <img src="https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&q=80&w=1000" alt="Museum Gallery">
+                </div>
                 <h3 class="solution-title">博物館・美術館</h3>
                 <p class="solution-description">
                     展示解説システム、来館者向けコンテンツ生成、学芸業務の効率化などをサポートします。
                 </p>
             </div>
             <div class="solution-card">
+                <div class="card-bg-image">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1000" alt="Small Business Office">
+                </div>
                 <h3 class="solution-title">中小企業</h3>
                 <p class="solution-description">
                     顧客対応の自動化、マーケティングコンテンツ生成、業務プロセスの効率化などをサポートします。
                 </p>
             </div>
             <div class="solution-card">
+                <div class="card-bg-image">
+                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=1000" alt="Non-profit Community">
+                </div>
                 <h3 class="solution-title">非営利団体</h3>
                 <p class="solution-description">
                     情報発信の強化、活動報告書の作成支援、ボランティア管理の効率化などをサポートします。
