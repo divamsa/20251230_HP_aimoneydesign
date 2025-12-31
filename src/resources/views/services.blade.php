@@ -250,7 +250,7 @@
                 <div class="flow-step" data-step="3">
                     <div class="flow-step-content">
                         <div class="card-bg-image">
-                            <img src="https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&fit=crop&q=80&w=1000" alt="Planning Strategy">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000" alt="Planning Strategy">
                         </div>
                         <div class="flow-step-number">3</div>
                         <div class="flow-step-progress">
