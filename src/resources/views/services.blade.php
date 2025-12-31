@@ -218,7 +218,7 @@
                 <div class="flow-step" data-step="1">
                     <div class="flow-step-content">
                         <div class="card-bg-image">
-                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1000" alt="Contact Consultation">
+                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1000" alt="Contact Consultation">
                         </div>
                         <div class="flow-step-number">1</div>
                         <div class="flow-step-progress">
@@ -250,7 +250,7 @@
                 <div class="flow-step" data-step="3">
                     <div class="flow-step-content">
                         <div class="card-bg-image">
-                            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1000" alt="Planning Strategy">
+                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1000" alt="Planning Strategy">
                         </div>
                         <div class="flow-step-number">3</div>
                         <div class="flow-step-progress">
@@ -266,7 +266,7 @@
                 <div class="flow-step" data-step="4">
                     <div class="flow-step-content">
                         <div class="card-bg-image">
-                            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=1000" alt="Implementation Development">
+                            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=1000" alt="Implementation Development">
                         </div>
                         <div class="flow-step-number">4</div>
                         <div class="flow-step-progress">
