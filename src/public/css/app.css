@@ -1442,8 +1442,8 @@ body.menu-open {
     max-height: none !important;
     object-fit: cover !important;
     object-position: center center !important;
-    opacity: 0.6 !important;
-    filter: grayscale(40%) brightness(1.0) contrast(1.3) saturate(1.2);
+    opacity: 0.35 !important;
+    filter: grayscale(50%) brightness(0.95) contrast(1.2) saturate(1.1);
     display: block !important;
     z-index: 0 !important;
     background-color: transparent !important;
