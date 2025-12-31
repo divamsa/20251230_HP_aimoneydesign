@@ -9,8 +9,8 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
     line-height: 1.6;
-    color: #553501;
-    background-color: #FFFAF4;
+    color: #1E293B;
+    background-color: #FFFFFF;
 }
 
 .container {
@@ -21,7 +21,7 @@ body {
 
 /* ヘッダー */
 .header {
-    background-color: #FFFAF4;
+    background-color: #FFFFFF;
     border-bottom: 1px solid #e0e0e0;
     padding: 1rem 0;
     position: sticky;
@@ -32,7 +32,7 @@ body {
 }
 
 .header.scrolled {
-    background-color: rgba(255, 250, 244, 0.95);
+    background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     padding: 0.75rem 0;
@@ -47,13 +47,13 @@ body {
 .logo a {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #DB4277;
+    color: #2563EB;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .logo a:hover {
-    color: #c03a6a;
+    color: #1D4ED8;
 }
 
 /* ナビゲーション */
@@ -70,7 +70,7 @@ body {
 }
 
 .nav-list a {
-    color: #553501;
+    color: #1E293B;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
@@ -79,13 +79,13 @@ body {
 }
 
 .nav-list a:hover {
-    color: #DB4277;
-    border-bottom-color: #DB4277;
+    color: #2563EB;
+    border-bottom-color: #2563EB;
 }
 
 .nav-list a.active {
-    color: #DB4277;
-    border-bottom-color: #DB4277;
+    color: #2563EB;
+    border-bottom-color: #2563EB;
 }
 
 /* ハンバーガーメニュー */
@@ -106,7 +106,7 @@ body {
 .hamburger span {
     width: 100%;
     height: 3px;
-    background-color: #553501;
+    background-color: #1E293B;
     border-radius: 3px;
     transition: all 0.3s ease;
     transform-origin: center;
@@ -157,26 +157,26 @@ body.menu-open {
 
 /* フッター */
 .footer {
-    background-color: #FFFAF4;
+    background-color: #FFFFFF;
     border-top: 1px solid #e0e0e0;
     padding: 2rem 0;
     margin-top: 4rem;
     text-align: center;
-    color: #553501;
+    color: #1E293B;
 }
 
 /* ページタイトル */
 .page-title {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #553501;
+    color: #1E293B;
     margin-bottom: 1rem;
     text-align: center;
 }
 
 .page-subtitle {
     font-size: 1.2rem;
-    color: #553501;
+    color: #1E293B;
     text-align: center;
     margin-bottom: 3rem;
     opacity: 0.8;
@@ -190,7 +190,7 @@ body.menu-open {
 .section-title {
     font-size: 2rem;
     font-weight: bold;
-    color: #553501;
+    color: #1E293B;
     margin-bottom: 1.5rem;
 }
 
@@ -198,7 +198,7 @@ body.menu-open {
 .btn {
     display: inline-block;
     padding: 0.75rem 2rem;
-    background-color: #DB4277;
+    background-color: #2563EB;
     color: #fff;
     text-decoration: none;
     border-radius: 0.5rem;
@@ -209,16 +209,16 @@ body.menu-open {
 }
 
 .btn:hover {
-    background-color: #c03a6a;
+    background-color: #1D4ED8;
 }
 
 .btn-secondary {
-    background-color: #DB4277;
+    background-color: #2563EB;
     opacity: 0.8;
 }
 
 .btn-secondary:hover {
-    background-color: #c03a6a;
+    background-color: #1D4ED8;
     opacity: 1;
 }
 
@@ -310,7 +310,7 @@ body.menu-open {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 500;
-    color: #553501;
+    color: #1E293B;
 }
 
 .form-group .required {
@@ -338,7 +338,7 @@ body.menu-open {
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #DB4277;
+    border-color: #2563EB;
 }
 
 .form-group textarea {
@@ -481,7 +481,7 @@ body.menu-open {
    ============================================ */
 
 .hero {
-    background: linear-gradient(135deg, #DB4277 0%, #c03a6a 100%);
+    background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
     color: #fff;
     padding: 8rem 0 6rem;
     position: relative;
@@ -559,19 +559,19 @@ body.menu-open {
 /* ボタンの改善 */
 .btn-primary {
     background: linear-gradient(135deg, #fff 0%, #f0f0f0 100%);
-    color: #DB4277;
+    color: #2563EB;
     font-weight: 600;
     padding: 1rem 2.5rem;
     font-size: 1.125rem;
     border-radius: 50px;
-    box-shadow: 0 4px 15px rgba(219, 66, 119, 0.3);
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
     transition: all 0.3s ease;
     transform: translateY(0);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(219, 66, 119, 0.4);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
     background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%);
 }
 
@@ -601,7 +601,7 @@ body.menu-open {
 
 .stats {
     padding: 5rem 0;
-    background: linear-gradient(to bottom, #FFFAF4 0%, #fff 100%);
+    background: linear-gradient(to bottom, #F8F9FA 0%, #fff 100%);
 }
 
 .stats-grid {
@@ -629,7 +629,7 @@ body.menu-open {
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, #DB4277 0%, #c03a6a 100%);
+    background: linear-gradient(90deg, #2563EB 0%, #1D4ED8 100%);
     transform: scaleX(0);
     transition: transform 0.3s ease;
 }
@@ -657,7 +657,7 @@ body.menu-open {
 .stat-number {
     font-size: 3.5rem;
     font-weight: 800;
-    color: #DB4277;
+    color: #2563EB;
     margin-bottom: 0.5rem;
     line-height: 1;
     min-height: 4rem;
@@ -668,7 +668,7 @@ body.menu-open {
 
 .stat-label {
     font-size: 1.125rem;
-    color: #553501;
+    color: #1E293B;
     font-weight: 500;
     opacity: 0.8;
 }
@@ -679,13 +679,13 @@ body.menu-open {
 
 .services-preview {
     padding: 5rem 0;
-    background: #FFFAF4;
+    background: #FFFFFF;
 }
 
 .section-subtitle {
     text-align: center;
     font-size: 1.25rem;
-    color: #553501;
+    color: #1E293B;
     margin-bottom: 3rem;
     opacity: 0.8;
 }
@@ -715,15 +715,15 @@ body.menu-open {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(219, 66, 119, 0.05) 0%, rgba(192, 58, 106, 0.05) 100%);
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(29, 78, 216, 0.05) 100%);
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
 .service-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 8px 30px rgba(219, 66, 119, 0.15);
-    border-color: #DB4277;
+    box-shadow: 0 8px 30px rgba(37, 99, 235, 0.15);
+    border-color: #2563EB;
 }
 
 .service-card:hover::after {
@@ -744,19 +744,19 @@ body.menu-open {
 .service-title {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #553501;
+    color: #1E293B;
     margin-bottom: 1rem;
 }
 
 .service-description {
-    color: #553501;
+    color: #1E293B;
     line-height: 1.7;
     margin-bottom: 1.5rem;
     opacity: 0.8;
 }
 
 .service-link {
-    color: #DB4277;
+    color: #2563EB;
     font-weight: 600;
     text-decoration: none;
     display: inline-flex;
@@ -768,7 +768,7 @@ body.menu-open {
 }
 
 .service-link:hover {
-    color: #c03a6a;
+    color: #1D4ED8;
     gap: 0.75rem;
 }
 
@@ -783,7 +783,7 @@ body.menu-open {
 
 .cases-preview {
     padding: 5rem 0;
-    background: linear-gradient(to bottom, #fff 0%, #FFFAF4 100%);
+    background: linear-gradient(to bottom, #fff 0%, #F8F9FA 100%);
 }
 
 .cases-grid {
@@ -811,7 +811,7 @@ body.menu-open {
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, #DB4277 0%, #c03a6a 100%);
+    background: linear-gradient(90deg, #2563EB 0%, #1D4ED8 100%);
     transform: scaleX(0);
     transition: transform 0.3s ease;
 }
@@ -828,7 +828,7 @@ body.menu-open {
 .case-category {
     display: inline-block;
     padding: 0.5rem 1rem;
-    background: linear-gradient(135deg, #DB4277 0%, #c03a6a 100%);
+    background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
     color: #fff;
     border-radius: 20px;
     font-size: 0.875rem;
@@ -839,19 +839,19 @@ body.menu-open {
 .case-title {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #553501;
+    color: #1E293B;
     margin-bottom: 1rem;
 }
 
 .case-description {
-    color: #553501;
+    color: #1E293B;
     line-height: 1.7;
     margin-bottom: 1.5rem;
     opacity: 0.8;
 }
 
 .case-link {
-    color: #DB4277;
+    color: #2563EB;
     font-weight: 600;
     text-decoration: none;
     display: inline-flex;
@@ -861,7 +861,7 @@ body.menu-open {
 }
 
 .case-link:hover {
-    color: #c03a6a;
+    color: #1D4ED8;
     gap: 0.75rem;
 }
 
@@ -871,7 +871,7 @@ body.menu-open {
 
 .cta {
     padding: 6rem 0;
-    background: linear-gradient(135deg, #DB4277 0%, #c03a6a 100%);
+    background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
     color: #fff;
     text-align: center;
     position: relative;
