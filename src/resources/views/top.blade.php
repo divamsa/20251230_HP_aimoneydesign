@@ -66,21 +66,33 @@
         <h2 class="section-title">実績数値</h2>
         <div class="stats-grid">
             <div class="stat-card">
+                <div class="card-bg-image">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1000" alt="Corporate Office">
+                </div>
                 <div class="stat-icon">🏢</div>
                 <div class="stat-number" data-target="100">0+</div>
                 <div class="stat-label">導入企業数</div>
             </div>
             <div class="stat-card">
+                <div class="card-bg-image">
+                    <img src="https://images.unsplash.com/photo-1575517111478-7f6afd0973db?auto=format&fit=crop&q=80&w=1000" alt="Government Building">
+                </div>
                 <div class="stat-icon">🏛️</div>
                 <div class="stat-number" data-target="50">0+</div>
                 <div class="stat-label">地方自治体</div>
             </div>
             <div class="stat-card">
+                <div class="card-bg-image">
+                    <img src="https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&q=80&w=1000" alt="Museum Art">
+                </div>
                 <div class="stat-icon">🎨</div>
                 <div class="stat-number" data-target="30">0+</div>
                 <div class="stat-label">博物館・美術館</div>
             </div>
             <div class="stat-card">
+                <div class="card-bg-image">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1000" alt="Satisfaction Smile">
+                </div>
                 <div class="stat-icon">⭐</div>
                 <div class="stat-number" data-target="95">0%</div>
                 <div class="stat-label">顧客満足度</div>

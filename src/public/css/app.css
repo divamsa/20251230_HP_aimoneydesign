@@ -515,11 +515,34 @@ body.menu-open {
     opacity: 0.08; /* ヒーローは少しだけ強め（8%） */
 }
 
+.card-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.card-bg-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.05; /* カード内背景は5% */
+    filter: grayscale(100%);
+}
+
 .stat-card, .service-card, .case-card {
     position: relative;
     overflow: hidden;
-    background-color: rgba(255, 255, 255, 0.8) !important; /* 背景画像を透かすために少し透過 */
+    background-color: rgba(255, 255, 255, 0.9) !important; /* 背景画像を透かしつつ文字を読みやすく */
     backdrop-filter: blur(5px);
+}
+
+.stat-card > *, .service-card > *, .case-card > * {
+    position: relative;
+    z-index: 1;
 }
 
 /* 既存のbg-iconは削除または非表示 */
