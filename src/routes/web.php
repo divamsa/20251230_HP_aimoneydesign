@@ -65,6 +65,7 @@ Route::prefix('admin')
     ->middleware(['auth', 'admin'])
     ->group(function () {
         Route::get('/contacts', [ContactAdminController::class, 'index'])->name('contacts.index');
+        Route::get('/contacts/export', [ContactAdminController::class, 'export'])->name('contacts.export');
         Route::get('/contacts/{contact}', [ContactAdminController::class, 'show'])->name('contacts.show');
         Route::patch('/contacts/{contact}/status', [ContactAdminController::class, 'updateStatus'])->name('contacts.updateStatus');
         

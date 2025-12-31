@@ -6,6 +6,7 @@ use App\Http\Requests\InquiryRequest;
 use App\Http\Requests\DownloadRequest;
 use App\Http\Requests\ConsultationRequest;
 use App\Mail\ContactMail;
+use App\Mail\ContactAutoReplyMail;
 use App\Models\Contact;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -39,7 +40,20 @@ class ContactController extends Controller
 
         // メール送信処理
         try {
-            Mail::to(config('mail.from.address'))->send(new ContactMail($contact));
+            // 管理者への通知メール（複数アドレスに対応）
+            $contactEmails = config('services.contact_emails');
+            if (!empty($contactEmails)) {
+                // 複数のメールアドレスが設定されている場合
+                foreach ($contactEmails as $email) {
+                    Mail::to($email)->send(new ContactMail($contact));
+                }
+            } else {
+                // 設定がない場合はデフォルトのメールアドレスに送信
+                Mail::to(config('mail.from.address'))->send(new ContactMail($contact));
+            }
+            
+            // お客様への自動返信メール
+            Mail::to($contact->email)->send(new ContactAutoReplyMail($contact));
         } catch (\Exception $e) {
             // メール送信エラーはログに記録するが、ユーザーには成功メッセージを表示
             \Log::error('メール送信エラー: ' . $e->getMessage());

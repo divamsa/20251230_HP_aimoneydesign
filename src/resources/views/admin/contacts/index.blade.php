@@ -39,6 +39,12 @@
         </form>
     </div>
 
+    <div style="margin-bottom: 1.5rem;">
+        <a href="{{ route('admin.contacts.export', ['type' => $type, 'status' => $status]) }}" class="btn" style="background:#10b981;">
+            CSVエクスポート（{{ $contacts->total() }}件）
+        </a>
+    </div>
+
     <div class="card">
         <h2 class="section-title">一覧</h2>
         <div style="overflow:auto;">

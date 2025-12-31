@@ -39,4 +39,19 @@ return [
 
     'google_api_key' => env('GOOGLE_API_KEY', ''),
 
+    /*
+    |--------------------------------------------------------------------------
+    | Contact Email Addresses
+    |--------------------------------------------------------------------------
+    |
+    | お問い合わせフォームの通知先メールアドレスを設定します。
+    | 複数のメールアドレスをカンマ区切りで指定できます。
+    | 例: CONTACT_EMAILS=admin@example.com,sales@example.com
+    |
+    */
+
+    'contact_emails' => array_filter(
+        array_map('trim', explode(',', env('CONTACT_EMAILS', '')))
+    ),
+
 ];
