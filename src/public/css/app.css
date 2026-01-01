@@ -88,6 +88,25 @@ body {
     border-bottom-color: #1F2937;
 }
 
+/* ヘッダー電話番号 */
+.header-phone {
+    display: flex;
+    align-items: center;
+}
+
+.phone-link {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    transition: all 0.3s ease;
+}
+
+.phone-link:hover {
+    color: #1F2937 !important;
+    transform: scale(1.05);
+}
+
 /* ハンバーガーメニュー */
 .hamburger {
     display: none;
@@ -285,6 +304,10 @@ body.menu-open {
         border-bottom: none;
         padding-left: 0.5rem;
         transition: padding-left 0.3s ease;
+    }
+
+    .header-phone {
+        display: none;
     }
 
     .page-title {

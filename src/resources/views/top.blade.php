@@ -46,12 +46,11 @@
     </div>
     <div class="container">
         <div class="hero-content">
-            <h1 class="hero-title">生成AI導入支援サービス</h1>
-            <p class="hero-subtitle">FP✖️不動産✖️生成AIを謳う株式会社マネーデザインの生成AI導入支援サービスです</p>
-            <p class="hero-description">中小企業、地方自治体、博物館・美術館など、様々な組織への生成AI導入支援を行っています。</p>
+            <h1 class="hero-title">生成AI導入で業務効率50%向上。<br>100社以上の実績で選ばれる導入支援</h1>
+            <p class="hero-subtitle">中小企業・自治体・文化施設の業務改革を、実績豊富な専門チームが完全サポート</p>
+            <p class="hero-description">生成AI導入により、業務時間の削減、コスト削減、顧客満足度の向上を実現。導入から運用まで、一貫したサポートでお客様の成功を支援します。</p>
             <div class="hero-actions">
-                <a href="{{ route('contact') }}" class="btn btn-primary">お問い合わせ</a>
-                <a href="{{ route('services') }}" class="btn btn-secondary">サービス詳細を見る</a>
+                <a href="{{ route('contact') }}" class="btn btn-primary">無料相談を申し込む（30秒で完了）</a>
             </div>
         </div>
     </div>
@@ -94,6 +93,9 @@
                 <div class="stat-label">顧客満足度</div>
             </div>
         </div>
+        <div class="section-actions" style="margin-top: 3rem; text-align: center;">
+            <a href="{{ route('contact') }}" class="btn btn-primary">無料相談を申し込む（初回60分無料）</a>
+        </div>
     </div>
 </section>
 
@@ -132,7 +134,8 @@
             </div>
         </div>
         <div class="section-actions">
-            <a href="{{ route('services') }}" class="btn">すべてのサービスを見る</a>
+            <a href="{{ route('services') }}" class="btn btn-primary">サービス詳細を見る</a>
+            <a href="{{ route('contact') }}" class="btn btn-secondary" style="margin-left: 1rem;">無料相談を申し込む</a>
         </div>
     </div>
 </section>
@@ -175,7 +178,8 @@
             </div>
         </div>
         <div class="section-actions">
-            <a href="{{ route('cases') }}" class="btn">すべての導入事例を見る</a>
+            <a href="{{ route('cases') }}" class="btn btn-primary">導入事例をもっと見る</a>
+            <a href="{{ route('contact') }}" class="btn btn-secondary" style="margin-left: 1rem;">無料相談を申し込む</a>
         </div>
     </div>
 </section>
@@ -184,11 +188,10 @@
 <section class="cta">
     <div class="container">
         <div class="cta-content">
-            <h2 class="cta-title">生成AI導入についてお気軽にご相談ください</h2>
-            <p class="cta-description">無料相談も承っております。まずはお問い合わせください。</p>
+            <h2 class="cta-title">今すぐ無料相談を申し込む<br>生成AI導入で業務効率を劇的に改善</h2>
+            <p class="cta-description">初回60分無料相談で、あなたの課題に最適な生成AI導入プランをご提案します。24時間以内にご返信いたします。</p>
             <div class="cta-actions">
-                <a href="{{ route('contact') }}" class="btn btn-primary">お問い合わせ</a>
-                <a href="{{ route('contact') }}" class="btn btn-secondary">資料請求</a>
+                <a href="{{ route('contact') }}" class="btn btn-primary">今すぐ無料相談を申し込む（30秒で完了）</a>
             </div>
         </div>
     </div>

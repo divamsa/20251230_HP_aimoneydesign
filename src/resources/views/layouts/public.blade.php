@@ -70,6 +70,12 @@
                         <li><a href="{{ route('blog.index') }}" class="{{ request()->routeIs('blog.*') ? 'active' : '' }}">ブログ</a></li>
                     </ul>
                 </nav>
+                <div class="header-phone" style="margin-left: auto; padding-left: 2rem;">
+                    <a href="tel:03-XXXX-XXXX" class="phone-link" style="color: #374151; text-decoration: none; font-weight: 600; font-size: 1.1rem; white-space: nowrap;">
+                        📞 03-XXXX-XXXX
+                        <span style="font-size: 0.85rem; color: #6B7280; display: block; margin-top: 0.25rem;">平日 9:00-18:00</span>
+                    </a>
+                </div>
             </div>
         </div>
     </header>
