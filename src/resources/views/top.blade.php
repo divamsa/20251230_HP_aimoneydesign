@@ -47,7 +47,7 @@
     <div class="container">
         <div class="hero-content">
             <h1 class="hero-title">生成AI導入で業務効率50%向上。<span class="hero-title-break">2025年4月から本格開始の導入支援</span></h1>
-            <p class="hero-subtitle">中小企業・自治体・文化施設の業務改革を、専門チームが完全サポート。<span class="hero-subtitle-break">早期導入のお客様には特別なサポートプランをご用意</span></p>
+            <p class="hero-subtitle">中小企業・自治体・文化施設の業務改革を、<span class="hero-subtitle-break">専門チームが完全サポート。早期導入のお客様には特別なサポートプランをご用意</span></p>
             <p class="hero-description">生成AI導入により、業務時間の削減、コスト削減、顧客満足度の向上を実現。2025年4月から本格的に支援業務を開始いたします。導入から運用まで、一貫したサポートでお客様の成功を支援します。</p>
             <div class="hero-actions">
                 <a href="{{ route('contact') }}" class="btn btn-primary">無料相談を申し込む（30秒で完了）</a>
@@ -252,7 +252,7 @@
 <section class="cta">
     <div class="container">
         <div class="cta-content">
-            <h2 class="cta-title">今すぐ無料相談を申し込む<span class="cta-title-break">生成AI導入で業務効率を劇的に改善</span></h2>
+            <h2 class="cta-title">今すぐ無料相談を申し込む。<span class="cta-title-break">生成AI導入で業務効率を劇的に改善</span></h2>
             <p class="cta-description">初回60分無料相談で、あなたの課題に最適な生成AI導入プランをご提案します。24時間以内にご返信いたします。</p>
             <div class="cta-actions">
                 <a href="{{ route('contact') }}" class="btn btn-primary">今すぐ無料相談を申し込む（30秒で完了）</a>

@@ -1553,7 +1553,7 @@ body.menu-open {
     display: block;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .hero-title-break {
         display: inline;
     }
@@ -1577,7 +1577,7 @@ body.menu-open {
     display: block;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .hero-subtitle-break {
         display: inline;
     }
@@ -2026,7 +2026,7 @@ body.menu-open {
     display: block;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .cta-title-break {
         display: inline;
     }
@@ -2041,7 +2041,7 @@ body.menu-open {
     display: block;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 768px) {
     .stats-breakdown-break {
         display: inline;
     }
