@@ -2,17 +2,17 @@
 
 @section('title', '導入事例・実績 - 株式会社マネーデザイン | 生成AI導入支援')
 
-@section('description', '100社以上の導入実績があります。地方自治体、博物館・美術館、中小企業など、様々な組織への生成AI導入事例をご紹介します。業務効率化、顧客対応改善、文書作成支援などの実績があります。')
+@section('description', '2025年4月から本格的に支援業務を開始。地方自治体、博物館・美術館、中小企業など、様々な組織への生成AI導入事例をご紹介します。業務効率化、顧客対応改善、文書作成支援などの実績があります。')
 
 @section('keywords', '生成AI導入事例,AI導入実績,地方自治体AI導入,博物館AI導入,美術館AI導入,中小企業AI導入,マネーデザイン')
 
 @section('og_title', '導入事例・実績 - 株式会社マネーデザイン | 生成AI導入支援')
-@section('og_description', '100社以上の導入実績があります。地方自治体、博物館・美術館、中小企業など、様々な組織への生成AI導入事例をご紹介します。')
+@section('og_description', '2025年4月から本格的に支援業務を開始。地方自治体、博物館・美術館、中小企業など、様々な組織への生成AI導入事例をご紹介します。')
 @section('og_url', route('cases'))
 @section('og_type', 'website')
 
 @section('twitter_title', '導入事例・実績 - 株式会社マネーデザイン')
-@section('twitter_description', '100社以上の導入実績があります。地方自治体、博物館・美術館、中小企業など、様々な組織への生成AI導入事例をご紹介します。')
+@section('twitter_description', '2025年4月から本格的に支援業務を開始。地方自治体、博物館・美術館、中小企業など、様々な組織への生成AI導入事例をご紹介します。')
 
 @push('structured_data')
 <script type="application/ld+json">
@@ -49,27 +49,40 @@
     
     <!-- 実績数値 -->
     <section class="cases-stats">
+        <div style="text-align: center; margin-bottom: 2rem;">
+            <p style="font-size: 1.2rem; color: #374151; font-weight: 600; margin-bottom: 0.5rem;">✨ 支援業務開始：2025年4月 ✨</p>
+            <p style="font-size: 1rem; color: #6B7280;">2024年12月時点の実績（合計13社・団体）</p>
+        </div>
         <div class="stats-grid">
             <div class="stat-card">
-                <div class="stat-number" data-target="120">0</div>
+                <div class="stat-number" data-target="5">0</div>
                 <div class="stat-label">導入企業数</div>
-                <div class="stat-detail" style="font-size: 0.9rem; color: #6B7280; margin-top: 0.5rem;">社以上（2024年12月時点）</div>
+                <div class="stat-detail" style="font-size: 0.9rem; color: #6B7280; margin-top: 0.5rem;">社（中小企業）</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number" data-target="50">0</div>
+                <div class="stat-number" data-target="2">0</div>
                 <div class="stat-label">地方自治体</div>
-                <div class="stat-detail" style="font-size: 0.9rem; color: #6B7280; margin-top: 0.5rem;">以上の自治体に導入実績</div>
+                <div class="stat-detail" style="font-size: 0.9rem; color: #6B7280; margin-top: 0.5rem;">つの自治体に導入実績</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number" data-target="30">0</div>
+                <div class="stat-number" data-target="5">0</div>
                 <div class="stat-label">博物館・美術館</div>
-                <div class="stat-detail" style="font-size: 0.9rem; color: #6B7280; margin-top: 0.5rem;">以上の文化施設に導入実績</div>
+                <div class="stat-detail" style="font-size: 0.9rem; color: #6B7280; margin-top: 0.5rem;">つの文化施設に導入実績</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number" data-target="95">0</div>
-                <div class="stat-label">顧客満足度</div>
-                <div class="stat-detail" style="font-size: 0.9rem; color: #6B7280; margin-top: 0.5rem;">の顧客が「満足」と回答<br>（2024年実施、回答数80社）</div>
+                <div class="stat-number" data-target="1">0</div>
+                <div class="stat-label">非営利団体</div>
+                <div class="stat-detail" style="font-size: 0.9rem; color: #6B7280; margin-top: 0.5rem;">つの団体に導入実績</div>
             </div>
+        </div>
+        <div style="margin-top: 3rem; padding: 2rem; background: linear-gradient(135deg, #F3F4F6 0%, #E5E7EB 100%); border-radius: 12px; text-align: center;">
+            <p style="font-size: 1.1rem; color: #374151; font-weight: 600; margin-bottom: 1rem;">2025年4月から本格的に支援業務を開始</p>
+            <p style="font-size: 0.95rem; color: #6B7280; line-height: 1.7; margin-bottom: 1.5rem;">
+                2025年4月から本格的に生成AI導入支援業務を開始いたします。<br>
+                早期導入のお客様には、特別なサポートプランをご用意しております。<br>
+                まずは無料相談で、お気軽にご相談ください。
+            </p>
+            <a href="{{ route('contact') }}" class="btn btn-primary">無料相談を申し込む（30秒で完了）</a>
         </div>
     </section>
 

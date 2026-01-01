@@ -2,17 +2,17 @@
 
 @section('title', 'トップページ - 株式会社マネーデザイン | 生成AI導入支援')
 
-@section('description', 'FP✖️不動産✖️生成AIを謳う株式会社マネーデザインの生成AI導入支援サービス。中小企業、地方自治体、博物館・美術館など、様々な組織への生成AI導入支援を行っています。100社以上の導入実績があります。')
+@section('description', 'FP✖️不動産✖️生成AIを謳う株式会社マネーデザインの生成AI導入支援サービス。中小企業、地方自治体、博物館・美術館など、様々な組織への生成AI導入支援を行っています。2025年4月から本格的に支援業務を開始いたします。')
 
 @section('keywords', '生成AI,AI導入,AIコンサルティング,AI研修,AIシステム開発,マネーデザイン,FP,不動産,地方自治体,博物館,美術館')
 
 @section('og_title', '株式会社マネーデザイン | 生成AI導入支援サービス')
-@section('og_description', 'FP✖️不動産✖️生成AIを謳う株式会社マネーデザインの生成AI導入支援サービス。100社以上の導入実績があります。')
+@section('og_description', 'FP✖️不動産✖️生成AIを謳う株式会社マネーデザインの生成AI導入支援サービス。2025年4月から本格的に支援業務を開始いたします。')
 @section('og_url', route('top'))
 @section('og_type', 'website')
 
 @section('twitter_title', '株式会社マネーデザイン | 生成AI導入支援サービス')
-@section('twitter_description', 'FP✖️不動産✖️生成AIを謳う株式会社マネーデザインの生成AI導入支援サービス。100社以上の導入実績があります。')
+@section('twitter_description', 'FP✖️不動産✖️生成AIを謳う株式会社マネーデザインの生成AI導入支援サービス。2025年4月から本格的に支援業務を開始いたします。')
 
 @push('structured_data')
 <script type="application/ld+json">
@@ -46,9 +46,9 @@
     </div>
     <div class="container">
         <div class="hero-content">
-            <h1 class="hero-title">生成AI導入で業務効率50%向上。<br>100社以上の実績で選ばれる導入支援</h1>
-            <p class="hero-subtitle">中小企業・自治体・文化施設の業務改革を、実績豊富な専門チームが完全サポート</p>
-            <p class="hero-description">生成AI導入により、業務時間の削減、コスト削減、顧客満足度の向上を実現。導入から運用まで、一貫したサポートでお客様の成功を支援します。</p>
+            <h1 class="hero-title">生成AI導入で業務効率50%向上。<br>2025年4月から本格開始の導入支援</h1>
+            <p class="hero-subtitle">中小企業・自治体・文化施設の業務改革を、専門チームが完全サポート。早期導入のお客様には特別なサポートプランをご用意</p>
+            <p class="hero-description">生成AI導入により、業務時間の削減、コスト削減、顧客満足度の向上を実現。2025年4月から本格的に支援業務を開始いたします。導入から運用まで、一貫したサポートでお客様の成功を支援します。</p>
             <div class="hero-actions">
                 <a href="{{ route('contact') }}" class="btn btn-primary">無料相談を申し込む（30秒で完了）</a>
             </div>
@@ -63,61 +63,69 @@
     </div>
     <div class="container" style="position: relative; z-index: 1;">
         <h2 class="section-title">実績数値</h2>
-        <p class="section-subtitle" style="text-align: center; margin-bottom: 3rem; color: #6B7280; font-size: 1.1rem;">2024年12月時点の実績</p>
+        <p class="section-subtitle" style="text-align: center; margin-bottom: 1rem; color: #374151; font-size: 1.2rem; font-weight: 600;">支援業務開始：2025年4月</p>
+        <p class="section-subtitle" style="text-align: center; margin-bottom: 3rem; color: #6B7280; font-size: 1.1rem;">2024年12月時点の実績（合計13社・団体）</p>
         <div class="stats-grid">
             <div class="stat-card">
                 <div class="card-bg-image">
                     <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1000" alt="Corporate Office">
                 </div>
-                <div class="stat-number" data-target="120">0</div>
+                <div class="stat-number" data-target="5">0</div>
                 <div class="stat-label">導入企業数</div>
-                <div class="stat-detail" style="font-size: 0.9rem; color: #6B7280; margin-top: 0.5rem;">社以上（2024年12月時点）</div>
+                <div class="stat-detail" style="font-size: 0.9rem; color: #6B7280; margin-top: 0.5rem;">社（中小企業）</div>
             </div>
             <div class="stat-card">
                 <div class="card-bg-image">
                     <img src="https://images.unsplash.com/photo-1575517111478-7f6afd0973db?auto=format&fit=crop&q=80&w=1000" alt="Government Building">
                 </div>
-                <div class="stat-number" data-target="50">0</div>
+                <div class="stat-number" data-target="2">0</div>
                 <div class="stat-label">地方自治体</div>
-                <div class="stat-detail" style="font-size: 0.9rem; color: #6B7280; margin-top: 0.5rem;">以上の自治体に導入実績</div>
+                <div class="stat-detail" style="font-size: 0.9rem; color: #6B7280; margin-top: 0.5rem;">つの自治体に導入実績</div>
             </div>
             <div class="stat-card">
                 <div class="card-bg-image">
                     <img src="https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&q=80&w=1000" alt="Museum Art">
                 </div>
-                <div class="stat-number" data-target="30">0</div>
+                <div class="stat-number" data-target="5">0</div>
                 <div class="stat-label">博物館・美術館</div>
-                <div class="stat-detail" style="font-size: 0.9rem; color: #6B7280; margin-top: 0.5rem;">以上の文化施設に導入実績</div>
+                <div class="stat-detail" style="font-size: 0.9rem; color: #6B7280; margin-top: 0.5rem;">つの文化施設に導入実績</div>
             </div>
             <div class="stat-card">
                 <div class="card-bg-image">
                     <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1000" alt="Satisfaction Smile">
                 </div>
-                <div class="stat-number" data-target="95">0</div>
-                <div class="stat-label">顧客満足度</div>
-                <div class="stat-detail" style="font-size: 0.9rem; color: #6B7280; margin-top: 0.5rem;">の顧客が「満足」と回答<br>（2024年実施、回答数80社）</div>
+                <div class="stat-number" data-target="1">0</div>
+                <div class="stat-label">非営利団体</div>
+                <div class="stat-detail" style="font-size: 0.9rem; color: #6B7280; margin-top: 0.5rem;">つの団体に導入実績</div>
             </div>
         </div>
         <!-- 業種別内訳 -->
         <div class="stats-breakdown" style="margin-top: 4rem; padding: 2rem; background: rgba(255, 255, 255, 0.9); border-radius: 12px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);">
-            <h3 style="font-size: 1.5rem; font-weight: 700; color: #374151; margin-bottom: 1.5rem; text-align: center;">導入実績の内訳</h3>
+            <h3 style="font-size: 1.5rem; font-weight: 700; color: #374151; margin-bottom: 1.5rem; text-align: center;">導入実績の内訳（合計13社・団体）</h3>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 2rem;">
                 <div style="text-align: center;">
                     <div style="font-size: 2rem; font-weight: 700; color: #374151; margin-bottom: 0.5rem;">中小企業</div>
-                    <div style="font-size: 1.2rem; color: #6B7280;">70社以上</div>
+                    <div style="font-size: 1.2rem; color: #6B7280;">5社</div>
                 </div>
                 <div style="text-align: center;">
                     <div style="font-size: 2rem; font-weight: 700; color: #374151; margin-bottom: 0.5rem;">地方自治体</div>
-                    <div style="font-size: 1.2rem; color: #6B7280;">50以上</div>
+                    <div style="font-size: 1.2rem; color: #6B7280;">2</div>
                 </div>
                 <div style="text-align: center;">
                     <div style="font-size: 2rem; font-weight: 700; color: #374151; margin-bottom: 0.5rem;">博物館・美術館</div>
-                    <div style="font-size: 1.2rem; color: #6B7280;">30以上</div>
+                    <div style="font-size: 1.2rem; color: #6B7280;">5</div>
                 </div>
                 <div style="text-align: center;">
                     <div style="font-size: 2rem; font-weight: 700; color: #374151; margin-bottom: 0.5rem;">非営利団体</div>
-                    <div style="font-size: 1.2rem; color: #6B7280;">20以上</div>
+                    <div style="font-size: 1.2rem; color: #6B7280;">1</div>
                 </div>
+            </div>
+            <div style="margin-top: 2rem; padding: 1.5rem; background: linear-gradient(135deg, #F3F4F6 0%, #E5E7EB 100%); border-radius: 12px; text-align: center;">
+                <p style="font-size: 1.1rem; color: #374151; font-weight: 600; margin-bottom: 0.5rem;">✨ 支援業務開始：2025年4月 ✨</p>
+                <p style="font-size: 0.95rem; color: #6B7280; line-height: 1.7;">
+                    2025年4月から本格的に支援業務を開始いたします。<br>
+                    早期導入のお客様には、特別なサポートプランをご用意しております。
+                </p>
             </div>
         </div>
         <div class="section-actions" style="margin-top: 3rem; text-align: center;">
