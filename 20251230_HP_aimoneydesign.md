@@ -3634,6 +3634,38 @@ GOOGLE_ANALYTICS_ID=G-XXXXXXXXXX
 
 ---
 
+#### ✅ ヒーローセクションのレイアウト改善（2025年1月） ✅ 完了
+
+**実装日**: 2025年1月
+
+##### ヒーローセクションのテキストを左寄せに変更 ✅ 完了
+- ✅ **レイアウトの改善**
+  - ヒーローセクションのテキストを中央揃えから左寄せに変更
+  - `text-align: center` → `text-align: left`
+  - `max-width: 800px` → `max-width: 1200px`（より広い幅に拡張）
+  - `margin: 0 auto` → `margin: 0`（左寄せのため）
+
+- ✅ **ヒーローセクション全体の配置**
+  - `justify-content: flex-start`を追加（左寄せ）
+  - よりモダンで読みやすいレイアウトに改善
+
+- ✅ **説明文の左寄せ**
+  - `margin-left: auto; margin-right: auto;` → `margin-left: 0; margin-right: auto;`
+  - `max-width: 600px` → `max-width: 700px`
+
+- ✅ **アクションボタンの左寄せ**
+  - `justify-content: center` → `justify-content: flex-start`
+
+### 実装ファイル（ヒーローセクションのレイアウト改善）
+
+- ✅ `src/public/css/app.css` - ヒーローセクションのレイアウトを左寄せに変更
+
+### Gitコミット（ヒーローセクションのレイアウト改善）
+
+- ✅ **コミット1**: `feat: ヒーローセクションのテキストを左寄せに変更`
+
+---
+
 *作成日: 2025年12月29日*  
-*最終更新: 2025年1月（デザイン改善の実装完了を要件定義書に追加）*
+*最終更新: 2025年1月（ヒーローセクションのレイアウト改善を追加）*
 
