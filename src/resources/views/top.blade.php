@@ -169,7 +169,7 @@
         </div>
         <div class="section-actions">
             <a href="{{ route('services') }}" class="btn btn-primary">サービス詳細を見る</a>
-            <a href="{{ route('contact') }}" class="btn btn-secondary" style="margin-left: 1rem;">無料相談を申し込む</a>
+            <a href="{{ route('contact') }}" class="btn btn-primary" style="margin-left: 1rem;">無料相談を申し込む</a>
         </div>
     </div>
 </section>
@@ -243,7 +243,7 @@
         </div>
         <div class="section-actions">
             <a href="{{ route('cases') }}" class="btn btn-primary">導入事例をもっと見る</a>
-            <a href="{{ route('contact') }}" class="btn btn-secondary" style="margin-left: 1rem;">無料相談を申し込む</a>
+            <a href="{{ route('contact') }}" class="btn btn-primary" style="margin-left: 1rem;">無料相談を申し込む</a>
         </div>
     </div>
 </section>

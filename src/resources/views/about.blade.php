@@ -160,7 +160,7 @@
                 <p class="cta-description">無料相談も承っております。まずはお問い合わせください。</p>
                 <div class="cta-actions">
                     <a href="{{ route('contact') }}" class="btn btn-primary">お問い合わせ</a>
-                    <a href="{{ route('contact') }}" class="btn btn-secondary">無料相談</a>
+                    <a href="{{ route('contact') }}" class="btn btn-primary">無料相談</a>
                 </div>
             </div>
         </div>
