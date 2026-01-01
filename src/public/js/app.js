@@ -1,7 +1,7 @@
 // カウントアップアニメーション
 function animateCounter(element, target, suffix = '', duration = 2000) {
-    const start = 0;
-    const increment = target / (duration / 16); // 60fps
+    const start = parseInt(element.textContent) || 0;
+    const increment = (target - start) / (duration / 16); // 60fps
     let current = start;
     
     const timer = setInterval(() => {
@@ -32,10 +32,16 @@ function initCounterAnimation() {
             if (entry.isIntersecting) {
                 statNumbers.forEach(statNumber => {
                     const target = parseInt(statNumber.dataset.target);
+                    const currentValue = parseInt(statNumber.textContent) || 0;
                     
                     if (target && !statNumber.dataset.animated) {
                         statNumber.dataset.animated = 'true';
-                        statNumber.textContent = '0';
+                        // 初期値が既に設定されている場合は、その値から開始
+                        if (currentValue === target) {
+                            // 既に目標値が表示されている場合はアニメーションをスキップ
+                            return;
+                        }
+                        statNumber.textContent = currentValue.toString();
                         animateCounter(statNumber, target, '');
                     }
                 });

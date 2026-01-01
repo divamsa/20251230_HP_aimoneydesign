@@ -55,22 +55,22 @@
         </div>
         <div class="stats-grid">
             <div class="stat-card">
-                <div class="stat-number" data-target="5">0</div>
+                <div class="stat-number" data-target="5">5</div>
                 <div class="stat-label">導入企業数</div>
                 <div class="stat-detail" style="font-size: 0.9rem; color: #6B7280; margin-top: 0.5rem;">社（中小企業）</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number" data-target="2">0</div>
+                <div class="stat-number" data-target="2">2</div>
                 <div class="stat-label">地方自治体</div>
                 <div class="stat-detail" style="font-size: 0.9rem; color: #6B7280; margin-top: 0.5rem;">つの自治体に導入実績</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number" data-target="5">0</div>
+                <div class="stat-number" data-target="5">5</div>
                 <div class="stat-label">博物館・美術館</div>
                 <div class="stat-detail" style="font-size: 0.9rem; color: #6B7280; margin-top: 0.5rem;">つの文化施設に導入実績</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number" data-target="1">0</div>
+                <div class="stat-number" data-target="1">1</div>
                 <div class="stat-label">非営利団体</div>
                 <div class="stat-detail" style="font-size: 0.9rem; color: #6B7280; margin-top: 0.5rem;">つの団体に導入実績</div>
             </div>
