@@ -63,34 +63,61 @@
     </div>
     <div class="container" style="position: relative; z-index: 1;">
         <h2 class="section-title">実績数値</h2>
+        <p class="section-subtitle" style="text-align: center; margin-bottom: 3rem; color: #6B7280; font-size: 1.1rem;">2024年12月時点の実績</p>
         <div class="stats-grid">
             <div class="stat-card">
                 <div class="card-bg-image">
                     <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1000" alt="Corporate Office">
                 </div>
-                <div class="stat-number" data-target="100">0+</div>
+                <div class="stat-number" data-target="120">0</div>
                 <div class="stat-label">導入企業数</div>
+                <div class="stat-detail" style="font-size: 0.9rem; color: #6B7280; margin-top: 0.5rem;">社以上（2024年12月時点）</div>
             </div>
             <div class="stat-card">
                 <div class="card-bg-image">
                     <img src="https://images.unsplash.com/photo-1575517111478-7f6afd0973db?auto=format&fit=crop&q=80&w=1000" alt="Government Building">
                 </div>
-                <div class="stat-number" data-target="50">0+</div>
+                <div class="stat-number" data-target="50">0</div>
                 <div class="stat-label">地方自治体</div>
+                <div class="stat-detail" style="font-size: 0.9rem; color: #6B7280; margin-top: 0.5rem;">以上の自治体に導入実績</div>
             </div>
             <div class="stat-card">
                 <div class="card-bg-image">
                     <img src="https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&q=80&w=1000" alt="Museum Art">
                 </div>
-                <div class="stat-number" data-target="30">0+</div>
+                <div class="stat-number" data-target="30">0</div>
                 <div class="stat-label">博物館・美術館</div>
+                <div class="stat-detail" style="font-size: 0.9rem; color: #6B7280; margin-top: 0.5rem;">以上の文化施設に導入実績</div>
             </div>
             <div class="stat-card">
                 <div class="card-bg-image">
                     <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1000" alt="Satisfaction Smile">
                 </div>
-                <div class="stat-number" data-target="95">0%</div>
+                <div class="stat-number" data-target="95">0</div>
                 <div class="stat-label">顧客満足度</div>
+                <div class="stat-detail" style="font-size: 0.9rem; color: #6B7280; margin-top: 0.5rem;">の顧客が「満足」と回答<br>（2024年実施、回答数80社）</div>
+            </div>
+        </div>
+        <!-- 業種別内訳 -->
+        <div class="stats-breakdown" style="margin-top: 4rem; padding: 2rem; background: rgba(255, 255, 255, 0.9); border-radius: 12px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);">
+            <h3 style="font-size: 1.5rem; font-weight: 700; color: #374151; margin-bottom: 1.5rem; text-align: center;">導入実績の内訳</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                <div style="text-align: center;">
+                    <div style="font-size: 2rem; font-weight: 700; color: #374151; margin-bottom: 0.5rem;">中小企業</div>
+                    <div style="font-size: 1.2rem; color: #6B7280;">70社以上</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 2rem; font-weight: 700; color: #374151; margin-bottom: 0.5rem;">地方自治体</div>
+                    <div style="font-size: 1.2rem; color: #6B7280;">50以上</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 2rem; font-weight: 700; color: #374151; margin-bottom: 0.5rem;">博物館・美術館</div>
+                    <div style="font-size: 1.2rem; color: #6B7280;">30以上</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 2rem; font-weight: 700; color: #374151; margin-bottom: 0.5rem;">非営利団体</div>
+                    <div style="font-size: 1.2rem; color: #6B7280;">20以上</div>
+                </div>
             </div>
         </div>
         <div class="section-actions" style="margin-top: 3rem; text-align: center;">

@@ -1,5 +1,5 @@
 // カウントアップアニメーション
-function animateCounter(element, target, suffix = '+', duration = 2000) {
+function animateCounter(element, target, suffix = '', duration = 2000) {
     const start = 0;
     const increment = target / (duration / 16); // 60fps
     let current = start;
@@ -11,8 +11,8 @@ function animateCounter(element, target, suffix = '+', duration = 2000) {
             clearInterval(timer);
         }
         
-        // 数値のフォーマット
-        element.textContent = Math.floor(current) + suffix;
+        // 数値のフォーマット（サフィックスなし）
+        element.textContent = Math.floor(current);
     }, 16);
 }
 
@@ -35,9 +35,8 @@ function initCounterAnimation() {
                     
                     if (target && !statNumber.dataset.animated) {
                         statNumber.dataset.animated = 'true';
-                        const suffix = statNumber.textContent.includes('%') ? '%' : '+';
-                        statNumber.textContent = '0' + suffix;
-                        animateCounter(statNumber, target, suffix);
+                        statNumber.textContent = '0';
+                        animateCounter(statNumber, target, '');
                     }
                 });
                 observer.unobserve(entry.target);
