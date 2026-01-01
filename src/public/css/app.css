@@ -307,6 +307,7 @@ body {
     transition: all var(--duration-base) var(--ease-out);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    overflow: visible;
 }
 
 .header::before {
@@ -315,18 +316,25 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--color-primary-600), var(--color-secondary-500), var(--color-primary-600));
-    background-size: 200% 100%;
-    animation: gradient-shift 3s ease infinite;
+    height: 4px;
+    background: linear-gradient(90deg, 
+        #2563eb 0%, 
+        #9333ea 25%,
+        #2563eb 50%,
+        #9333ea 75%,
+        #2563eb 100%);
+    background-size: 300% 100%;
+    animation: gradient-shift 4s linear infinite;
+    z-index: 1;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
 }
 
 @keyframes gradient-shift {
-    0%, 100% {
+    0% {
         background-position: 0% 50%;
     }
-    50% {
-        background-position: 100% 50%;
+    100% {
+        background-position: 300% 50%;
     }
 }
 
@@ -343,6 +351,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    z-index: 2;
 }
 
 .logo a {
