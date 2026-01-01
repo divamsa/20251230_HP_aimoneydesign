@@ -74,6 +74,28 @@
     <h1 class="page-title" id="services">サービス紹介</h1>
     <p class="page-subtitle">生成AI導入支援サービスをご提供しています</p>
     
+    <!-- 差別化ポイント -->
+    <section class="differentiation-points" style="margin: 3rem 0; padding: 2.5rem; background: linear-gradient(135deg, #F3F4F6 0%, #E5E7EB 100%); border-radius: 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);">
+        <h2 style="font-size: 1.75rem; font-weight: 700; color: #374151; margin-bottom: 1.5rem; text-align: center;">なぜマネーデザインを選ぶのか</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem;">
+            <div style="text-align: center; padding: 1.5rem; background: rgba(255, 255, 255, 0.8); border-radius: 12px;">
+                <div style="font-size: 2.5rem; margin-bottom: 1rem;">🎯</div>
+                <h3 style="font-size: 1.25rem; font-weight: 700; color: #374151; margin-bottom: 0.75rem;">専門知識 × AI技術</h3>
+                <p style="color: #6B7280; line-height: 1.7;">FP・不動産の専門知識とAI技術を融合した、独自の導入支援サービス</p>
+            </div>
+            <div style="text-align: center; padding: 1.5rem; background: rgba(255, 255, 255, 0.8); border-radius: 12px;">
+                <div style="font-size: 2.5rem; margin-bottom: 1rem;">🏢</div>
+                <h3 style="font-size: 1.25rem; font-weight: 700; color: #374151; margin-bottom: 0.75rem;">中小企業・自治体特化</h3>
+                <p style="color: #6B7280; line-height: 1.7;">中小企業・自治体・文化施設に特化した、実績豊富な導入支援</p>
+            </div>
+            <div style="text-align: center; padding: 1.5rem; background: rgba(255, 255, 255, 0.8); border-radius: 12px;">
+                <div style="font-size: 2.5rem; margin-bottom: 1rem;">🔄</div>
+                <h3 style="font-size: 1.25rem; font-weight: 700; color: #374151; margin-bottom: 0.75rem;">一貫したサポート</h3>
+                <p style="color: #6B7280; line-height: 1.7;">導入から運用まで、継続的なサポートでお客様の成功を支援</p>
+            </div>
+        </div>
+    </section>
+    
     <!-- インタラクティブなタブ切り替えシステム -->
     <section class="services-detail">
         <div class="service-tabs">
@@ -98,7 +120,8 @@
                     </div>
                     <h2 class="service-detail-title">生成AI導入コンサルティング</h2>
                     <p class="service-detail-description">
-                        企業の課題に合わせた生成AI導入戦略の策定から実装まで、トータルサポートを提供します。
+                        企業の課題に合わせた生成AI導入戦略の策定から実装まで、トータルサポートを提供します。<br>
+                        <strong style="color: #374151;">FP・不動産の専門知識とAI技術を融合</strong>した、中小企業・自治体特化型の導入支援です。導入後の運用サポートまで一貫して対応いたします。
                     </p>
                     <div class="service-detail-content">
                         <h3>サービス内容</h3>
@@ -110,6 +133,16 @@
                         </ul>
                         <h3>対象企業</h3>
                         <p>中小企業、地方自治体、博物館・美術館、非営利団体など</p>
+                        <div class="service-pricing" style="margin-top: 2rem; padding: 1.5rem; background: rgba(255, 255, 255, 0.9); border-radius: 12px; border-left: 4px solid #2563EB;">
+                            <h3 style="font-size: 1.25rem; font-weight: 700; color: #374151; margin-bottom: 1rem;">価格の目安</h3>
+                            <p style="color: #6B7280; margin-bottom: 0.5rem;"><strong>初回相談：</strong>無料</p>
+                            <p style="color: #6B7280; margin-bottom: 1rem;"><strong>導入支援：</strong>50万円〜（規模により変動）</p>
+                            <p style="font-size: 0.9rem; color: #9CA3AF; margin-top: 1rem;">※完全な見積もりは無料相談後に提示いたします</p>
+                        </div>
+                        <div class="service-duration" style="margin-top: 1.5rem; padding: 1.5rem; background: rgba(255, 255, 255, 0.9); border-radius: 12px; border-left: 4px solid #10B981;">
+                            <h3 style="font-size: 1.25rem; font-weight: 700; color: #374151; margin-bottom: 1rem;">提供期間の目安</h3>
+                            <p style="color: #6B7280;"><strong>1〜3ヶ月</strong>（導入規模により変動）</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -122,7 +155,8 @@
                     </div>
                     <h2 class="service-detail-title">生成AI研修・セミナー</h2>
                     <p class="service-detail-description">
-                        従業員向けの生成AI活用研修や、経営層向けのセミナーを実施します。
+                        従業員向けの生成AI活用研修や、経営層向けのセミナーを実施します。<br>
+                        <strong style="color: #374151;">実務に即した実践的な内容</strong>で、中小企業・自治体・文化施設の課題に特化した研修プログラムを提供します。
                     </p>
                     <div class="service-detail-content">
                         <h3>サービス内容</h3>
@@ -134,6 +168,16 @@
                         </ul>
                         <h3>対象</h3>
                         <p>従業員、経営層、管理職など</p>
+                        <div class="service-pricing" style="margin-top: 2rem; padding: 1.5rem; background: rgba(255, 255, 255, 0.9); border-radius: 12px; border-left: 4px solid #10B981;">
+                            <h3 style="font-size: 1.25rem; font-weight: 700; color: #374151; margin-bottom: 1rem;">価格の目安</h3>
+                            <p style="color: #6B7280; margin-bottom: 0.5rem;"><strong>初回相談：</strong>無料</p>
+                            <p style="color: #6B7280; margin-bottom: 1rem;"><strong>研修・セミナー：</strong>1回5万円〜（内容により変動）</p>
+                            <p style="font-size: 0.9rem; color: #9CA3AF; margin-top: 1rem;">※完全な見積もりは無料相談後に提示いたします</p>
+                        </div>
+                        <div class="service-duration" style="margin-top: 1.5rem; padding: 1.5rem; background: rgba(255, 255, 255, 0.9); border-radius: 12px; border-left: 4px solid #10B981;">
+                            <h3 style="font-size: 1.25rem; font-weight: 700; color: #374151; margin-bottom: 1rem;">提供期間の目安</h3>
+                            <p style="color: #6B7280;"><strong>1日〜1週間</strong>（研修内容により変動）</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -146,7 +190,8 @@
                     </div>
                     <h2 class="service-detail-title">生成AIシステム開発</h2>
                     <p class="service-detail-description">
-                        企業固有の業務プロセスに合わせた生成AIシステムの開発をサポートします。
+                        企業固有の業務プロセスに合わせた生成AIシステムの開発をサポートします。<br>
+                        <strong style="color: #374151;">導入から運用まで一貫したサポート</strong>で、お客様の業務に最適化されたシステムを構築します。保守・運用サポートも継続的に提供いたします。
                     </p>
                     <div class="service-detail-content">
                         <h3>サービス内容</h3>
@@ -158,6 +203,16 @@
                         </ul>
                         <h3>対象業務</h3>
                         <p>顧客対応、文書作成、データ分析、コンテンツ生成など</p>
+                        <div class="service-pricing" style="margin-top: 2rem; padding: 1.5rem; background: rgba(255, 255, 255, 0.9); border-radius: 12px; border-left: 4px solid #8B5CF6;">
+                            <h3 style="font-size: 1.25rem; font-weight: 700; color: #374151; margin-bottom: 1rem;">価格の目安</h3>
+                            <p style="color: #6B7280; margin-bottom: 0.5rem;"><strong>初回相談：</strong>無料</p>
+                            <p style="color: #6B7280; margin-bottom: 1rem;"><strong>システム開発：</strong>100万円〜（規模により変動）</p>
+                            <p style="font-size: 0.9rem; color: #9CA3AF; margin-top: 1rem;">※完全な見積もりは無料相談後に提示いたします</p>
+                        </div>
+                        <div class="service-duration" style="margin-top: 1.5rem; padding: 1.5rem; background: rgba(255, 255, 255, 0.9); border-radius: 12px; border-left: 4px solid #8B5CF6;">
+                            <h3 style="font-size: 1.25rem; font-weight: 700; color: #374151; margin-bottom: 1rem;">提供期間の目安</h3>
+                            <p style="color: #6B7280;"><strong>3〜6ヶ月</strong>（開発規模により変動）</p>
+                        </div>
                     </div>
                 </div>
             </div>

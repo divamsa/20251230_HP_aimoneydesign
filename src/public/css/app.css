@@ -1108,6 +1108,15 @@ body.menu-open {
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 1.5rem !important;
     }
+    
+    .differentiation-points > div {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+    
+    .differentiation-points {
+        padding: 1.5rem !important;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1122,6 +1131,15 @@ body.menu-open {
     .stats-breakdown > div {
         grid-template-columns: 1fr !important;
         gap: 1.5rem !important;
+    }
+    
+    .differentiation-points {
+        padding: 1rem !important;
+    }
+    
+    .differentiation-points > div {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
     }
 }
 
