@@ -1684,17 +1684,36 @@ body.menu-open {
     overflow-wrap: break-word;
 }
 
-.hero-title-break {
+.hero-title-break-1 {
     display: block;
 }
 
-@media (min-width: 1024px) {
-    .hero-title-break {
+.hero-title-break-2 {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .hero-title-break-1 {
         display: inline;
     }
     
-    .hero-title-break::before {
+    .hero-title-break-1::after {
         content: ' ';
+    }
+    
+    .hero-title-break-2 {
+        display: inline;
+    }
+    
+    .hero-title-break-2::before {
+        content: ' ';
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-title-break-1,
+    .hero-title-break-2 {
+        display: inline;
     }
 }
 
