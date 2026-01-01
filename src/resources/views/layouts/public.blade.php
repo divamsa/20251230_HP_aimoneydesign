@@ -59,6 +59,8 @@
 </head>
 <body>
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <!-- スキップリンク（アクセシビリティ） -->
+    <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
     <header class="header">
         <div class="container">
             <div class="header-content">
@@ -75,23 +77,60 @@
                         <li><a href="{{ route('blog.index') }}" class="{{ request()->routeIs('blog.*') ? 'active' : '' }}">ブログ</a></li>
                     </ul>
                 </nav>
-                <div class="header-phone" style="margin-left: auto; padding-left: 2rem;">
-                    <a href="tel:03-XXXX-XXXX" class="phone-link" style="color: #374151; text-decoration: none; font-weight: 600; font-size: 1.1rem; white-space: nowrap;">
+                <div class="header-phone">
+                    <a href="tel:03-XXXX-XXXX" class="phone-link">
                         📞 03-XXXX-XXXX
-                        <span style="font-size: 0.85rem; color: #6B7280; display: block; margin-top: 0.25rem;">平日 9:00-18:00</span>
+                        <span class="phone-hours">平日 9:00-18:00</span>
                     </a>
                 </div>
             </div>
         </div>
     </header>
 
-    <main class="main">
+    <main class="main" id="main-content" tabindex="-1">
         @yield('content')
     </main>
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 株式会社マネーデザイン. All rights reserved.</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">株式会社マネーデザイン</h3>
+                    <p class="footer-description">生成AI導入支援サービス</p>
+                    <p class="footer-description">FP✖️不動産✖️生成AIを謳う専門チーム</p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">サービス</h4>
+                    <ul class="footer-links">
+                        <li><a href="{{ route('services') }}">サービス一覧</a></li>
+                        <li><a href="{{ route('cases') }}">導入事例</a></li>
+                        <li><a href="{{ route('blog.index') }}">ブログ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">会社情報</h4>
+                    <ul class="footer-links">
+                        <li><a href="{{ route('about') }}">会社概要</a></li>
+                        <li><a href="{{ route('contact') }}">お問い合わせ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">お問い合わせ</h4>
+                    <div class="footer-contact">
+                        <p><strong>電話:</strong> <a href="tel:03-XXXX-XXXX">03-XXXX-XXXX</a></p>
+                        <p><strong>メール:</strong> <a href="mailto:info@moneydesign.co.jp">info@moneydesign.co.jp</a></p>
+                        <p><strong>営業時間:</strong> 平日 9:00〜18:00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 株式会社マネーデザイン. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="/privacy">プライバシーポリシー</a>
+                    <span class="footer-separator">|</span>
+                    <a href="/terms">利用規約</a>
+                </div>
+            </div>
         </div>
     </footer>
 
