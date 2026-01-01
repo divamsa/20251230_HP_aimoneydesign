@@ -460,6 +460,25 @@ document.addEventListener('DOMContentLoaded', () => {
         initTimeline();
         initParallax();
         initStickySidebarNav();
+        initScrollProgress();
     }
 });
+
+// ============================================
+// スクロール進行インジケーター
+// ============================================
+function initScrollProgress() {
+    // スクロール進行バーを作成
+    const progressBar = document.createElement('div');
+    progressBar.className = 'scroll-progress';
+    document.body.appendChild(progressBar);
+    
+    // スクロールイベントで進行率を更新
+    window.addEventListener('scroll', () => {
+        const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = window.scrollY;
+        const progress = (scrolled / windowHeight) * 100;
+        progressBar.style.width = `${progress}%`;
+    });
+}
 

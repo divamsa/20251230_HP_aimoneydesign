@@ -59,7 +59,7 @@
 <!-- 実績数値セクション -->
 <section class="stats" style="position: relative; overflow: hidden;">
     <div class="section-bg-image">
-        <img src="https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&fit=crop&q=80&w=2000" alt="Data Dashboard Background">
+        <img src="https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&fit=crop&q=80&w=2000" alt="Data Dashboard Background" loading="lazy" decoding="async">
     </div>
     <div class="container" style="position: relative; z-index: 1;">
         <h2 class="section-title">実績数値</h2>
@@ -68,7 +68,7 @@
         <div class="stats-grid">
             <div class="stat-card">
                 <div class="card-bg-image">
-                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1000" alt="Corporate Office">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1000" alt="Corporate Office" loading="lazy" decoding="async">
                 </div>
                 <div class="stat-number" data-target="5">5</div>
                 <div class="stat-label">導入企業数</div>

@@ -169,6 +169,66 @@
     --breakpoint-2xl: 1536px;
 }
 
+/* ============================================
+   ダークモード対応
+   ============================================ */
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* テキストカラー（ダークモード） */
+        --color-text-primary: #f9fafb;
+        --color-text-secondary: #d1d5db;
+        --color-text-muted: #9ca3af;
+        --color-text-inverse: #1f2937;
+        
+        /* 背景カラー（ダークモード） */
+        --color-bg-primary: #1f2937;
+        --color-bg-secondary: #111827;
+        --color-bg-tertiary: #0f172a;
+        
+        /* シャドウ（ダークモード用に調整） */
+        --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+        --shadow-base: 0 1px 3px 0 rgba(0, 0, 0, 0.4), 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+        --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+        --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+        --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+        --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    }
+    
+    /* ヘッダー（ダークモード） */
+    .header {
+        background-color: var(--color-bg-secondary);
+        border-bottom-color: var(--color-neutral-700);
+    }
+    
+    /* フッター（ダークモード） */
+    .footer {
+        background: linear-gradient(135deg, var(--color-neutral-900) 0%, var(--color-bg-secondary) 100%);
+    }
+    
+    /* カード（ダークモード） */
+    .card {
+        background-color: var(--color-bg-secondary);
+        border-color: var(--color-neutral-700);
+    }
+    
+    /* フォーム要素（ダークモード） */
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="tel"],
+    .form-group input[type="datetime-local"],
+    .form-group select,
+    .form-group textarea {
+        background-color: var(--color-bg-secondary);
+        border-color: var(--color-neutral-700);
+        color: var(--color-text-primary);
+    }
+    
+    /* セクション背景（ダークモード） */
+    .section {
+        background-color: var(--color-bg-primary);
+    }
+}
+
 /* 基本設定 */
 body {
     font-family: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
@@ -200,6 +260,21 @@ body {
     top: 0;
     outline: 2px solid var(--color-primary-400);
     outline-offset: 2px;
+}
+
+/* ============================================
+   スクロール進行インジケーター
+   ============================================ */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-primary-600), var(--color-secondary-500));
+    z-index: 9999;
+    transition: width var(--duration-fast) var(--ease-out);
+    box-shadow: 0 0 10px rgba(37, 99, 235, 0.5);
 }
 
 .container {
@@ -451,6 +526,38 @@ body.menu-open {
 
 .animate-scale-in {
     animation: scaleIn var(--duration-base) var(--ease-out);
+}
+
+/* ============================================
+   グラスモーフィズムデザイン
+   ============================================ */
+.glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border-radius: var(--radius-lg);
+}
+
+.glass-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.5);
+}
+
+/* ダークモード用のグラスモーフィズム */
+@media (prefers-color-scheme: dark) {
+    .glass-card {
+        background: rgba(31, 41, 55, 0.3);
+        border-color: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+    }
+    
+    .glass-card:hover {
+        background: rgba(31, 41, 55, 0.4);
+        border-color: rgba(255, 255, 255, 0.15);
+    }
 }
 
 /* メインコンテンツ */
@@ -786,6 +893,67 @@ body.menu-open {
     }
 }
 
+/* ============================================
+   スケルトンローディング
+   ============================================ */
+.skeleton {
+    background: linear-gradient(
+        90deg,
+        var(--color-neutral-200) 25%,
+        var(--color-neutral-100) 50%,
+        var(--color-neutral-200) 75%
+    );
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s ease-in-out infinite;
+    border-radius: var(--radius-base);
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+.skeleton-text {
+    height: 1em;
+    margin-bottom: var(--spacing-2);
+}
+
+.skeleton-title {
+    height: 1.5em;
+    width: 60%;
+    margin-bottom: var(--spacing-4);
+}
+
+.skeleton-image {
+    width: 100%;
+    height: 200px;
+    margin-bottom: var(--spacing-4);
+}
+
+.skeleton-card {
+    padding: var(--spacing-6);
+    border-radius: var(--radius-lg);
+    background-color: var(--color-bg-primary);
+    border: 1px solid var(--color-neutral-200);
+}
+
+/* ダークモード用のスケルトン */
+@media (prefers-color-scheme: dark) {
+    .skeleton {
+        background: linear-gradient(
+            90deg,
+            var(--color-neutral-700) 25%,
+            var(--color-neutral-600) 50%,
+            var(--color-neutral-700) 75%
+        );
+        background-size: 200% 100%;
+    }
+}
+
 /* レスポンシブデザイン */
 @media (max-width: 768px) {
     .header-content {
@@ -867,6 +1035,43 @@ body.menu-open {
     font-size: var(--font-size-base);
     color: var(--color-text-primary);
     line-height: var(--line-height-normal);
+    transition: all var(--duration-base) var(--ease-out);
+}
+
+/* フローティングラベル */
+.form-group.floating-label {
+    position: relative;
+}
+
+.form-group.floating-label label {
+    position: absolute;
+    top: var(--spacing-3);
+    left: var(--spacing-4);
+    color: var(--color-text-muted);
+    font-size: var(--font-size-base);
+    pointer-events: none;
+    transition: all var(--duration-base) var(--ease-out);
+    background-color: var(--color-bg-primary);
+    padding: 0 var(--spacing-1);
+    margin: 0;
+    z-index: 1;
+}
+
+.form-group.floating-label input:focus + label,
+.form-group.floating-label input:not(:placeholder-shown) + label,
+.form-group.floating-label textarea:focus + label,
+.form-group.floating-label textarea:not(:placeholder-shown) + label {
+    top: -0.5rem;
+    left: var(--spacing-3);
+    font-size: var(--font-size-sm);
+    color: var(--color-primary-600);
+    font-weight: var(--font-weight-semibold);
+}
+
+.form-group.floating-label input,
+.form-group.floating-label textarea {
+    padding-top: var(--spacing-4);
+    padding-bottom: var(--spacing-2);
 }
 
 .form-group .required {
@@ -965,6 +1170,90 @@ body.menu-open {
     border-top-color: rgba(255, 255, 255, 0.9);
     border-radius: 50%;
     animation: spin 0.6s linear infinite;
+}
+
+/* ============================================
+   エラーハンドリングのUI改善
+   ============================================ */
+.error-message {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    padding: var(--spacing-3) var(--spacing-4);
+    background-color: var(--color-error-light);
+    border: 1px solid var(--color-error);
+    border-radius: var(--radius-base);
+    color: var(--color-error);
+    font-size: var(--font-size-sm);
+    margin-top: var(--spacing-2);
+    animation: slideIn var(--duration-base) var(--ease-out);
+}
+
+.error-message::before {
+    content: '⚠️';
+    font-size: var(--font-size-lg);
+    flex-shrink: 0;
+}
+
+.error-message-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.error-message-list li {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    padding: var(--spacing-2) 0;
+}
+
+.error-message-list li::before {
+    content: '•';
+    color: var(--color-error);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-lg);
+}
+
+/* 404ページのスタイル */
+.error-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    text-align: center;
+    padding: var(--spacing-16) var(--spacing-4);
+}
+
+.error-page-title {
+    font-size: var(--font-size-6xl);
+    font-weight: var(--font-weight-extrabold);
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-4);
+}
+
+.error-page-message {
+    font-size: var(--font-size-xl);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-8);
+}
+
+.error-page-link {
+    display: inline-block;
+    padding: var(--spacing-3) var(--spacing-8);
+    background-color: var(--color-primary-600);
+    color: var(--color-text-inverse);
+    text-decoration: none;
+    border-radius: var(--radius-lg);
+    font-weight: var(--font-weight-semibold);
+    transition: all var(--duration-base) var(--ease-out);
+}
+
+.error-page-link:hover {
+    background-color: var(--color-primary-700);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
 }
 
 .form-group textarea {
