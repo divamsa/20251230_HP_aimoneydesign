@@ -2065,6 +2065,32 @@ body.menu-open {
     flex-wrap: wrap;
 }
 
+/* CTAセクション内のボタンを明るく表示 */
+.cta .btn-primary {
+    background: linear-gradient(135deg, #fff 0%, #f0f0f0 100%);
+    color: var(--color-text-primary);
+    font-weight: var(--font-weight-semibold);
+    padding: var(--spacing-4) var(--spacing-10);
+    font-size: var(--font-size-lg);
+    border-radius: var(--radius-full);
+    box-shadow: var(--shadow-lg);
+    transition: all var(--duration-base) var(--ease-out);
+    transform: translateY(0);
+    border: none;
+}
+
+.cta .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-xl);
+    background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%);
+}
+
+.cta .btn-primary:focus-visible {
+    outline: 2px solid var(--color-primary-500);
+    outline-offset: 2px;
+    box-shadow: var(--shadow-lg), 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
 /* ============================================
    レスポンシブデザイン（トップページ）
    ============================================ */
