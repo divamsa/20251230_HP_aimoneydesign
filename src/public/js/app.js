@@ -100,6 +100,50 @@ function initScrollHeader() {
     });
 }
 
+// ============================================
+// ヘッダーのグラデーションアニメーション
+// ============================================
+function initHeaderGradientAnimation() {
+    const header = document.querySelector('.header');
+    if (!header) return;
+    
+    // 既存のグラデーションバーを削除（重複防止）
+    const existingBar = header.querySelector('.header-gradient-bar');
+    if (existingBar) {
+        existingBar.remove();
+    }
+    
+    // グラデーションバーを作成
+    const gradientBar = document.createElement('div');
+    gradientBar.className = 'header-gradient-bar';
+    
+    // 初期グラデーションを設定
+    gradientBar.style.background = 'linear-gradient(90deg, #2563eb 0%, #9333ea 25%, #2563eb 50%, #9333ea 75%, #2563eb 100%)';
+    gradientBar.style.backgroundSize = '200% 100%';
+    
+    header.appendChild(gradientBar);
+    
+    // アニメーション用の変数
+    let position = 0;
+    const speed = 0.5; // アニメーション速度
+    
+    // アニメーション関数
+    function animate() {
+        position += speed;
+        if (position >= 200) {
+            position = 0;
+        }
+        
+        // background-positionを更新してグラデーションを流す
+        gradientBar.style.backgroundPosition = `${position}% 0%`;
+        
+        requestAnimationFrame(animate);
+    }
+    
+    // アニメーション開始
+    animate();
+}
+
 // ハンバーガーメニュー
 function initMobileMenu() {
     const nav = document.querySelector('.nav');
@@ -451,6 +495,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollAnimation();
     initScrollHeader();
     initMobileMenu();
+    initHeaderGradientAnimation();
     
     // サービスページ専用の初期化
     if (document.querySelector('.service-tabs')) {
