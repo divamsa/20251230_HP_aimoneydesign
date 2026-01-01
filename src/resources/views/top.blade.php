@@ -181,8 +181,18 @@
                     <img src="https://images.unsplash.com/photo-1575517111478-7f6afd0973db?auto=format&fit=crop&q=80&w=1000" alt="Government Office">
                 </div>
                 <div class="case-category">地方自治体</div>
-                <h3 class="case-title">A市役所の業務効率化</h3>
-                <p class="case-description">生成AIを活用した住民対応業務の効率化により、対応時間を50%削減しました。</p>
+                <h3 class="case-title">人口5万人規模の市役所の業務効率化</h3>
+                <p class="case-description">生成AIを活用した住民対応業務の効率化により、対応時間を50%削減。顧客満足度が60%から90%に向上しました。</p>
+                <div class="case-preview-results" style="margin-top: 1rem; padding: 1rem; background: rgba(255, 255, 255, 0.9); border-radius: 8px; font-size: 0.9rem;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                        <span style="color: #6B7280;">対応時間:</span>
+                        <span style="color: #374151; font-weight: 600;">30分 → 15分</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span style="color: #6B7280;">顧客満足度:</span>
+                        <span style="color: #374151; font-weight: 600;">60% → 90%</span>
+                    </div>
+                </div>
                 <a href="{{ route('cases') }}" class="case-link">詳細を見る →</a>
             </div>
             <div class="case-card">
@@ -190,8 +200,18 @@
                     <img src="https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&q=80&w=1000" alt="Museum Gallery">
                 </div>
                 <div class="case-category">博物館</div>
-                <h3 class="case-title">B美術館の展示解説システム</h3>
-                <p class="case-description">生成AIを活用した展示解説システムにより、来館者の満足度が向上しました。</p>
+                <h3 class="case-title">地方都市の美術館の展示解説システム</h3>
+                <p class="case-description">生成AIを活用した多言語対応の展示解説システムにより、来館者満足度が75%から92%に向上。滞在時間も25%延長しました。</p>
+                <div class="case-preview-results" style="margin-top: 1rem; padding: 1rem; background: rgba(255, 255, 255, 0.9); border-radius: 8px; font-size: 0.9rem;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                        <span style="color: #6B7280;">来館者満足度:</span>
+                        <span style="color: #374151; font-weight: 600;">75% → 92%</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span style="color: #6B7280;">滞在時間:</span>
+                        <span style="color: #374151; font-weight: 600;">1.5時間 → 1.9時間</span>
+                    </div>
+                </div>
                 <a href="{{ route('cases') }}" class="case-link">詳細を見る →</a>
             </div>
             <div class="case-card">
@@ -199,8 +219,18 @@
                     <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1000" alt="Manufacturing Industry">
                 </div>
                 <div class="case-category">中小企業</div>
-                <h3 class="case-title">C製造業の顧客対応改善</h3>
-                <p class="case-description">生成AIを活用した顧客対応システムにより、問い合わせ対応の品質が向上しました。</p>
+                <h3 class="case-title">従業員50名規模の製造業の顧客対応改善</h3>
+                <p class="case-description">生成AIを活用した24時間365日の自動対応システムにより、対応時間を70%削減。顧客満足度が65%から98%に向上しました。</p>
+                <div class="case-preview-results" style="margin-top: 1rem; padding: 1rem; background: rgba(255, 255, 255, 0.9); border-radius: 8px; font-size: 0.9rem;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                        <span style="color: #6B7280;">対応時間:</span>
+                        <span style="color: #374151; font-weight: 600;">2時間 → 36分</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span style="color: #6B7280;">顧客満足度:</span>
+                        <span style="color: #374151; font-weight: 600;">65% → 98%</span>
+                    </div>
+                </div>
                 <a href="{{ route('cases') }}" class="case-link">詳細を見る →</a>
             </div>
         </div>
