@@ -61,25 +61,25 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
     <!-- スキップリンク（アクセシビリティ） -->
     <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
-    <header class="header">
+    <header class="header" role="banner">
         <div class="container">
             <div class="header-content">
                 <h1 class="logo">
-                    <a href="{{ route('top') }}">株式会社マネーデザイン</a>
+                    <a href="{{ route('top') }}" aria-label="株式会社マネーデザイン ホームページ">株式会社マネーデザイン</a>
                 </h1>
-                <nav class="nav">
+                <nav class="nav" role="navigation" aria-label="メインナビゲーション">
                     <ul class="nav-list">
-                        <li><a href="{{ route('top') }}" class="{{ request()->routeIs('top') ? 'active' : '' }}">ホーム</a></li>
-                        <li><a href="{{ route('services') }}" class="{{ request()->routeIs('services') ? 'active' : '' }}">サービス</a></li>
-                        <li><a href="{{ route('cases') }}" class="{{ request()->routeIs('cases') ? 'active' : '' }}">導入事例</a></li>
-                        <li><a href="{{ route('about') }}" class="{{ request()->routeIs('about') ? 'active' : '' }}">会社情報</a></li>
-                        <li><a href="{{ route('contact') }}" class="{{ request()->routeIs('contact') ? 'active' : '' }}">お問い合わせ</a></li>
-                        <li><a href="{{ route('blog.index') }}" class="{{ request()->routeIs('blog.*') ? 'active' : '' }}">ブログ</a></li>
+                        <li><a href="{{ route('top') }}" class="{{ request()->routeIs('top') ? 'active' : '' }}" aria-current="{{ request()->routeIs('top') ? 'page' : 'false' }}">ホーム</a></li>
+                        <li><a href="{{ route('services') }}" class="{{ request()->routeIs('services') ? 'active' : '' }}" aria-current="{{ request()->routeIs('services') ? 'page' : 'false' }}">サービス</a></li>
+                        <li><a href="{{ route('cases') }}" class="{{ request()->routeIs('cases') ? 'active' : '' }}" aria-current="{{ request()->routeIs('cases') ? 'page' : 'false' }}">導入事例</a></li>
+                        <li><a href="{{ route('about') }}" class="{{ request()->routeIs('about') ? 'active' : '' }}" aria-current="{{ request()->routeIs('about') ? 'page' : 'false' }}">会社情報</a></li>
+                        <li><a href="{{ route('contact') }}" class="{{ request()->routeIs('contact') ? 'active' : '' }}" aria-current="{{ request()->routeIs('contact') ? 'page' : 'false' }}">お問い合わせ</a></li>
+                        <li><a href="{{ route('blog.index') }}" class="{{ request()->routeIs('blog.*') ? 'active' : '' }}" aria-current="{{ request()->routeIs('blog.*') ? 'page' : 'false' }}">ブログ</a></li>
                     </ul>
                 </nav>
                 <div class="header-phone">
-                    <a href="tel:03-XXXX-XXXX" class="phone-link">
-                        📞 03-XXXX-XXXX
+                    <a href="tel:03-XXXX-XXXX" class="phone-link" aria-label="電話番号: 03-XXXX-XXXX">
+                        <span aria-hidden="true">📞</span> 03-XXXX-XXXX
                         <span class="phone-hours">平日 9:00-18:00</span>
                     </a>
                 </div>
@@ -91,7 +91,7 @@
         @yield('content')
     </main>
 
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
@@ -101,35 +101,41 @@
                 </div>
                 <div class="footer-section">
                     <h4 class="footer-heading">サービス</h4>
-                    <ul class="footer-links">
-                        <li><a href="{{ route('services') }}">サービス一覧</a></li>
-                        <li><a href="{{ route('cases') }}">導入事例</a></li>
-                        <li><a href="{{ route('blog.index') }}">ブログ</a></li>
-                    </ul>
+                    <nav aria-label="フッターナビゲーション: サービス">
+                        <ul class="footer-links">
+                            <li><a href="{{ route('services') }}">サービス一覧</a></li>
+                            <li><a href="{{ route('cases') }}">導入事例</a></li>
+                            <li><a href="{{ route('blog.index') }}">ブログ</a></li>
+                        </ul>
+                    </nav>
                 </div>
                 <div class="footer-section">
                     <h4 class="footer-heading">会社情報</h4>
-                    <ul class="footer-links">
-                        <li><a href="{{ route('about') }}">会社概要</a></li>
-                        <li><a href="{{ route('contact') }}">お問い合わせ</a></li>
-                    </ul>
+                    <nav aria-label="フッターナビゲーション: 会社情報">
+                        <ul class="footer-links">
+                            <li><a href="{{ route('about') }}">会社概要</a></li>
+                            <li><a href="{{ route('contact') }}">お問い合わせ</a></li>
+                        </ul>
+                    </nav>
                 </div>
                 <div class="footer-section">
                     <h4 class="footer-heading">お問い合わせ</h4>
-                    <div class="footer-contact">
-                        <p><strong>電話:</strong> <a href="tel:03-XXXX-XXXX">03-XXXX-XXXX</a></p>
-                        <p><strong>メール:</strong> <a href="mailto:info@moneydesign.co.jp">info@moneydesign.co.jp</a></p>
+                    <address class="footer-contact">
+                        <p><strong>電話:</strong> <a href="tel:03-XXXX-XXXX" aria-label="電話番号: 03-XXXX-XXXX">03-XXXX-XXXX</a></p>
+                        <p><strong>メール:</strong> <a href="mailto:info@moneydesign.co.jp" aria-label="メールアドレス: info@moneydesign.co.jp">info@moneydesign.co.jp</a></p>
                         <p><strong>営業時間:</strong> 平日 9:00〜18:00</p>
-                    </div>
+                    </address>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 株式会社マネーデザイン. All rights reserved.</p>
-                <div class="footer-legal">
-                    <a href="/privacy">プライバシーポリシー</a>
-                    <span class="footer-separator">|</span>
-                    <a href="/terms">利用規約</a>
-                </div>
+                <nav aria-label="フッターナビゲーション: 法的情報">
+                    <div class="footer-legal">
+                        <a href="/privacy">プライバシーポリシー</a>
+                        <span class="footer-separator" aria-hidden="true">|</span>
+                        <a href="/terms">利用規約</a>
+                    </div>
+                </nav>
             </div>
         </div>
     </footer>
