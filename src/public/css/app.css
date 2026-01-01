@@ -1692,6 +1692,10 @@ body.menu-open {
     display: block;
 }
 
+.hero-title-break-3 {
+    display: block;
+}
+
 @media (min-width: 768px) {
     .hero-title-break-1 {
         display: inline;
@@ -1705,14 +1709,19 @@ body.menu-open {
         display: inline;
     }
     
-    .hero-title-break-2::before {
+    .hero-title-break-2::after {
         content: ' ';
+    }
+    
+    .hero-title-break-3 {
+        display: inline;
     }
 }
 
 @media (min-width: 1024px) {
     .hero-title-break-1,
-    .hero-title-break-2 {
+    .hero-title-break-2,
+    .hero-title-break-3 {
         display: inline;
     }
 }

@@ -46,7 +46,7 @@
     </div>
     <div class="container">
         <div class="hero-content">
-            <h1 class="hero-title">生成AI導入で<span class="hero-title-break-1">業務効率50%向上</span><span class="hero-title-break-2">2025年4月から本格開始の導入支援</span></h1>
+            <h1 class="hero-title">生成AI導入で<span class="hero-title-break-1">業務効率50%向上</span><span class="hero-title-break-2">2025年4月から本格開始の</span><span class="hero-title-break-3">導入支援</span></h1>
             <p class="hero-subtitle">中小企業・自治体・文化施設の業務改革を、<span class="hero-subtitle-break">専門チームが完全サポート。早期導入のお客様には特別なサポートプランをご用意</span></p>
             <p class="hero-description">生成AI導入により、業務時間の削減、コスト削減、顧客満足度の向上を実現。2025年4月から本格的に支援業務を開始いたします。導入から運用まで、一貫したサポートでお客様の成功を支援します。</p>
             <div class="hero-actions">
