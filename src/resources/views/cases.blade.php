@@ -76,8 +76,8 @@
             </div>
         </div>
         <div style="margin-top: 3rem; padding: 2rem; background: linear-gradient(135deg, #F3F4F6 0%, #E5E7EB 100%); border-radius: 12px; text-align: center;">
-            <p style="font-size: 1.1rem; color: #374151; font-weight: 600; margin-bottom: 1rem;">2025年4月から本格的に支援業務を開始</p>
-            <p style="font-size: 0.95rem; color: #6B7280; line-height: 1.7; margin-bottom: 1.5rem;">
+            <p style="font-size: 1.1rem; color: #000000 !important; font-weight: 600; margin-bottom: 1rem;">2025年4月から本格的に支援業務を開始</p>
+            <p style="font-size: 0.95rem; color: #000000 !important; line-height: 1.7; margin-bottom: 1.5rem;">
                 2025年4月から本格的に生成AI導入支援業務を開始いたします。<br>
                 早期導入のお客様には、特別なサポートプランをご用意しております。<br>
                 まずは無料相談で、お気軽にご相談ください。
@@ -124,10 +124,10 @@
                     </div>
                 </div>
                 <div class="case-testimonial" style="margin-top: 1.5rem; padding: 1.5rem; background: rgba(255, 255, 255, 0.9); border-radius: 12px; border-left: 4px solid #2563EB;">
-                    <p style="color: #374151; font-style: italic; line-height: 1.8; margin-bottom: 1rem;">
+                    <p style="color: #000000 !important; font-style: italic; line-height: 1.8; margin-bottom: 1rem;">
                         「生成AI導入により、職員の業務負担が大幅に軽減され、より質の高い住民サービスを提供できるようになりました。導入から運用まで、マネーデザインさんのサポートが非常に心強かったです。」
                     </p>
-                    <p style="font-size: 0.9rem; color: #6B7280;">
+                    <p style="font-size: 0.9rem; color: #000000 !important;">
                         <strong>市役所 総務課長</strong>（匿名希望）
                     </p>
                 </div>
@@ -165,10 +165,10 @@
                     </div>
                 </div>
                 <div class="case-testimonial" style="margin-top: 1.5rem; padding: 1.5rem; background: rgba(255, 255, 255, 0.9); border-radius: 12px; border-left: 4px solid #10B981;">
-                    <p style="color: #374151; font-style: italic; line-height: 1.8; margin-bottom: 1rem;">
+                    <p style="color: #000000 !important; font-style: italic; line-height: 1.8; margin-bottom: 1rem;">
                         「多言語対応の展示解説システムにより、外国人観光客からの評価が大幅に向上しました。来館者の滞在時間も延長し、展示への理解が深まったと好評です。」
                     </p>
-                    <p style="font-size: 0.9rem; color: #6B7280;">
+                    <p style="font-size: 0.9rem; color: #000000 !important;">
                         <strong>美術館 学芸員</strong>（匿名希望）
                     </p>
                 </div>
@@ -206,10 +206,10 @@
                     </div>
                 </div>
                 <div class="case-testimonial" style="margin-top: 1.5rem; padding: 1.5rem; background: rgba(255, 255, 255, 0.9); border-radius: 12px; border-left: 4px solid #8B5CF6;">
-                    <p style="color: #374151; font-style: italic; line-height: 1.8; margin-bottom: 1rem;">
+                    <p style="color: #000000 !important; font-style: italic; line-height: 1.8; margin-bottom: 1rem;">
                         「24時間365日の自動対応により、顧客からの評価が大幅に向上しました。対応時間も短縮され、社員の業務負担も軽減されました。導入から運用まで、マネーデザインさんのサポートが非常に充実していて安心でした。」
                     </p>
-                    <p style="font-size: 0.9rem; color: #6B7280;">
+                    <p style="font-size: 0.9rem; color: #000000 !important;">
                         <strong>製造業 営業部長</strong>（匿名希望）
                     </p>
                 </div>

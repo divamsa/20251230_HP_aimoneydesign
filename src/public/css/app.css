@@ -2171,15 +2171,57 @@ body.menu-open {
 }
 
 .case-category {
-    display: inline-block;
-    padding: var(--spacing-2) var(--spacing-4);
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: auto;
+    margin: 0 auto var(--spacing-4) auto;
+    padding: 0.5rem 1rem !important;
+    height: 2.5rem !important;
+    min-height: 2.5rem !important;
+    max-height: 2.5rem !important;
     background: linear-gradient(135deg, var(--color-primary-600) 0%, var(--color-primary-800) 100%);
     color: var(--color-text-inverse);
     border-radius: var(--radius-full);
-    font-size: var(--font-size-sm);
+    font-size: 0.875rem !important;
     font-weight: var(--font-weight-semibold);
-    margin-bottom: var(--spacing-4);
     box-shadow: var(--shadow-sm);
+    text-align: center;
+    line-height: 1 !important;
+    box-sizing: border-box !important;
+    white-space: nowrap;
+    vertical-align: middle;
+    overflow: hidden;
+    flex-shrink: 0 !important;
+    flex-grow: 0 !important;
+}
+
+/* 導入事例ページのカテゴリタイトルの高さを確実に統一（最優先） */
+.case-card .case-category,
+.cases-list .case-card .case-category,
+.cases-grid .case-card .case-category,
+div.case-card > div.case-category,
+.cases-grid div.case-card > div.case-category {
+    height: 2.5rem !important;
+    min-height: 2.5rem !important;
+    max-height: 2.5rem !important;
+    padding: 0.5rem 1rem !important;
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    line-height: 1 !important;
+    font-size: 0.875rem !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    align-self: flex-start !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    flex-shrink: 0 !important;
+    flex-grow: 0 !important;
+    width: auto !important;
 }
 
 .cases-preview .case-title {
@@ -4674,6 +4716,70 @@ p.hero-definition,
 
 /* 生成AIシステム開発（業務組込み型）Box内の全てのテキストを黒に */
 #development * {
+    color: #000000 !important;
+}
+
+/* 導入事例・実績ページ内の全てのテキストを黒に */
+.cases-list *,
+.cases-stats *,
+.case-card *,
+.case-title,
+.case-results *,
+.case-result-item *,
+.case-result-label,
+.case-result-value,
+.case-testimonial *,
+.case-testimonial p,
+.case-testimonial strong,
+.case-card .case-testimonial *,
+.case-card .case-testimonial p,
+.case-card .case-testimonial strong,
+.cases-grid .case-card .case-testimonial *,
+.cases-grid .case-card .case-testimonial p,
+.cases-grid .case-card .case-testimonial strong {
+    color: #000000 !important;
+}
+
+/* 導入事例ページの成果表示（case-results）内の全てのテキストを確実に黒に（最優先） */
+.case-card .case-results,
+.case-card .case-results *,
+.case-card .case-results .case-result-item,
+.case-card .case-results .case-result-item *,
+.case-card .case-results .case-result-label,
+.case-card .case-results .case-result-value,
+.case-card .case-results span,
+.cases-grid .case-card .case-results,
+.cases-grid .case-card .case-results *,
+.cases-grid .case-card .case-results .case-result-item,
+.cases-grid .case-card .case-results .case-result-item *,
+.cases-grid .case-card .case-results .case-result-label,
+.cases-grid .case-card .case-results .case-result-value,
+.cases-grid .case-card .case-results span {
+    color: #000000 !important;
+}
+
+/* 導入事例・実績ページのセクションタイトルとサブタイトルも黒に */
+.cases-list .section-title,
+.cases-list .section-subtitle,
+.cases-stats .section-title,
+.cases-stats .section-subtitle {
+    color: #000000 !important;
+}
+
+/* 導入事例・実績ページの「2025年4月から本格的に支援業務を開始」セクション内の全てのテキストを黒に（最優先） */
+.cases-stats div[style*="background: linear-gradient"],
+.cases-stats div[style*="background: linear-gradient"] *,
+.cases-stats div[style*="background: linear-gradient"] p,
+.cases-stats div[style*="background: linear-gradient"] a {
+    color: #000000 !important;
+}
+
+/* 導入事例・実績ページ内の全てのdiv内のテキストを黒に（包括的） */
+section.cases-stats div,
+section.cases-stats div *,
+section.cases-stats div p,
+section.cases-stats div span,
+section.cases-stats div a {
     color: #000000 !important;
 }
 

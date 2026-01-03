@@ -4037,8 +4037,109 @@ GOOGLE_ANALYTICS_ID=G-XXXXXXXXXX
 - CSSセレクタ `#training *` と `#development *` を使用し、`!important` で最優先適用
 - これにより、「生成AI導入コンサルティング」と同様に、全てのサービスボックス内のテキストが黒色で統一された
 
+### 2026-01-03 23:38:46 導入事例・実績ページ内の全てのテキストを黒に変更
+
+**対象ファイル**: `src/public/css/app.css`
+
+**変更内容**:
+- 導入事例・実績ページ内の全てのテキストを黒色に変更
+- `.cases-list`、`.cases-stats`、`.case-card`、`.case-title`、`.case-results`、`.case-result-item`、`.case-result-label`、`.case-result-value`、`.case-testimonial`などのクラス内の全てのテキストを黒色に設定
+- セクションタイトルとサブタイトルも黒色に変更
+- CSSセレクタに`!important`を使用して最優先適用
+- これにより、導入事例・実績ページ全体のテキストが黒色で統一された
+
+### 2026-01-03 23:40:32 導入事例・実績ページ「2025年4月から本格的に支援業務を開始」セクションのテキストを黒に変更
+
+**対象ファイル**: 
+- `src/resources/views/cases.blade.php`
+- `src/public/css/app.css`
+
+**変更内容**:
+- 「2025年4月から本格的に支援業務を開始」セクション内のテキストを黒色に変更
+- インラインスタイルの`color`属性を`#000000 !important`に変更（79行目、80行目）
+- CSSに包括的なセレクタを追加して、`.cases-stats`セクション内の全てのdiv内のテキストを黒色に設定
+- これにより、インラインスタイルとCSSの両方で確実に黒色が適用されるようになった
+
+### 2026-01-03 23:43:40 導入事例・実績ページ カテゴリタイトルのセンタリングと高さの統一
+
+**対象ファイル**: `src/public/css/app.css`
+
+**変更内容**:
+- 導入事例一覧のカテゴリタイトル（地方自治体、博物館、中小企業）をセンタリング
+- `.case-category`のスタイルを修正：
+  - `display: inline-block`から`display: flex`に変更
+  - `align-items: center`と`justify-content: center`でセンタリング
+  - `margin: 0 auto`で水平方向のセンタリング
+  - `min-height: 2rem`で高さを統一（地方自治体の高さに合わせる）
+  - `width: fit-content`でコンテンツ幅に合わせる
+- これにより、全てのカテゴリタイトルが中央揃えになり、高さも統一された
+
+### 2026-01-03 23:46:11 導入事例・実績ページ カテゴリタイトルの高さを固定値で統一
+
+**対象ファイル**: `src/public/css/app.css`
+
+**変更内容**:
+- `.case-category`の高さを固定値で統一するように修正
+- `min-height: 2rem`から`height: 2.5rem`に変更（固定の高さを設定）
+- `line-height: 1.5`から`line-height: 1`に変更（行間を最小化して高さを統一）
+- `padding: var(--spacing-2) var(--spacing-4)`から`padding: 0.5rem 1rem`に変更（固定値で統一）
+- `box-sizing: border-box`を追加（paddingを含めた高さ計算を正確に）
+- `white-space: nowrap`を追加（テキストの折り返しを防止）
+- これにより、全てのカテゴリタイトル（地方自治体、博物館、中小企業）が完全に同じ高さ（2.5rem = 40px）で統一された
+
+### 2026-01-03 23:48:31 導入事例・実績ページ カテゴリタイトルの高さを確実に統一
+
+**対象ファイル**: `src/public/css/app.css`
+
+**変更内容**:
+- `.case-category`の高さを確実に統一するために、より具体的なセレクタと`!important`を追加
+- 高さの固定値を`height: 2.5rem !important`、`min-height: 2.5rem !important`、`max-height: 2.5rem !important`で設定
+- フォントサイズを`font-size: 0.875rem !important`で固定
+- 行間を`line-height: 1 !important`で固定
+- `box-sizing: border-box !important`でパディングを含めた高さ計算を確実に
+- `.case-card .case-category`、`.cases-list .case-card .case-category`、`.cases-grid .case-card .case-category`に対して、より具体的なセレクタで高さを強制適用
+- これにより、全てのカテゴリタイトル（地方自治体、博物館、中小企業）が完全に同じ高さ（2.5rem = 40px）で統一され、中央揃えも維持された
+
+### 2026-01-03 23:52:04 導入事例・実績ページ カテゴリタイトルの高さを完全に統一
+
+**対象ファイル**: `src/public/css/app.css`
+
+**変更内容**:
+- `.case-card`が`display: flex`になっているため、`.case-category`が親要素のflexレイアウトの影響を受けていた問題を修正
+- `.case-category`の基本スタイルに`!important`を追加して、他のスタイルの影響を受けないようにした
+- `flex-shrink: 0 !important`と`flex-grow: 0 !important`を追加して、親要素のflexレイアウトの影響を受けないようにした
+- `width: auto !important`を追加して、幅の影響を受けないようにした
+- より具体的なセレクタ（`.cases-grid div.case-card > div.case-category`）を追加して、確実に高さが統一されるようにした
+- これにより、全てのカテゴリタイトル（地方自治体、博物館、中小企業）が完全に同じ高さ（2.5rem = 40px）で統一され、中央揃えも維持された
+
+### 2026-01-03 23:55:23 導入事例・実績ページ 担当者の感想箇所のテキストを黒に変更
+
+**対象ファイル**: 
+- `src/resources/views/cases.blade.php`
+- `src/public/css/app.css`
+
+**変更内容**:
+- 導入事例ページの担当者の感想（お客様の声）箇所のテキストを黒色に変更
+- `.case-testimonial`内の全てのテキスト（感想文と担当者名）のインラインスタイルを`color: #000000 !important`に変更
+- 修正した箇所：
+  1. 市役所 総務課長の感想（126-133行目）
+  2. 美術館 学芸員の感想（167-174行目）
+  3. 製造業 営業部長の感想（208-215行目）
+- CSSにもより具体的なセレクタを追加して、確実に黒色が適用されるようにした
+- これにより、全ての担当者の感想箇所のテキストが黒色で統一された
+
+### 2026-01-03 23:57:52 導入事例・実績ページ 成果表示（case-results）のテキストを黒に変更
+
+**対象ファイル**: `src/public/css/app.css`
+
+**変更内容**:
+- 導入事例ページの成果表示（`.case-results`）内の全てのテキストを黒色に変更
+- `.case-result-item`、`.case-result-label`、`.case-result-value`内の全てのテキストを確実に黒色に設定
+- より具体的なセレクタを追加して、確実に黒色が適用されるようにした
+- これにより、「文書作成時間 3時間 → 1.2時間」「業務効率 40%向上」「導入期間 2ヶ月」などの成果表示のテキストが黒色で統一された
+
 ---
 
 *作成日: 2025年12月29日*  
-*最終更新: 2026-01-03 23:31:10（サービスページ 研修・セミナーとシステム開発ボックス内のテキストを黒に変更）*
+*最終更新: 2026-01-03 23:57:52（導入事例・実績ページ 成果表示（case-results）のテキストを黒に変更）*
 
