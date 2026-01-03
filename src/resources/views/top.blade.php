@@ -197,8 +197,10 @@
         <div class="lp-cta-content">
             <h2 class="lp-section-title">まずは現状を整理します</h2>
             <p class="lp-cta-subtitle">課題の切り分けと、最初の一手を一緒に決めます</p>
-            <div class="lp-cta-actions">
-                <a href="{{ route('contact') }}" class="btn btn-primary">構造を一緒に見直す（10分）</a>
+            <div class="cta-actions">
+                <a href="{{ route('contact') }}#inquiry" class="btn btn-primary">お問い合わせ</a>
+                <a href="{{ route('contact') }}#download" class="btn btn-primary" style="background-color: #FF8C00; border-color: #FF8C00;">資料請求</a>
+                <a href="{{ route('contact') }}#consultation" class="btn btn-primary">無料相談</a>
             </div>
             <p class="lp-cta-note">まずは状況の整理から行います</p>
         </div>
@@ -417,7 +419,9 @@
             </div>
             
             <div class="cta-actions">
-                <a href="{{ route('contact') }}" class="btn btn-primary">構造を一緒に見直す（10分）</a>
+                <a href="{{ route('contact') }}#inquiry" class="btn btn-primary">お問い合わせ</a>
+                <a href="{{ route('contact') }}#download" class="btn btn-primary" style="background-color: #FF8C00; border-color: #FF8C00;">資料請求</a>
+                <a href="{{ route('contact') }}#consultation" class="btn btn-primary">無料相談</a>
             </div>
             <p class="lp-cta-note" style="text-align: center;">一緒に最初の一歩を踏み出しましょう</p>
         </div>
