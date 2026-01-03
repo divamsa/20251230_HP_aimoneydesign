@@ -46,12 +46,133 @@
     </div>
     <div class="container">
         <div class="hero-content">
-            <h1 class="hero-title">生成AI導入で業務効率50%向上。<span class="hero-title-break">2025年4月から本格開始の導入支援</span></h1>
-            <p class="hero-subtitle">中小企業・自治体・文化施設の業務改革を、<span class="hero-subtitle-break">専門チームが完全サポート。早期導入のお客様には特別なサポートプランをご用意</span></p>
-            <p class="hero-description">生成AI導入により、業務時間の削減、コスト削減、顧客満足度の向上を実現。2025年4月から本格的に支援業務を開始いたします。導入から運用まで、一貫したサポートでお客様の成功を支援します。</p>
-            <div class="hero-actions">
-                <a href="{{ route('contact') }}" class="btn btn-primary">無料相談を申し込む（30秒で完了）</a>
+            <h1 class="hero-title">2026年、組織は「努力」では立ち行かなくなります</h1>
+            <p class="hero-subtitle">人材不足、業務過多、DX疲れ。<span class="hero-subtitle-break">多くの組織が同じ壁にぶつかっています。</span></p>
+            <p class="hero-description">問題は現場の能力ではありません。<br>人が頑張ることを前提に積み上がった<strong>業務の構造と設計</strong>にあります。</p>
+            <p class="hero-reinforcement" style="margin-top: var(--spacing-6); font-size: var(--font-size-base); color: var(--color-neutral-400); line-height: var(--line-height-relaxed);">これはツール導入の話ではなく、<br>業務構造の再設計の話です。</p>
+            <p class="hero-definition" style="margin-top: var(--spacing-4); font-size: var(--font-size-base); color: var(--color-neutral-400); line-height: var(--line-height-relaxed);">私たちは生成AIそのものではなく、<br>生成AIを「現場で使える構造」にすることを支援しています。</p>
+        </div>
+    </div>
+</section>
+
+<!-- 提供価値セクション -->
+<section class="lp-section lp-value-proposition">
+    <div class="container">
+        <h2 class="lp-section-title">何を変えるのか</h2>
+        <p class="lp-section-subtitle">生成AI導入を「現場で回る仕組み」にする。デモ→プロトタイプ→運用定着まで、最短距離で伴走します</p>
+        <div class="lp-cards-grid">
+            <div class="lp-card">
+                <h3 class="lp-card-title">業務分解</h3>
+                <p class="lp-card-description">業務を構造化できる粒度まで分解した結果、<br>再設計可能な状態を作ります</p>
             </div>
+            <div class="lp-card">
+                <h3 class="lp-card-title">プロトタイプ</h3>
+                <p class="lp-card-description">最速で動くものを作った結果、<br>現場で検証しながら改善できる状態を作ります</p>
+            </div>
+            <div class="lp-card">
+                <h3 class="lp-card-title">定着支援</h3>
+                <p class="lp-card-description">運用フローと教育を整えた結果、<br>組織が自走できる状態を作ります</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 根拠/信頼セクション -->
+<section class="lp-section lp-proof">
+    <div class="container">
+        <h2 class="lp-section-title">なぜ信頼できるのか</h2>
+        <p class="lp-section-subtitle" style="margin-bottom: var(--spacing-8);">机上ではなく、実装で証明します</p>
+        <div class="lp-badges-grid">
+            <div class="lp-badge">
+                <div class="lp-badge-content">非エンジニア向け伴走</div>
+            </div>
+            <div class="lp-badge">
+                <div class="lp-badge-content">既存業務の構造改善</div>
+            </div>
+            <div class="lp-badge">
+                <div class="lp-badge-content">プロンプト設計と運用</div>
+            </div>
+            <div class="lp-badge">
+                <div class="lp-badge-content">適切なツール選定</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 自分ごと化セクション -->
+<section class="lp-section lp-self-identification">
+    <div class="container">
+        <p class="lp-self-identification-text" style="font-size: var(--font-size-lg); color: var(--color-neutral-200); text-align: center; line-height: var(--line-height-relaxed); margin-bottom: var(--spacing-6);">
+            もし、あなたの組織で次のどれかに心当たりがあれば、<br>この話は無関係ではありません。
+        </p>
+        <ul class="lp-self-identification-list" style="list-style: none; padding: 0; max-width: 600px; margin: 0 auto; text-align: left;">
+            <li style="padding: var(--spacing-3) 0; font-size: var(--font-size-base); color: var(--color-neutral-300); border-bottom: 1px solid var(--color-neutral-700);">・業務が特定の人に依存している（属人化）</li>
+            <li style="padding: var(--spacing-3) 0; font-size: var(--font-size-base); color: var(--color-neutral-300); border-bottom: 1px solid var(--color-neutral-700);">・常に忙しく、改善の時間が取れない</li>
+            <li style="padding: var(--spacing-3) 0; font-size: var(--font-size-base); color: var(--color-neutral-300);">・改善を試みても、すぐ元に戻ってしまう</li>
+        </ul>
+    </div>
+</section>
+
+<!-- サービスセクション -->
+<section class="lp-section lp-services">
+    <div class="container">
+        <h2 class="lp-section-title">何を提供するのか</h2>
+        <div class="lp-cards-grid lp-services-grid">
+            <div class="lp-card">
+                <h3 class="lp-card-title">生成AI導入コンサル</h3>
+                <p class="lp-card-description">業務棚卸→設計→試作→定着を進めた結果、<br>構造改善が実現した状態を作ります</p>
+            </div>
+            <div class="lp-card">
+                <h3 class="lp-card-title">社内研修/講師</h3>
+                <p class="lp-card-description">段階的な研修を実施した結果、<br>組織全体で活用できる状態を作ります</p>
+            </div>
+            <div class="lp-card">
+                <h3 class="lp-card-title">コンテンツ制作の構造改善</h3>
+                <p class="lp-card-description">制作フローを再設計した結果、<br>持続可能な体制が整った状態を作ります</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 進め方セクション -->
+<section class="lp-section lp-process">
+    <div class="container">
+        <h2 class="lp-section-title">どう進めるのか</h2>
+        <div class="lp-steps-grid">
+            <div class="lp-step">
+                <div class="lp-step-number">1</div>
+                <h3 class="lp-step-title">ヒアリング</h3>
+                <p class="lp-step-description">現状の課題と目標を<br>丁寧に聞き取ります</p>
+            </div>
+            <div class="lp-step">
+                <div class="lp-step-number">2</div>
+                <h3 class="lp-step-title">業務分解</h3>
+                <p class="lp-step-description">業務を構造化できる粒度まで<br>分解・整理します</p>
+            </div>
+            <div class="lp-step">
+                <div class="lp-step-number">3</div>
+                <h3 class="lp-step-title">試作・検証</h3>
+                <p class="lp-step-description">最速で動くプロトタイプを<br>現場で検証します</p>
+            </div>
+            <div class="lp-step">
+                <div class="lp-step-number">4</div>
+                <h3 class="lp-step-title">運用・定着</h3>
+                <p class="lp-step-description">運用フローと教育で<br>自走できる状態にします</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTAセクション（問い合わせ誘導） -->
+<section class="lp-section lp-cta">
+    <div class="container">
+        <div class="lp-cta-content">
+            <h2 class="lp-section-title">まずは現状を整理します</h2>
+            <p class="lp-cta-subtitle">課題の切り分けと、最初の一手を一緒に決めます</p>
+            <div class="lp-cta-actions">
+                <a href="{{ route('contact') }}" class="btn btn-primary">構造を一緒に見直す（10分）</a>
+            </div>
+            <p class="lp-cta-note">売り込みは行いません。整理だけでも構いません。</p>
         </div>
     </div>
 </section>
@@ -62,9 +183,10 @@
         <img src="https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&fit=crop&q=80&w=2000" alt="Data Dashboard Background" loading="lazy" decoding="async">
     </div>
     <div class="container" style="position: relative; z-index: 1;">
-        <h2 class="section-title">実績数値</h2>
-        <p class="section-subtitle" style="text-align: center; margin-bottom: 1rem; color: #374151; font-size: 1.2rem; font-weight: 600;">支援業務開始：2025年4月</p>
-        <p class="section-subtitle" style="text-align: center; margin-bottom: 3rem; color: #6B7280; font-size: 1.1rem;">2024年12月時点の実績（合計13社・団体）</p>
+        <h2 class="section-title">対象領域</h2>
+        <p class="section-subtitle" style="text-align: center; margin-bottom: var(--spacing-6); color: var(--color-neutral-400); font-size: var(--font-size-lg); line-height: var(--line-height-relaxed); max-width: 800px; margin-left: auto; margin-right: auto;">この支援は、次のような組織を想定しています。<br>共通するのは、業務の構造が重く、改善が滞りがちな組織です。</p>
+        <p class="section-subtitle" style="text-align: center; margin-bottom: 1rem; color: var(--color-neutral-300); font-size: 1.2rem; font-weight: 600;">支援業務開始：2025年4月</p>
+        <p class="section-subtitle" style="text-align: center; margin-bottom: 3rem; color: var(--color-neutral-400); font-size: 1.1rem;">2024年12月時点の実績（合計13社・団体）</p>
         <div class="stats-grid">
             <div class="stat-card">
                 <div class="card-bg-image">
@@ -72,7 +194,7 @@
                 </div>
                 <div class="stat-number" data-target="5">5</div>
                 <div class="stat-label">導入企業数</div>
-                <div class="stat-detail" style="font-size: 0.9rem; color: #6B7280; margin-top: 0.5rem;">社（中小企業）</div>
+                <div class="stat-detail" style="font-size: 0.9rem; color: var(--color-neutral-400); margin-top: 0.5rem;">社（中小企業）</div>
             </div>
             <div class="stat-card">
                 <div class="card-bg-image">
@@ -80,7 +202,7 @@
                 </div>
                 <div class="stat-number" data-target="2">2</div>
                 <div class="stat-label">地方自治体</div>
-                <div class="stat-detail" style="font-size: 0.9rem; color: #6B7280; margin-top: 0.5rem;">つの自治体に導入実績</div>
+                <div class="stat-detail" style="font-size: 0.9rem; color: var(--color-neutral-400); margin-top: 0.5rem;">つの自治体に導入実績</div>
             </div>
             <div class="stat-card">
                 <div class="card-bg-image">
@@ -88,7 +210,7 @@
                 </div>
                 <div class="stat-number" data-target="5">5</div>
                 <div class="stat-label">博物館・美術館</div>
-                <div class="stat-detail" style="font-size: 0.9rem; color: #6B7280; margin-top: 0.5rem;">つの文化施設に導入実績</div>
+                <div class="stat-detail" style="font-size: 0.9rem; color: var(--color-neutral-400); margin-top: 0.5rem;">つの文化施設に導入実績</div>
             </div>
             <div class="stat-card">
                 <div class="card-bg-image">
@@ -96,39 +218,39 @@
                 </div>
                 <div class="stat-number" data-target="1">1</div>
                 <div class="stat-label">非営利団体</div>
-                <div class="stat-detail" style="font-size: 0.9rem; color: #6B7280; margin-top: 0.5rem;">つの団体に導入実績</div>
+                <div class="stat-detail" style="font-size: 0.9rem; color: var(--color-neutral-400); margin-top: 0.5rem;">つの団体に導入実績</div>
             </div>
         </div>
         <!-- 業種別内訳 -->
-        <div class="stats-breakdown" style="margin-top: 4rem; padding: 2rem; background: rgba(255, 255, 255, 0.9); border-radius: 12px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);">
-            <h3 style="font-size: 1.5rem; font-weight: 700; color: #374151; margin-bottom: 1.5rem; text-align: center;">導入実績の内訳（合計13社・団体）</h3>
+        <div class="stats-breakdown" style="margin-top: 4rem; padding: 2rem; background: var(--color-neutral-800); border-radius: 12px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); border: 1px solid var(--color-neutral-700);">
+            <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--color-neutral-100); margin-bottom: 1.5rem; text-align: center;">導入実績の内訳（合計13社・団体）</h3>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 2rem;">
                 <div style="text-align: center;">
-                    <div style="font-size: 2rem; font-weight: 700; color: #374151; margin-bottom: 0.5rem;">中小企業</div>
-                    <div style="font-size: 1.2rem; color: #6B7280;">5社</div>
+                    <div style="font-size: 2rem; font-weight: 700; color: var(--color-neutral-100); margin-bottom: 0.5rem;">中小企業</div>
+                    <div style="font-size: 1.2rem; color: var(--color-neutral-300);">5社</div>
                 </div>
                 <div style="text-align: center;">
-                    <div style="font-size: 2rem; font-weight: 700; color: #374151; margin-bottom: 0.5rem;">地方自治体</div>
-                    <div style="font-size: 1.2rem; color: #6B7280;">2</div>
+                    <div style="font-size: 2rem; font-weight: 700; color: var(--color-neutral-100); margin-bottom: 0.5rem;">地方自治体</div>
+                    <div style="font-size: 1.2rem; color: var(--color-neutral-300);">2</div>
                 </div>
                 <div style="text-align: center;">
-                    <div style="font-size: 2rem; font-weight: 700; color: #374151; margin-bottom: 0.5rem;">博物館・美術館</div>
-                    <div style="font-size: 1.2rem; color: #6B7280;">5</div>
+                    <div style="font-size: 2rem; font-weight: 700; color: var(--color-neutral-100); margin-bottom: 0.5rem;">博物館・美術館</div>
+                    <div style="font-size: 1.2rem; color: var(--color-neutral-300);">5</div>
                 </div>
                 <div style="text-align: center;">
-                    <div style="font-size: 2rem; font-weight: 700; color: #374151; margin-bottom: 0.5rem;">非営利団体</div>
-                    <div style="font-size: 1.2rem; color: #6B7280;">1</div>
+                    <div style="font-size: 2rem; font-weight: 700; color: var(--color-neutral-100); margin-bottom: 0.5rem;">非営利団体</div>
+                    <div style="font-size: 1.2rem; color: var(--color-neutral-300);">1</div>
                 </div>
             </div>
-            <div style="margin-top: 2rem; padding: 1.5rem; background: linear-gradient(135deg, #F3F4F6 0%, #E5E7EB 100%); border-radius: 12px; text-align: center;">
-                <p style="font-size: 1.1rem; color: #374151; font-weight: 600; margin-bottom: 0.5rem;">✨ 支援業務開始：2025年4月 ✨</p>
-                <p style="font-size: 0.95rem; color: #6B7280; line-height: 1.7;">
+            <div style="margin-top: 2rem; padding: 1.5rem; background: var(--color-neutral-700); border-radius: 12px; text-align: center; border: 1px solid var(--color-neutral-600);">
+                <p style="font-size: 1.1rem; color: var(--color-neutral-100); font-weight: 600; margin-bottom: 0.5rem;">✨ 支援業務開始：2025年4月 ✨</p>
+                <p style="font-size: 0.95rem; color: var(--color-neutral-300); line-height: 1.7;">
                     2025年4月から本格的に支援業務を開始いたします。<span class="stats-breakdown-break">早期導入のお客様には、特別なサポートプランをご用意しております。</span>
                 </p>
             </div>
         </div>
         <div class="section-actions" style="margin-top: 3rem; text-align: center;">
-            <a href="{{ route('contact') }}" class="btn btn-primary">無料相談を申し込む（初回60分無料）</a>
+            <a href="{{ route('cases') }}" style="color: var(--color-neutral-200); text-decoration: underline; text-underline-offset: 4px;">導入事例をもっと見る</a>
         </div>
     </div>
 </section>
@@ -168,8 +290,7 @@
             </div>
         </div>
         <div class="section-actions">
-            <a href="{{ route('services') }}" class="btn btn-primary">サービス詳細を見る</a>
-            <a href="{{ route('contact') }}" class="btn btn-primary" style="margin-left: 1rem;">無料相談を申し込む</a>
+            <a href="{{ route('services') }}" style="color: var(--color-neutral-300); text-decoration: underline; text-underline-offset: 4px;">サービス詳細を見る</a>
         </div>
     </div>
 </section>
@@ -188,8 +309,8 @@
                     <img src="https://images.unsplash.com/photo-1575517111478-7f6afd0973db?auto=format&fit=crop&q=80&w=1000" alt="Government Office">
                 </div>
                 <div class="case-category">地方自治体</div>
-                <h3 class="case-title">人口5万人規模の市役所の業務効率化</h3>
-                <p class="case-description">生成AIを活用した住民対応業務の効率化により、対応時間を50%削減。顧客満足度が60%から90%に向上しました。</p>
+                <h3 class="case-title">人口5万人規模の市役所の業務構造改善</h3>
+                <p class="case-description">住民対応業務の構造を再設計し、対応時間を50%削減。顧客満足度が60%から90%に向上しました。</p>
                 <div class="case-preview-results" style="margin-top: 1rem; padding: 1rem; background: rgba(255, 255, 255, 0.9); border-radius: 8px; font-size: 0.9rem;">
                     <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
                         <span style="color: #6B7280;">対応時間:</span>
@@ -227,7 +348,7 @@
                 </div>
                 <div class="case-category">中小企業</div>
                 <h3 class="case-title">従業員50名規模の製造業の顧客対応改善</h3>
-                <p class="case-description">生成AIを活用した24時間365日の自動対応システムにより、対応時間を70%削減。顧客満足度が65%から98%に向上しました。</p>
+                <p class="case-description">顧客対応の構造を再設計し、対応時間を70%削減。顧客満足度が65%から98%に向上しました。</p>
                 <div class="case-preview-results" style="margin-top: 1rem; padding: 1rem; background: rgba(255, 255, 255, 0.9); border-radius: 8px; font-size: 0.9rem;">
                     <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
                         <span style="color: #6B7280;">対応時間:</span>
@@ -242,8 +363,7 @@
             </div>
         </div>
         <div class="section-actions">
-            <a href="{{ route('cases') }}" class="btn btn-primary">導入事例をもっと見る</a>
-            <a href="{{ route('contact') }}" class="btn btn-primary" style="margin-left: 1rem;">無料相談を申し込む</a>
+            <a href="{{ route('cases') }}" style="color: var(--color-neutral-300); text-decoration: underline; text-underline-offset: 4px;">導入事例をもっと見る</a>
         </div>
     </div>
 </section>
@@ -252,11 +372,12 @@
 <section class="cta">
     <div class="container">
         <div class="cta-content">
-            <h2 class="cta-title">今すぐ無料相談を申し込む。<span class="cta-title-break">生成AI導入で業務効率を劇的に改善</span></h2>
-            <p class="cta-description">初回60分無料相談で、あなたの課題に最適な生成AI導入プランをご提案します。24時間以内にご返信いたします。</p>
+            <h2 class="cta-title">最初の一手を決めます</h2>
+            <p class="cta-description">現状を整理し、課題の切り分けと最初の一手を一緒に決めます。24時間以内にご返信いたします。</p>
             <div class="cta-actions">
-                <a href="{{ route('contact') }}" class="btn btn-primary">今すぐ無料相談を申し込む（30秒で完了）</a>
+                <a href="{{ route('contact') }}" class="btn btn-primary">構造を一緒に見直す（10分）</a>
             </div>
+            <p style="margin-top: var(--spacing-4); font-size: var(--font-size-sm); color: var(--color-neutral-500); text-align: center;">売り込みは行いません。整理だけでも構いません。</p>
         </div>
     </div>
 </section>
