@@ -297,7 +297,7 @@
                     <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1000" alt="Consulting Business">
                 </div>
                 <h3 class="service-title">生成AI導入コンサルティング</h3>
-                <p class="service-description">業務を構造化できる粒度まで分解し、再設計可能な状態を作ります。</p>
+                <p class="service-description" style="color: #000000 !important;">業務を構造化できる粒度まで分解し、再設計可能な状態を作ります。</p>
                 <a href="{{ route('services') }}" class="service-link">詳細を見る →</a>
             </div>
             <div class="service-card">
@@ -305,7 +305,7 @@
                     <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=1000" alt="Training Seminar with Instructor and Students">
                 </div>
                 <h3 class="service-title">生成AI研修・セミナー</h3>
-                <p class="service-description">業務構造の再設計に必要な思考と手法を伝えます。</p>
+                <p class="service-description" style="color: #000000 !important;">業務構造の再設計に必要な思考と手法を伝えます。</p>
                 <a href="{{ route('services') }}" class="service-link">詳細を見る →</a>
             </div>
             <div class="service-card">
@@ -313,7 +313,7 @@
                     <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=1000" alt="Development Coding">
                 </div>
                 <h3 class="service-title">生成AIシステム開発</h3>
-                <p class="service-description">業務構造に組み込まれるシステムを構築します。</p>
+                <p class="service-description" style="color: #000000 !important;">業務構造に組み込まれるシステムを構築します。</p>
                 <a href="{{ route('services') }}" class="service-link">詳細を見る →</a>
             </div>
         </div>
@@ -337,16 +337,16 @@
                     <img src="https://images.unsplash.com/photo-1575517111478-7f6afd0973db?auto=format&fit=crop&q=80&w=1000" alt="Government Office">
                 </div>
                 <div class="case-category">地方自治体</div>
-                <h3 class="case-title">人口5万人規模の市役所の<br>業務構造改善</h3>
-                <p class="case-description" style="text-align: center;">住民対応業務の構造を再設計し、<br>対応時間を50%削減。<br>顧客満足度が60%から90%に向上しました。</p>
+                <h3 class="case-title" style="color: #000000 !important;">人口5万人規模の市役所の<br>業務構造改善</h3>
+                <p class="case-description" style="text-align: center; color: #000000 !important;">住民対応業務の構造を再設計し、<br>対応時間を50%削減。<br>顧客満足度が60%から90%に向上しました。</p>
                 <div class="case-preview-results" style="margin-top: 1rem; padding: 1rem; background: rgba(255, 255, 255, 0.9); border-radius: 8px; font-size: 0.9rem;">
                     <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-                        <span style="color: #6B7280;">対応時間:</span>
-                        <span style="color: #374151; font-weight: 600;">30分 → 15分</span>
+                        <span style="color: #000000 !important;">対応時間:</span>
+                        <span style="color: #000000 !important; font-weight: 600;">30分 → 15分</span>
                     </div>
                     <div style="display: flex; justify-content: space-between;">
-                        <span style="color: #6B7280;">顧客満足度:</span>
-                        <span style="color: #374151; font-weight: 600;">60% → 90%</span>
+                        <span style="color: #000000 !important;">顧客満足度:</span>
+                        <span style="color: #000000 !important; font-weight: 600;">60% → 90%</span>
                     </div>
                 </div>
                 <a href="{{ route('cases') }}" class="case-link">詳細を見る →</a>
@@ -356,16 +356,16 @@
                     <img src="https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&q=80&w=1000" alt="Museum Gallery">
                 </div>
                 <div class="case-category">博物館</div>
-                <h3 class="case-title">地方都市の美術館の<br>展示解説システム</h3>
-                <p class="case-description" style="text-align: center;">多言語対応の展示解説システムにより、<br>来館者満足度が75%から92%に向上。<br>滞在時間も25%延長。</p>
+                <h3 class="case-title" style="color: #000000 !important;">地方都市の美術館の<br>展示解説システム</h3>
+                <p class="case-description" style="text-align: center; color: #000000 !important;">多言語対応の展示解説システムにより、<br>来館者満足度が75%から92%に向上。<br>滞在時間も25%延長。</p>
                 <div class="case-preview-results" style="margin-top: 1rem; padding: 1rem; background: rgba(255, 255, 255, 0.9); border-radius: 8px; font-size: 0.9rem;">
                     <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-                        <span style="color: #6B7280;">来館者満足度:</span>
-                        <span style="color: #374151; font-weight: 600;">75% → 92%</span>
+                        <span style="color: #000000 !important;">来館者満足度:</span>
+                        <span style="color: #000000 !important; font-weight: 600;">75% → 92%</span>
                     </div>
                     <div style="display: flex; justify-content: space-between;">
-                        <span style="color: #6B7280;">滞在時間:</span>
-                        <span style="color: #374151; font-weight: 600;">1.5時間 → 1.9時間</span>
+                        <span style="color: #000000 !important;">滞在時間:</span>
+                        <span style="color: #000000 !important; font-weight: 600;">1.5時間 → 1.9時間</span>
                     </div>
                 </div>
                 <a href="{{ route('cases') }}" class="case-link">詳細を見る →</a>
@@ -375,16 +375,16 @@
                     <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1000" alt="Manufacturing Industry">
                 </div>
                 <div class="case-category">中小企業</div>
-                <h3 class="case-title">従業員50名規模の製造業の<br>顧客対応改善</h3>
-                <p class="case-description" style="text-align: center;">顧客対応の構造を再設計し、<br>対応時間を70%削減。<br>顧客満足度が65%から98%に向上しました。</p>
+                <h3 class="case-title" style="color: #000000 !important;">従業員50名規模の製造業の<br>顧客対応改善</h3>
+                <p class="case-description" style="text-align: center; color: #000000 !important;">顧客対応の構造を再設計し、<br>対応時間を70%削減。<br>顧客満足度が65%から98%に向上しました。</p>
                 <div class="case-preview-results" style="margin-top: 1rem; padding: 1rem; background: rgba(255, 255, 255, 0.9); border-radius: 8px; font-size: 0.9rem;">
                     <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-                        <span style="color: #6B7280;">対応時間:</span>
-                        <span style="color: #374151; font-weight: 600;">2時間 → 36分</span>
+                        <span style="color: #000000 !important;">対応時間:</span>
+                        <span style="color: #000000 !important; font-weight: 600;">2時間 → 36分</span>
                     </div>
                     <div style="display: flex; justify-content: space-between;">
-                        <span style="color: #6B7280;">顧客満足度:</span>
-                        <span style="color: #374151; font-weight: 600;">65% → 98%</span>
+                        <span style="color: #000000 !important;">顧客満足度:</span>
+                        <span style="color: #000000 !important; font-weight: 600;">65% → 98%</span>
                     </div>
                 </div>
                 <a href="{{ route('cases') }}" class="case-link">詳細を見る →</a>

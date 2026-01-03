@@ -1981,6 +1981,26 @@ body.menu-open {
     color: var(--color-neutral-100);
 }
 
+/* サービス紹介セクション内のサービスカード内の全てのテキストを確実に黒に（最優先・親要素の色を上書き） */
+.services-preview .service-card,
+.services-preview .service-card *,
+.services-preview .service-card h3,
+.services-preview .service-card p,
+.services-preview .service-card a,
+.services-preview .service-card .service-title,
+.services-preview .service-card .service-description,
+.services-preview .service-card .service-link,
+.services-preview .services-grid .service-card,
+.services-preview .services-grid .service-card *,
+.services-preview .services-grid .service-card h3,
+.services-preview .services-grid .service-card p,
+.services-preview .services-grid .service-card a,
+.services-preview .services-grid .service-card .service-title,
+.services-preview .services-grid .service-card .service-description,
+.services-preview .services-grid .service-card .service-link {
+    color: #000000 !important;
+}
+
 @media (max-width: 768px) {
     .services-preview {
         padding: var(--spacing-12) 0;
@@ -2121,6 +2141,26 @@ body.menu-open {
     padding: var(--spacing-20) 0;
     background: var(--color-neutral-900);
     color: var(--color-neutral-100);
+}
+
+/* 導入事例セクション内のケースカード内の全てのテキストを確実に黒に（最優先・親要素の色を上書き） */
+.cases-preview .case-card,
+.cases-preview .case-card *,
+.cases-preview .case-card h3,
+.cases-preview .case-card p,
+.cases-preview .case-card a,
+.cases-preview .case-card .case-title,
+.cases-preview .case-card .case-description,
+.cases-preview .case-card .case-link,
+.cases-preview .cases-grid .case-card,
+.cases-preview .cases-grid .case-card *,
+.cases-preview .cases-grid .case-card h3,
+.cases-preview .cases-grid .case-card p,
+.cases-preview .cases-grid .case-card a,
+.cases-preview .cases-grid .case-card .case-title,
+.cases-preview .cases-grid .case-card .case-description,
+.cases-preview .cases-grid .case-card .case-link {
+    color: #000000 !important;
 }
 
 @media (max-width: 768px) {
@@ -4691,7 +4731,7 @@ section.services-preview .services-grid .service-card .service-link,
     color: #000000 !important;
 }
 
-/* ホームページのサービス紹介セクション内の説明文（p.service-description）を確実に黒に（最優先・強化版） */
+/* ホームページのサービス紹介セクション内の説明文（p.service-description）を確実に黒に（最優先・強化版・最終版） */
 section.services-preview .services-grid .service-card p.service-description,
 section.services-preview .services-grid .service-card .service-description,
 .services-preview .services-grid .service-card p.service-description,
@@ -4701,11 +4741,19 @@ section.services-preview .services-grid .service-card .service-description,
 .services-preview .services-grid .service-card p,
 .services-preview .services-grid .service-card p *,
 section.services-preview .services-grid .service-card p,
-section.services-preview .services-grid .service-card p * {
+section.services-preview .services-grid .service-card p *,
+.services-preview p.service-description,
+.services-preview .service-description,
+.services-preview .service-card p,
+.services-preview .service-card p *,
+.services-preview .services-grid p,
+.services-preview .services-grid p *,
+.services-preview .services-grid .service-card p.service-description *,
+section.services-preview .services-grid .service-card p.service-description * {
     color: #000000 !important;
 }
 
-/* 導入事例カード内のテキストも確実に黒に */
+/* 導入事例カード内のテキストも確実に黒に（最優先・強化版） */
 .case-card,
 .case-card *,
 .case-card p,
@@ -4718,7 +4766,48 @@ section.services-preview .services-grid .service-card p * {
 .cases-preview .case-card a,
 .cases-preview .case-title,
 .cases-preview .case-description,
-.cases-preview .case-link {
+.cases-preview .case-link,
+section.cases-preview .cases-grid .case-card,
+section.cases-preview .cases-grid .case-card *,
+section.cases-preview .cases-grid .case-card h3,
+section.cases-preview .cases-grid .case-card p,
+section.cases-preview .cases-grid .case-card a,
+section.cases-preview .cases-grid .case-card .case-title,
+section.cases-preview .cases-grid .case-card .case-description,
+section.cases-preview .cases-grid .case-card .case-link,
+.cases-preview .cases-grid .case-card h3.case-title,
+.cases-preview .cases-grid .case-card p.case-description,
+section.cases-preview .cases-grid .case-card h3.case-title,
+section.cases-preview .cases-grid .case-card p.case-description {
+    color: #000000 !important;
+}
+
+/* 導入事例セクション内の成果表示（case-preview-results）内の全てのテキストを確実に黒に（最優先） */
+.case-preview-results,
+.case-preview-results *,
+.case-preview-results span,
+.case-preview-results div,
+.case-preview-results div span,
+.cases-preview .case-preview-results,
+.cases-preview .case-preview-results *,
+.cases-preview .case-preview-results span,
+.cases-preview .case-preview-results div,
+.cases-preview .case-preview-results div span,
+.cases-preview .case-card .case-preview-results,
+.cases-preview .case-card .case-preview-results *,
+.cases-preview .case-card .case-preview-results span,
+.cases-preview .case-card .case-preview-results div,
+.cases-preview .case-card .case-preview-results div span,
+.cases-preview .cases-grid .case-card .case-preview-results,
+.cases-preview .cases-grid .case-card .case-preview-results *,
+.cases-preview .cases-grid .case-card .case-preview-results span,
+.cases-preview .cases-grid .case-card .case-preview-results div,
+.cases-preview .cases-grid .case-card .case-preview-results div span,
+section.cases-preview .cases-grid .case-card .case-preview-results,
+section.cases-preview .cases-grid .case-card .case-preview-results *,
+section.cases-preview .cases-grid .case-card .case-preview-results span,
+section.cases-preview .cases-grid .case-card .case-preview-results div,
+section.cases-preview .cases-grid .case-card .case-preview-results div span {
     color: #000000 !important;
 }
 

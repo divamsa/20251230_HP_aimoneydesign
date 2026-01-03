@@ -59,8 +59,8 @@
 
     <div class="section">
         <!-- 一般問い合わせフォーム -->
-        <div class="card" style="margin-bottom: 2rem;">
-            <h2 class="section-title">一般問い合わせ</h2>
+        <div class="card" id="inquiry" style="margin-bottom: 2rem; scroll-margin-top: 80px;">
+            <h2 class="section-title">お問い合わせ</h2>
             <form action="{{ route('contact.inquiry') }}" method="POST" class="contact-form" data-form-type="inquiry">
                 @csrf
                 <input type="hidden" name="recaptcha_token" id="recaptcha_token_inquiry">
@@ -104,7 +104,7 @@
         </div>
 
         <!-- 資料請求フォーム -->
-        <div class="card" style="margin-bottom: 2rem;">
+        <div class="card" id="download" style="margin-bottom: 2rem; scroll-margin-top: 80px;">
             <h2 class="section-title">資料請求</h2>
             <form action="{{ route('contact.download') }}" method="POST" class="contact-form" data-form-type="download">
                 @csrf
@@ -144,8 +144,8 @@
         </div>
 
         <!-- 無料相談申し込みフォーム -->
-        <div class="card">
-            <h2 class="section-title">無料相談申し込み</h2>
+        <div class="card" id="consultation" style="scroll-margin-top: 80px;">
+            <h2 class="section-title">無料相談</h2>
             <form action="{{ route('contact.consultation') }}" method="POST" class="contact-form" data-form-type="consultation">
                 @csrf
                 <input type="hidden" name="recaptcha_token" id="recaptcha_token_consultation">
