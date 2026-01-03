@@ -4691,6 +4691,20 @@ section.services-preview .services-grid .service-card .service-link,
     color: #000000 !important;
 }
 
+/* ホームページのサービス紹介セクション内の説明文（p.service-description）を確実に黒に（最優先・強化版） */
+section.services-preview .services-grid .service-card p.service-description,
+section.services-preview .services-grid .service-card .service-description,
+.services-preview .services-grid .service-card p.service-description,
+.services-preview .services-grid .service-card .service-description,
+.services-preview .service-card p.service-description,
+.services-preview .service-card .service-description,
+.services-preview .services-grid .service-card p,
+.services-preview .services-grid .service-card p *,
+section.services-preview .services-grid .service-card p,
+section.services-preview .services-grid .service-card p * {
+    color: #000000 !important;
+}
+
 /* 導入事例カード内のテキストも確実に黒に */
 .case-card,
 .case-card *,
