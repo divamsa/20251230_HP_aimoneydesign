@@ -4671,6 +4671,26 @@ p.hero-definition,
     color: #000000 !important;
 }
 
+/* ホームページのサービス紹介セクション内の3つのボックス内の全てのテキストを確実に黒に（最優先） */
+section.services-preview .services-grid .service-card,
+section.services-preview .services-grid .service-card *,
+section.services-preview .services-grid .service-card h3,
+section.services-preview .services-grid .service-card p,
+section.services-preview .services-grid .service-card a,
+section.services-preview .services-grid .service-card .service-title,
+section.services-preview .services-grid .service-card .service-description,
+section.services-preview .services-grid .service-card .service-link,
+.services-preview .services-grid .service-card,
+.services-preview .services-grid .service-card *,
+.services-preview .services-grid .service-card h3,
+.services-preview .services-grid .service-card p,
+.services-preview .services-grid .service-card a,
+.services-preview .services-grid .service-card .service-title,
+.services-preview .services-grid .service-card .service-description,
+.services-preview .services-grid .service-card .service-link {
+    color: #000000 !important;
+}
+
 /* 導入事例カード内のテキストも確実に黒に */
 .case-card,
 .case-card *,
