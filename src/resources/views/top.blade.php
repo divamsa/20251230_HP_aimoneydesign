@@ -2,17 +2,17 @@
 
 @section('title', 'トップページ - 株式会社マネーデザイン | 生成AI導入支援')
 
-@section('description', 'FP✖️不動産✖️生成AIを謳う株式会社マネーデザインの生成AI導入支援サービス。中小企業、地方自治体、博物館・美術館など、様々な組織への生成AI導入支援を行っています。2025年4月から本格的に支援業務を開始いたします。')
+@section('description', 'FP✖️不動産✖️生成AIを謳う株式会社マネーデザインの生成AI導入支援サービス。中小企業、地方自治体、博物館・美術館など、様々な組織への生成AI導入支援を行っています。2025年4月から本格的に支援業務を開始いたしました。')
 
 @section('keywords', '生成AI,AI導入,AIコンサルティング,AI研修,AIシステム開発,マネーデザイン,FP,不動産,地方自治体,博物館,美術館')
 
 @section('og_title', '株式会社マネーデザイン | 生成AI導入支援サービス')
-@section('og_description', 'FP✖️不動産✖️生成AIを謳う株式会社マネーデザインの生成AI導入支援サービス。2025年4月から本格的に支援業務を開始いたします。')
+@section('og_description', 'FP✖️不動産✖️生成AIを謳う株式会社マネーデザインの生成AI導入支援サービス。2025年4月から本格的に支援業務を開始いたしました。')
 @section('og_url', route('top'))
 @section('og_type', 'website')
 
 @section('twitter_title', '株式会社マネーデザイン | 生成AI導入支援サービス')
-@section('twitter_description', 'FP✖️不動産✖️生成AIを謳う株式会社マネーデザインの生成AI導入支援サービス。2025年4月から本格的に支援業務を開始いたします。')
+@section('twitter_description', 'FP✖️不動産✖️生成AIを謳う株式会社マネーデザインの生成AI導入支援サービス。2025年4月から本格的に支援業務を開始いたしました。')
 
 @push('structured_data')
 <script type="application/ld+json">
@@ -46,11 +46,12 @@
     </div>
     <div class="container">
         <div class="hero-content">
+            <p class="hero-label">AI Collaboration Background</p>
             <h1 class="hero-title">2026年、組織は「努力」では立ち行かなくなります</h1>
             <p class="hero-subtitle">人材不足、業務過多、DX疲れ。<span class="hero-subtitle-break">多くの組織が同じ壁にぶつかっています。</span></p>
             <p class="hero-description">問題は現場の能力ではありません。<br>人が頑張ることを前提に積み上がった<strong>業務の構造と設計</strong>にあります。</p>
-            <p class="hero-reinforcement" style="margin-top: var(--spacing-6); font-size: var(--font-size-base); color: var(--color-neutral-400); line-height: var(--line-height-relaxed);">これはツール導入の話ではなく、<br>業務構造の再設計の話です。</p>
-            <p class="hero-definition" style="margin-top: var(--spacing-4); font-size: var(--font-size-base); color: var(--color-neutral-400); line-height: var(--line-height-relaxed);">私たちは生成AIそのものではなく、<br>生成AIを「現場で使える構造」にすることを支援しています。</p>
+            <p class="hero-reinforcement">これは生成AIの話ではありません。<br>人が頑張る前提で積み上がった「業務構造」の話です。</p>
+            <p class="hero-definition">私たちは、この「業務構造」を現場で組み替えるための<br>生成AI導入・業務再設計を支援しています</p>
         </div>
     </div>
 </section>
@@ -58,8 +59,8 @@
 <!-- 提供価値セクション -->
 <section class="lp-section lp-value-proposition">
     <div class="container">
-        <h2 class="lp-section-title">何を変えるのか</h2>
-        <p class="lp-section-subtitle">生成AI導入を「現場で回る仕組み」にする。デモ→プロトタイプ→運用定着まで、最短距離で伴走します</p>
+        <h2 class="lp-section-title">何を設計するのか</h2>
+        <p class="lp-section-subtitle">生成AI導入を「現場で回る仕組み」にする</p>
         <div class="lp-cards-grid">
             <div class="lp-card">
                 <h3 class="lp-card-title">業務分解</h3>
@@ -70,7 +71,7 @@
                 <p class="lp-card-description">最速で動くものを作った結果、<br>現場で検証しながら改善できる状態を作ります</p>
             </div>
             <div class="lp-card">
-                <h3 class="lp-card-title">定着支援</h3>
+                <h3 class="lp-card-title">定着</h3>
                 <p class="lp-card-description">運用フローと教育を整えた結果、<br>組織が自走できる状態を作ります</p>
             </div>
         </div>
@@ -79,24 +80,51 @@
 
 <!-- 根拠/信頼セクション -->
 <section class="lp-section lp-proof">
-    <div class="container">
-        <h2 class="lp-section-title">なぜ信頼できるのか</h2>
-        <p class="lp-section-subtitle" style="margin-bottom: var(--spacing-8);">机上ではなく、実装で証明します</p>
-        <div class="lp-badges-grid">
-            <div class="lp-badge">
-                <div class="lp-badge-content">非エンジニア向け伴走</div>
-            </div>
-            <div class="lp-badge">
-                <div class="lp-badge-content">既存業務の構造改善</div>
-            </div>
-            <div class="lp-badge">
-                <div class="lp-badge-content">プロンプト設計と運用</div>
-            </div>
-            <div class="lp-badge">
-                <div class="lp-badge-content">適切なツール選定</div>
-            </div>
-        </div>
+  <div class="container">
+    <h2 class="lp-section-title">なぜ、多くの改善は続かないのか</h2>
+    <p class="lp-section-subtitle">努力や意欲の問題ではありません</p>
+
+    <p style="text-align: center; margin-bottom: var(--spacing-6); color: var(--color-neutral-300); font-size: var(--font-size-base); line-height: var(--line-height-relaxed);">
+      この構造に心当たりがない組織は、ほぼ存在しません。
+    </p>
+
+    <ul class="lp-self-identification-list" style="list-style: none; padding: 0; max-width: 600px; margin: 0 auto var(--spacing-8); text-align: left;">
+      <li style="padding: var(--spacing-3) 0; font-size: var(--font-size-base); color: var(--color-neutral-300); border-bottom: 1px solid var(--color-neutral-700);">
+        ・業務が特定の人に依存している（属人化）
+      </li>
+      <li style="padding: var(--spacing-3) 0; font-size: var(--font-size-base); color: var(--color-neutral-300); border-bottom: 1px solid var(--color-neutral-700);">
+        ・常に忙しく、改善の時間が取れない
+      </li>
+      <li style="padding: var(--spacing-3) 0; font-size: var(--font-size-base); color: var(--color-neutral-300);">
+        ・改善を試みても、すぐ元に戻ってしまう
+      </li>
+    </ul>
+
+    <p style="text-align: center; margin-bottom: var(--spacing-6); color: var(--color-neutral-200); font-size: var(--font-size-base); line-height: var(--line-height-relaxed);">
+      これらは個別の問題ではありません。<br>
+      人が頑張ることを前提に積み上がった<strong>業務の構造そのもの</strong>が原因です。
+    </p>
+
+    <p style="text-align: center; margin-bottom: var(--spacing-8); color: var(--color-neutral-200); font-size: var(--font-size-base); line-height: var(--line-height-relaxed);">
+      私たちは、机上の設計ではなく、<br>
+      <strong>実際に動かしながら業務構造を組み替える進め方</strong>を取ります。
+    </p>
+
+    <div class="lp-badges-grid">
+      <div class="lp-badge">
+        <div class="lp-badge-content">非エンジニアでも扱える形に再設計</div>
+      </div>
+      <div class="lp-badge">
+        <div class="lp-badge-content">既存業務を壊さず構造から整理</div>
+      </div>
+      <div class="lp-badge">
+        <div class="lp-badge-content">プロンプトを一過性で終わらせない運用設計</div>
+      </div>
+      <div class="lp-badge">
+        <div class="lp-badge-content">目的と現場に合ったツールだけを選定</div>
+      </div>
     </div>
+  </div>
 </section>
 
 <!-- 自分ごと化セクション -->
@@ -142,7 +170,7 @@
             <div class="lp-step">
                 <div class="lp-step-number">1</div>
                 <h3 class="lp-step-title">ヒアリング</h3>
-                <p class="lp-step-description">現状の課題と目標を<br>丁寧に聞き取ります</p>
+                <p class="lp-step-description">現状の課題と目標を<br>切り分けます</p>
             </div>
             <div class="lp-step">
                 <div class="lp-step-number">2</div>
@@ -157,7 +185,7 @@
             <div class="lp-step">
                 <div class="lp-step-number">4</div>
                 <h3 class="lp-step-title">運用・定着</h3>
-                <p class="lp-step-description">運用フローと教育で<br>自走できる状態にします</p>
+                <p class="lp-step-description">運用フローと教育で<br>自走できる状態を作ります</p>
             </div>
         </div>
     </div>
@@ -172,7 +200,7 @@
             <div class="lp-cta-actions">
                 <a href="{{ route('contact') }}" class="btn btn-primary">構造を一緒に見直す（10分）</a>
             </div>
-            <p class="lp-cta-note">売り込みは行いません。整理だけでも構いません。</p>
+            <p class="lp-cta-note">まずは状況の整理から行います</p>
         </div>
     </div>
 </section>
@@ -194,7 +222,7 @@
                 </div>
                 <div class="stat-number" data-target="5">5</div>
                 <div class="stat-label">導入企業数</div>
-                <div class="stat-detail" style="font-size: 0.9rem; color: var(--color-neutral-400); margin-top: 0.5rem;">社（中小企業）</div>
+                <div class="stat-detail" style="font-size: 0.9rem; color: #000000; margin-top: 0.5rem;">社（中小企業）</div>
             </div>
             <div class="stat-card">
                 <div class="card-bg-image">
@@ -202,7 +230,7 @@
                 </div>
                 <div class="stat-number" data-target="2">2</div>
                 <div class="stat-label">地方自治体</div>
-                <div class="stat-detail" style="font-size: 0.9rem; color: var(--color-neutral-400); margin-top: 0.5rem;">つの自治体に導入実績</div>
+                <div class="stat-detail" style="font-size: 0.9rem; color: #000000; margin-top: 0.5rem;">つの自治体に導入実績</div>
             </div>
             <div class="stat-card">
                 <div class="card-bg-image">
@@ -210,7 +238,7 @@
                 </div>
                 <div class="stat-number" data-target="5">5</div>
                 <div class="stat-label">博物館・美術館</div>
-                <div class="stat-detail" style="font-size: 0.9rem; color: var(--color-neutral-400); margin-top: 0.5rem;">つの文化施設に導入実績</div>
+                <div class="stat-detail" style="font-size: 0.9rem; color: #000000; margin-top: 0.5rem;">つの文化施設に導入実績</div>
             </div>
             <div class="stat-card">
                 <div class="card-bg-image">
@@ -218,7 +246,7 @@
                 </div>
                 <div class="stat-number" data-target="1">1</div>
                 <div class="stat-label">非営利団体</div>
-                <div class="stat-detail" style="font-size: 0.9rem; color: var(--color-neutral-400); margin-top: 0.5rem;">つの団体に導入実績</div>
+                <div class="stat-detail" style="font-size: 0.9rem; color: #000000; margin-top: 0.5rem;">つの団体に導入実績</div>
             </div>
         </div>
         <!-- 業種別内訳 -->
@@ -245,7 +273,7 @@
             <div style="margin-top: 2rem; padding: 1.5rem; background: var(--color-neutral-700); border-radius: 12px; text-align: center; border: 1px solid var(--color-neutral-600);">
                 <p style="font-size: 1.1rem; color: var(--color-neutral-100); font-weight: 600; margin-bottom: 0.5rem;">✨ 支援業務開始：2025年4月 ✨</p>
                 <p style="font-size: 0.95rem; color: var(--color-neutral-300); line-height: 1.7;">
-                    2025年4月から本格的に支援業務を開始いたします。<span class="stats-breakdown-break">早期導入のお客様には、特別なサポートプランをご用意しております。</span>
+                    2025年4月から本格的に支援業務を開始いたしました。<span class="stats-breakdown-break">早期導入のお客様には、特別なサポートプランをご用意しております。</span>
                 </p>
             </div>
         </div>
@@ -269,7 +297,7 @@
                     <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1000" alt="Consulting Business">
                 </div>
                 <h3 class="service-title">生成AI導入コンサルティング</h3>
-                <p class="service-description">企業の課題に合わせた生成AI導入戦略の策定から実装まで、トータルサポートを提供します。</p>
+                <p class="service-description">業務を構造化できる粒度まで分解し、再設計可能な状態を作ります。</p>
                 <a href="{{ route('services') }}" class="service-link">詳細を見る →</a>
             </div>
             <div class="service-card">
@@ -277,7 +305,7 @@
                     <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=1000" alt="Training Seminar with Instructor and Students">
                 </div>
                 <h3 class="service-title">生成AI研修・セミナー</h3>
-                <p class="service-description">従業員向けの生成AI活用研修や、経営層向けのセミナーを実施します。</p>
+                <p class="service-description">業務構造の再設計に必要な思考と手法を伝えます。</p>
                 <a href="{{ route('services') }}" class="service-link">詳細を見る →</a>
             </div>
             <div class="service-card">
@@ -285,7 +313,7 @@
                     <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=1000" alt="Development Coding">
                 </div>
                 <h3 class="service-title">生成AIシステム開発</h3>
-                <p class="service-description">企業固有の業務プロセスに合わせた生成AIシステムの開発をサポートします。</p>
+                <p class="service-description">業務構造に組み込まれるシステムを構築します。</p>
                 <a href="{{ route('services') }}" class="service-link">詳細を見る →</a>
             </div>
         </div>
@@ -309,8 +337,8 @@
                     <img src="https://images.unsplash.com/photo-1575517111478-7f6afd0973db?auto=format&fit=crop&q=80&w=1000" alt="Government Office">
                 </div>
                 <div class="case-category">地方自治体</div>
-                <h3 class="case-title">人口5万人規模の市役所の業務構造改善</h3>
-                <p class="case-description">住民対応業務の構造を再設計し、対応時間を50%削減。顧客満足度が60%から90%に向上しました。</p>
+                <h3 class="case-title">人口5万人規模の市役所の<br>業務構造改善</h3>
+                <p class="case-description" style="text-align: center;">住民対応業務の構造を再設計し、<br>対応時間を50%削減。<br>顧客満足度が60%から90%に向上しました。</p>
                 <div class="case-preview-results" style="margin-top: 1rem; padding: 1rem; background: rgba(255, 255, 255, 0.9); border-radius: 8px; font-size: 0.9rem;">
                     <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
                         <span style="color: #6B7280;">対応時間:</span>
@@ -328,8 +356,8 @@
                     <img src="https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&q=80&w=1000" alt="Museum Gallery">
                 </div>
                 <div class="case-category">博物館</div>
-                <h3 class="case-title">地方都市の美術館の展示解説システム</h3>
-                <p class="case-description">生成AIを活用した多言語対応の展示解説システムにより、来館者満足度が75%から92%に向上。滞在時間も25%延長しました。</p>
+                <h3 class="case-title">地方都市の美術館の<br>展示解説システム</h3>
+                <p class="case-description" style="text-align: center;">多言語対応の展示解説システムにより、<br>来館者満足度が75%から92%に向上。<br>滞在時間も25%延長。</p>
                 <div class="case-preview-results" style="margin-top: 1rem; padding: 1rem; background: rgba(255, 255, 255, 0.9); border-radius: 8px; font-size: 0.9rem;">
                     <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
                         <span style="color: #6B7280;">来館者満足度:</span>
@@ -347,8 +375,8 @@
                     <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1000" alt="Manufacturing Industry">
                 </div>
                 <div class="case-category">中小企業</div>
-                <h3 class="case-title">従業員50名規模の製造業の顧客対応改善</h3>
-                <p class="case-description">顧客対応の構造を再設計し、対応時間を70%削減。顧客満足度が65%から98%に向上しました。</p>
+                <h3 class="case-title">従業員50名規模の製造業の<br>顧客対応改善</h3>
+                <p class="case-description" style="text-align: center;">顧客対応の構造を再設計し、<br>対応時間を70%削減。<br>顧客満足度が65%から98%に向上しました。</p>
                 <div class="case-preview-results" style="margin-top: 1rem; padding: 1rem; background: rgba(255, 255, 255, 0.9); border-radius: 8px; font-size: 0.9rem;">
                     <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
                         <span style="color: #6B7280;">対応時間:</span>
@@ -373,11 +401,25 @@
     <div class="container">
         <div class="cta-content">
             <h2 class="cta-title">最初の一手を決めます</h2>
-            <p class="cta-description">現状を整理し、課題の切り分けと最初の一手を一緒に決めます。24時間以内にご返信いたします。</p>
+            <p class="cta-description">現状を整理し、課題の切り分けと最初の一手を一緒に決めます。</p>
+            
+            <!-- 選別文 -->
+            <div style="margin: 2rem 0; padding: 1.5rem 0; text-align: center;">
+                <p style="font-size: var(--font-size-base); color: var(--color-neutral-300); line-height: var(--line-height-relaxed); margin-bottom: 0.75rem;">
+                    便利な生成AI活用を探している方には向いていません。
+                </p>
+                <p style="font-size: var(--font-size-base); color: var(--color-neutral-300); line-height: var(--line-height-relaxed); margin-bottom: 0.75rem;">
+                    業務の根本に手を入れる覚悟がない場合、お勧めしません。
+                </p>
+                <p style="font-size: var(--font-size-base); color: var(--color-neutral-300); line-height: var(--line-height-relaxed);">
+                    部分的な効率化が目的の場合、この支援は適しません。
+                </p>
+            </div>
+            
             <div class="cta-actions">
                 <a href="{{ route('contact') }}" class="btn btn-primary">構造を一緒に見直す（10分）</a>
             </div>
-            <p style="margin-top: var(--spacing-4); font-size: var(--font-size-sm); color: var(--color-neutral-500); text-align: center;">売り込みは行いません。整理だけでも構いません。</p>
+            <p class="lp-cta-note" style="text-align: center;">一緒に最初の一歩を踏み出しましょう</p>
         </div>
     </div>
 </section>

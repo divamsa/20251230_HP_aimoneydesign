@@ -99,7 +99,7 @@
                         個人情報の取り扱いに同意します <span class="required">*</span>
                     </label>
                 </div>
-                <button type="submit" class="btn">送信する</button>
+                <button type="submit" class="btn btn-primary">送信する</button>
             </form>
         </div>
 
@@ -139,7 +139,7 @@
                         個人情報の取り扱いに同意します <span class="required">*</span>
                     </label>
                 </div>
-                <button type="submit" class="btn">送信する</button>
+                <button type="submit" class="btn btn-primary">送信する</button>
             </form>
         </div>
 
@@ -179,7 +179,7 @@
                         個人情報の取り扱いに同意します <span class="required">*</span>
                     </label>
                 </div>
-                <button type="submit" class="btn">送信する</button>
+                <button type="submit" class="btn btn-primary">送信する</button>
             </form>
         </div>
     </div>
