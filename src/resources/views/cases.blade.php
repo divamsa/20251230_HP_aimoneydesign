@@ -82,7 +82,11 @@
                 早期導入のお客様には、特別なサポートプランをご用意しております。<br>
                 まずは無料相談で、お気軽にご相談ください。
             </p>
-            <a href="{{ route('contact') }}" class="btn btn-primary">無料相談を申し込む（30秒で完了）</a>
+            <div class="cta-actions">
+                <a href="{{ route('contact') }}#inquiry" class="btn btn-primary">お問い合わせ</a>
+                <a href="{{ route('contact') }}#download" class="btn btn-primary" style="background-color: #FF8C00; border-color: #FF8C00;">資料請求</a>
+                <a href="{{ route('contact') }}#consultation" class="btn btn-primary">無料相談</a>
+            </div>
         </div>
     </section>
 
@@ -320,10 +324,12 @@
     <section class="cta">
         <div class="container">
             <div class="cta-content">
-                <h2 class="cta-title">あなたの組織でも生成AI導入を始めませんか？</h2>
+                <h2 class="cta-title">あなたの組織でも<br>生成AI導入を始めませんか</h2>
                 <p class="cta-description">初回60分無料相談で、あなたの課題に最適な生成AI導入プランをご提案します。24時間以内にご返信いたします。</p>
                 <div class="cta-actions">
-                    <a href="{{ route('contact') }}" class="btn btn-primary">今すぐ無料相談を申し込む（30秒で完了）</a>
+                    <a href="{{ route('contact') }}#inquiry" class="btn btn-primary">お問い合わせ</a>
+                    <a href="{{ route('contact') }}#download" class="btn btn-primary" style="background-color: #FF8C00; border-color: #FF8C00;">資料請求</a>
+                    <a href="{{ route('contact') }}#consultation" class="btn btn-primary">無料相談</a>
                 </div>
             </div>
         </div>

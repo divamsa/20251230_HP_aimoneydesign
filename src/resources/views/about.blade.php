@@ -166,7 +166,7 @@
     <section class="cta">
         <div class="container">
             <div class="cta-content">
-                <h2 class="cta-title">生成AI導入についてお気軽に<br>ご相談ください</h2>
+                <h2 class="cta-title">生成AI導入について<br>お気軽にご相談ください</h2>
                 <p class="cta-description">無料相談も承っております。まずはお問い合わせください。</p>
                 <div class="cta-actions">
                     <a href="{{ route('contact') }}#inquiry" class="btn btn-primary">お問い合わせ</a>
