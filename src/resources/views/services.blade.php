@@ -61,6 +61,83 @@
 @endpush
 
 @section('content')
+<!-- メインビジュアルセクション -->
+<section class="hero">
+    <div class="hero-bg-image">
+        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=2000" alt="AI Collaboration Background">
+    </div>
+    <div class="container">
+        <div class="hero-content">
+            <p class="hero-label">生成AI導入支援サービス</p>
+            <h1 class="hero-title">生成AIを「業務で使える仕組み」に落とし込む支援</h1>
+            <p class="hero-subtitle">ツール導入ではなく、業務構造から再設計します</p>
+            <p class="hero-description">生成AIを導入しても、現場で使われなければ意味がありません。<br>私たちは、生成AIを単なるツールとして扱うのではなく、<br>業務の流れそのものに組み込み、回り続ける状態を作ります。</p>
+            <p class="hero-reinforcement">多くの組織で起きているのは、<br>「便利なAIを導入したが、結局使われなくなった」という問題です。<br>原因は、業務が属人化し、手順や判断基準が構造化されないまま、<br>AIだけを後付けしている点にあります。</p>
+            <p class="hero-definition">私たちは、業務を分解し、再設計し、試作し、定着させるまでを<br>一貫して支援します。<br>その結果、生成AIが特別な存在ではなく、<br>業務の一部として自然に使われる状態を実現します。</p>
+            <p class="hero-closing">このページでは、私たちが「どのように業務を捉え」<br>「どこまでを支援範囲とするのか」を具体的に説明します。</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== 提供サービス（業務構造ベース） ===== -->
+<section class="lp-section lp-services-structure">
+  <div class="container">
+
+    <h2 class="lp-section-title">私たちが提供する支援</h2>
+    <p class="lp-section-subtitle">
+      生成AIは手段です。<br>
+      業務構造を変えなければ、何も変わりません。
+    </p>
+
+    <div class="services-structure">
+
+      <!-- Service 1 -->
+      <div class="service-structure-item">
+        <div class="service-step">01</div>
+        <h3 class="service-title">
+          業務構造再設計コンサルティング
+        </h3>
+        <p class="service-description">
+          人が頑張る前提で積み上がった業務を分解し、<br>
+          生成AIを組み込める構造へ再設計します。<br><br>
+          ツール選定やAI導入の前に、<br>
+          「何を仕事として残すのか」を明確にします。
+        </p>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="service-structure-item">
+        <div class="service-step">02</div>
+        <h3 class="service-title">
+          業務再設計のための生成AI研修・セミナー
+        </h3>
+        <p class="service-description">
+          再設計された業務を、<br>
+          現場が理解し、自ら判断できる状態を作ります。<br><br>
+          操作説明ではなく、<br>
+          業務を構造で捉える思考と運用を移植します。
+        </p>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="service-structure-item">
+        <div class="service-step">03</div>
+        <h3 class="service-title">
+          業務構造に組み込む生成AIシステム開発
+        </h3>
+        <p class="service-description">
+          再設計された業務構造を、<br>
+          人が頑張らなくても回る形に実装します。<br><br>
+          システムは目的ではなく、<br>
+          構造を固定するための手段です。
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
 <!-- スティッキーサイドバーナビゲーション -->
 <nav class="sticky-sidebar-nav" id="stickyNav">
     <ul class="sidebar-nav-list">
@@ -73,28 +150,6 @@
 <div class="container">
     <h1 class="page-title" id="services">サービス紹介</h1>
     <p class="page-subtitle">生成AI導入支援サービスをご提供しています</p>
-    
-    <!-- 差別化ポイント -->
-    <section class="differentiation-points" style="margin: 3rem 0; padding: 2.5rem; background: linear-gradient(135deg, #F3F4F6 0%, #E5E7EB 100%); border-radius: 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);">
-        <h2 style="font-size: 1.75rem; font-weight: 700; color: #374151; margin-bottom: 1.5rem; text-align: center;">なぜマネーデザインを選ぶのか</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem;">
-            <div style="text-align: center; padding: 1.5rem; background: rgba(255, 255, 255, 0.8); border-radius: 12px;">
-                <div style="font-size: 2.5rem; margin-bottom: 1rem;">🎯</div>
-                <h3 style="font-size: 1.25rem; font-weight: 700; color: #374151; margin-bottom: 0.75rem;">専門知識 × AI技術</h3>
-                <p style="color: #6B7280; line-height: 1.7;">FP・不動産の専門知識とAI技術を融合した、独自の導入支援サービス</p>
-            </div>
-            <div style="text-align: center; padding: 1.5rem; background: rgba(255, 255, 255, 0.8); border-radius: 12px;">
-                <div style="font-size: 2.5rem; margin-bottom: 1rem;">🏢</div>
-                <h3 style="font-size: 1.25rem; font-weight: 700; color: #374151; margin-bottom: 0.75rem;">中小企業・自治体特化</h3>
-                <p style="color: #6B7280; line-height: 1.7;">中小企業・自治体・文化施設に特化した、実績豊富な導入支援</p>
-            </div>
-            <div style="text-align: center; padding: 1.5rem; background: rgba(255, 255, 255, 0.8); border-radius: 12px;">
-                <div style="font-size: 2.5rem; margin-bottom: 1rem;">🔄</div>
-                <h3 style="font-size: 1.25rem; font-weight: 700; color: #374151; margin-bottom: 0.75rem;">一貫したサポート</h3>
-                <p style="color: #6B7280; line-height: 1.7;">導入から運用まで、継続的なサポートでお客様の成功を支援</p>
-            </div>
-        </div>
-    </section>
     
     <!-- インタラクティブなタブ切り替えシステム -->
     <section class="services-detail">
@@ -184,34 +239,55 @@
 
             <!-- システム開発 -->
             <div class="service-content" id="development">
+                <!-- 生成AIシステム開発（業務組込み型） -->
                 <div class="service-detail-card service-card-3d" data-service="development">
                     <div class="card-bg-image">
                         <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=1000" alt="Development">
                     </div>
-                    <h2 class="service-detail-title">生成AIシステム開発</h2>
+                    <h2 class="service-detail-title">生成AIシステム開発（業務組込み型）</h2>
                     <p class="service-detail-description">
-                        企業固有の業務プロセスに合わせた生成AIシステムの開発をサポートします。<br>
-                        <strong style="color: #374151;">導入から運用まで一貫したサポート</strong>で、お客様の業務に最適化されたシステムを構築します。保守・運用サポートも継続的に提供いたします。
+                        このサービスは、AIを作るための開発ではありません。<br>
+                        再設計された業務構造を、システムとして固定化するための開発です。<br><br>
+                        生成AI活用が定着しない最大の原因は、<br>
+                        人が毎回考え、操作し、判断する前提にあります。<br>
+                        私たちは、誰がやっても迷わず回り続ける状態を作るために、<br>
+                        生成AIを業務フローの中に組み込みます。
                     </p>
                     <div class="service-detail-content">
-                        <h3>サービス内容</h3>
+                        <h3>このような課題を抱える組織に</h3>
                         <ul class="service-list">
-                            <li><span class="check-icon">✓</span>要件定義・設計</li>
-                            <li><span class="check-icon">✓</span>システム開発・実装</li>
-                            <li><span class="check-icon">✓</span>テスト・品質保証</li>
-                            <li><span class="check-icon">✓</span>保守・運用サポート</li>
+                            <li><span class="check-icon">✓</span>PoCやデモで止まってしまっている</li>
+                            <li><span class="check-icon">✓</span>人が介在しないとAIが回らない</li>
+                            <li><span class="check-icon">✓</span>ツールが増えすぎて業務が複雑になっている</li>
+                            <li><span class="check-icon">✓</span>属人化を仕組みとして解消したい</li>
+                            <li><span class="check-icon">✓</span>内製したいが、設計の軸がない</li>
                         </ul>
-                        <h3>対象業務</h3>
-                        <p>顧客対応、文書作成、データ分析、コンテンツ生成など</p>
+                        <h3>提供内容</h3>
+                        <ul class="service-list">
+                            <li><span class="check-icon">✓</span>再設計済み業務フローのシステム化</li>
+                            <li><span class="check-icon">✓</span>生成AIを含む処理フローの設計・実装</li>
+                            <li><span class="check-icon">✓</span>プロンプト・ルール・データ構造の組込み</li>
+                            <li><span class="check-icon">✓</span>運用前提の最小構成での実装</li>
+                            <li><span class="check-icon">✓</span>現場が自走するための引き渡し設計</li>
+                        </ul>
+                        <h3>導入後の状態</h3>
+                        <ul class="service-list">
+                            <li><span class="check-icon">✓</span>人が判断しなくても業務が進む</li>
+                            <li><span class="check-icon">✓</span>AI活用が特定の人に依存しない</li>
+                            <li><span class="check-icon">✓</span>改善がシステム前提で積み上がる</li>
+                            <li><span class="check-icon">✓</span>AIが「考える対象」ではなく「前提条件」になる</li>
+                        </ul>
                         <div class="service-pricing" style="margin-top: 2rem; padding: 1.5rem; background: rgba(255, 255, 255, 0.9); border-radius: 12px; border-left: 4px solid #8B5CF6;">
                             <h3 style="font-size: 1.25rem; font-weight: 700; color: #374151; margin-bottom: 1rem;">価格の目安</h3>
-                            <p style="color: #6B7280; margin-bottom: 0.5rem;"><strong>初回相談：</strong>無料</p>
-                            <p style="color: #6B7280; margin-bottom: 1rem;"><strong>システム開発：</strong>100万円〜（規模により変動）</p>
+                            <p style="color: #6B7280; margin-bottom: 1rem;"><strong>100万円〜800万円（税別）</strong></p>
                             <p style="font-size: 0.9rem; color: #9CA3AF; margin-top: 1rem;">※完全な見積もりは無料相談後に提示いたします</p>
                         </div>
-                        <div class="service-duration" style="margin-top: 1.5rem; padding: 1.5rem; background: rgba(255, 255, 255, 0.9); border-radius: 12px; border-left: 4px solid #8B5CF6;">
+                        <div class="service-duration" style="margin-top: 1.5rem; padding: 1.5rem; background: rgba(255, 255, 255, 0.9); border-radius: 12px; border-left: 4px solid #10B981;">
                             <h3 style="font-size: 1.25rem; font-weight: 700; color: #374151; margin-bottom: 1rem;">提供期間の目安</h3>
-                            <p style="color: #6B7280;"><strong>3〜6ヶ月</strong>（開発規模により変動）</p>
+                            <p style="color: #6B7280;"><strong>1〜4か月</strong>（最小構成〜業務組込み）</p>
+                        </div>
+                        <div style="margin-top: 1.5rem; padding: 1.5rem; background: rgba(255, 255, 255, 0.9); border-radius: 12px; border-left: 4px solid #8B5CF6;">
+                            <p style="color: #6B7280; font-size: 0.95rem; line-height: 1.8;">※ 本サービスは、生成AI導入コンサルティングによって業務構造が整理された組織を対象としています。<br>業務設計が未整理の状態での開発は行っていません。</p>
                         </div>
                     </div>
                 </div>
