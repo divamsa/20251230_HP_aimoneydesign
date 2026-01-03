@@ -429,7 +429,11 @@
             </div>
         </div>
         <div class="section-actions">
-            <a href="{{ route('contact') }}" class="btn btn-primary btn-ripple">お問い合わせ・無料相談</a>
+            <div class="cta-actions">
+                <a href="{{ route('contact') }}#inquiry" class="btn btn-primary">お問い合わせ</a>
+                <a href="{{ route('contact') }}#download" class="btn btn-primary" style="background-color: #FF8C00; border-color: #FF8C00;">資料請求</a>
+                <a href="{{ route('contact') }}#consultation" class="btn btn-primary">無料相談</a>
+            </div>
         </div>
     </section>
 </div>
