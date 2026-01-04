@@ -74,7 +74,7 @@
     </section>
 
     <!-- 代表メッセージ -->
-    <section class="company-message">
+    <section class="company-message" style="margin-top: 4rem;">
       <h2 class="section-title">代表メッセージ</h2>
 
       <p>
@@ -114,7 +114,7 @@
     </section>
 
     <!-- 私たちのスタンス -->
-    <section class="company-philosophy">
+    <section class="company-philosophy" style="margin-top: 4rem;">
       <h2 class="section-title">私たちのスタンス</h2>
 
       <ul class="philosophy-list">
@@ -134,9 +134,9 @@
     </section>
 
     <!-- CTA -->
-    <section class="company-cta">
+    <section class="company-cta" style="margin-top: 4rem;">
       <h2 class="section-title">生成AI導入について</h2>
-      <p>まずは現状整理からでも構いません。お気軽にご相談ください。</p>
+      <p style="margin-bottom: 3rem;">まずは現状整理からでも構いません。お気軽にご相談ください。</p>
       <div class="cta-actions">
         <a href="{{ route('contact') }}#inquiry" class="btn btn-primary">お問い合わせ</a>
         <a href="{{ route('contact') }}#download" class="btn btn-primary" style="background-color: #FF8C00; border-color: #FF8C00;">資料請求</a>

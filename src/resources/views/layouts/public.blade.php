@@ -65,7 +65,10 @@
         <div class="container">
             <div class="header-content">
                 <h1 class="logo">
-                    <a href="{{ route('top') }}" aria-label="株式会社マネーデザイン ホームページ">株式会社マネーデザイン</a>
+                    <a href="{{ route('top') }}" aria-label="株式会社マネーデザイン ホームページ" class="logo-link">
+                        <img src="{{ asset('images/logo.png') }}" alt="マネーデザイン" class="logo-image" onerror="this.style.display='none';">
+                        <span class="logo-text">株式会社マネーデザイン</span>
+                    </a>
                 </h1>
                 <nav class="nav" role="navigation" aria-label="メインナビゲーション">
                     <ul class="nav-list">
@@ -77,12 +80,6 @@
                         <li><a href="{{ route('blog.index') }}" class="{{ request()->routeIs('blog.*') ? 'active' : '' }}" aria-current="{{ request()->routeIs('blog.*') ? 'page' : 'false' }}">ブログ</a></li>
                     </ul>
                 </nav>
-                <div class="header-phone">
-                    <a href="tel:03-XXXX-XXXX" class="phone-link" aria-label="電話番号: 03-XXXX-XXXX">
-                        <span aria-hidden="true">📞</span> 03-XXXX-XXXX
-                        <span class="phone-hours">平日 9:00-18:00</span>
-                    </a>
-                </div>
             </div>
         </div>
     </header>

@@ -55,24 +55,36 @@
         </div>
         <div class="stats-grid">
             <div class="stat-card">
+                <div class="card-bg-image">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1000" alt="Corporate Office" loading="lazy" decoding="async">
+                </div>
+                <div class="stat-label">中小企業</div>
                 <div class="stat-number" data-target="5">5</div>
-                <div class="stat-label">導入企業数</div>
-                <div class="stat-detail" style="font-size: 0.9rem; color: #6B7280; margin-top: 0.5rem;">社（中小企業）</div>
+                <div class="stat-detail" style="font-size: 0.9rem; color: #000000; margin-top: 0.5rem;">つの中小企業に導入実績</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number" data-target="2">2</div>
+                <div class="card-bg-image">
+                    <img src="https://images.unsplash.com/photo-1575517111478-7f6afd0973db?auto=format&fit=crop&q=80&w=1000" alt="Government Building">
+                </div>
                 <div class="stat-label">地方自治体</div>
-                <div class="stat-detail" style="font-size: 0.9rem; color: #6B7280; margin-top: 0.5rem;">つの自治体に導入実績</div>
+                <div class="stat-number" data-target="2">2</div>
+                <div class="stat-detail" style="font-size: 0.9rem; color: #000000; margin-top: 0.5rem;">つの自治体に導入実績</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number" data-target="5">5</div>
+                <div class="card-bg-image">
+                    <img src="https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&q=80&w=1000" alt="Museum Art">
+                </div>
                 <div class="stat-label">博物館・美術館</div>
-                <div class="stat-detail" style="font-size: 0.9rem; color: #6B7280; margin-top: 0.5rem;">つの文化施設に導入実績</div>
+                <div class="stat-number" data-target="5">5</div>
+                <div class="stat-detail" style="font-size: 0.9rem; color: #000000; margin-top: 0.5rem;">つの文化施設に導入実績</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number" data-target="1">1</div>
+                <div class="card-bg-image">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1000" alt="Satisfaction Smile">
+                </div>
                 <div class="stat-label">非営利団体</div>
-                <div class="stat-detail" style="font-size: 0.9rem; color: #6B7280; margin-top: 0.5rem;">つの団体に導入実績</div>
+                <div class="stat-number" data-target="1">1</div>
+                <div class="stat-detail" style="font-size: 0.9rem; color: #000000; margin-top: 0.5rem;">つの非営利団体に導入実績</div>
             </div>
         </div>
         <div style="margin-top: 3rem; padding: 2rem; background: linear-gradient(135deg, #F3F4F6 0%, #E5E7EB 100%); border-radius: 12px; text-align: center;">
