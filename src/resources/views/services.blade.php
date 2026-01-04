@@ -168,7 +168,7 @@
 
         <div class="service-tab-content">
             <!-- コンサルティング -->
-            <div class="service-content active" id="consulting">
+            <div class="service-content active" id="consulting" style="scroll-margin-top: 80px;">
                 <div class="service-detail-card service-card-3d" data-service="consulting">
                     <div class="card-bg-image">
                         <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1000" alt="Consulting">
@@ -203,7 +203,7 @@
             </div>
 
             <!-- 研修・セミナー -->
-            <div class="service-content" id="training">
+            <div class="service-content" id="training" style="scroll-margin-top: 80px;">
                 <div class="service-detail-card service-card-3d" data-service="training">
                     <div class="card-bg-image">
                         <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=1000" alt="Training">
@@ -238,7 +238,7 @@
             </div>
 
             <!-- システム開発 -->
-            <div class="service-content" id="development">
+            <div class="service-content" id="development" style="scroll-margin-top: 80px;">
                 <!-- 生成AIシステム開発（業務組込み型） -->
                 <div class="service-detail-card service-card-3d" data-service="development">
                     <div class="card-bg-image">
@@ -359,7 +359,6 @@
                         <p class="flow-step-description">
                             まずはお気軽にお問い合わせください。無料相談も承っております。
                         </p>
-                        <button class="flow-step-detail-btn" data-modal="step1">詳細を見る</button>
                     </div>
                 </div>
                 <div class="flow-step" data-step="2">
@@ -375,7 +374,6 @@
                         <p class="flow-step-description">
                             ヒアリングを通じて、現状の業務プロセスや課題を分析します。
                         </p>
-                        <button class="flow-step-detail-btn" data-modal="step2">詳細を見る</button>
                     </div>
                 </div>
                 <div class="flow-step" data-step="3">
@@ -391,7 +389,6 @@
                         <p class="flow-step-description">
                             課題解決のための生成AI導入計画を策定し、ご提案します。
                         </p>
-                        <button class="flow-step-detail-btn" data-modal="step3">詳細を見る</button>
                     </div>
                 </div>
                 <div class="flow-step" data-step="4">
@@ -407,7 +404,6 @@
                         <p class="flow-step-description">
                             計画に基づいて、生成AIシステムの導入・実装を進めます。
                         </p>
-                        <button class="flow-step-detail-btn" data-modal="step4">詳細を見る</button>
                     </div>
                 </div>
                 <div class="flow-step" data-step="5">
@@ -423,7 +419,6 @@
                         <p class="flow-step-description">
                             導入後も、運用サポートや改善提案を継続的に提供します。
                         </p>
-                        <button class="flow-step-detail-btn" data-modal="step5">詳細を見る</button>
                     </div>
                 </div>
             </div>

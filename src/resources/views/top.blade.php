@@ -222,33 +222,33 @@
                 <div class="card-bg-image">
                     <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1000" alt="Corporate Office" loading="lazy" decoding="async">
                 </div>
+                <div class="stat-label">中小企業</div>
                 <div class="stat-number" data-target="5">5</div>
-                <div class="stat-label">導入企業数</div>
-                <div class="stat-detail" style="font-size: 0.9rem; color: #000000; margin-top: 0.5rem;">社（中小企業）</div>
+                <div class="stat-detail" style="font-size: 0.9rem; color: #000000; margin-top: 0.5rem;">つの中小企業に導入実績</div>
             </div>
             <div class="stat-card">
                 <div class="card-bg-image">
                     <img src="https://images.unsplash.com/photo-1575517111478-7f6afd0973db?auto=format&fit=crop&q=80&w=1000" alt="Government Building">
                 </div>
-                <div class="stat-number" data-target="2">2</div>
                 <div class="stat-label">地方自治体</div>
+                <div class="stat-number" data-target="2">2</div>
                 <div class="stat-detail" style="font-size: 0.9rem; color: #000000; margin-top: 0.5rem;">つの自治体に導入実績</div>
             </div>
             <div class="stat-card">
                 <div class="card-bg-image">
                     <img src="https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&q=80&w=1000" alt="Museum Art">
                 </div>
-                <div class="stat-number" data-target="5">5</div>
                 <div class="stat-label">博物館・美術館</div>
+                <div class="stat-number" data-target="5">5</div>
                 <div class="stat-detail" style="font-size: 0.9rem; color: #000000; margin-top: 0.5rem;">つの文化施設に導入実績</div>
             </div>
             <div class="stat-card">
                 <div class="card-bg-image">
                     <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1000" alt="Satisfaction Smile">
                 </div>
-                <div class="stat-number" data-target="1">1</div>
                 <div class="stat-label">非営利団体</div>
-                <div class="stat-detail" style="font-size: 0.9rem; color: #000000; margin-top: 0.5rem;">つの団体に導入実績</div>
+                <div class="stat-number" data-target="1">1</div>
+                <div class="stat-detail" style="font-size: 0.9rem; color: #000000; margin-top: 0.5rem;">つの非営利団体に導入実績</div>
             </div>
         </div>
         <!-- 業種別内訳 -->
@@ -261,15 +261,15 @@
                 </div>
                 <div style="text-align: center;">
                     <div style="font-size: 2rem; font-weight: 700; color: var(--color-neutral-100); margin-bottom: 0.5rem;">地方自治体</div>
-                    <div style="font-size: 1.2rem; color: var(--color-neutral-300);">2</div>
+                    <div style="font-size: 1.2rem; color: var(--color-neutral-300);">2自治体</div>
                 </div>
                 <div style="text-align: center;">
                     <div style="font-size: 2rem; font-weight: 700; color: var(--color-neutral-100); margin-bottom: 0.5rem;">博物館・美術館</div>
-                    <div style="font-size: 1.2rem; color: var(--color-neutral-300);">5</div>
+                    <div style="font-size: 1.2rem; color: var(--color-neutral-300);">5館</div>
                 </div>
                 <div style="text-align: center;">
                     <div style="font-size: 2rem; font-weight: 700; color: var(--color-neutral-100); margin-bottom: 0.5rem;">非営利団体</div>
-                    <div style="font-size: 1.2rem; color: var(--color-neutral-300);">1</div>
+                    <div style="font-size: 1.2rem; color: var(--color-neutral-300);">1団体</div>
                 </div>
             </div>
             <div style="margin-top: 2rem; padding: 1.5rem; background: var(--color-neutral-700); border-radius: 12px; text-align: center; border: 1px solid var(--color-neutral-600);">
@@ -300,7 +300,7 @@
                 </div>
                 <h3 class="service-title">生成AI導入コンサルティング</h3>
                 <p class="service-description" style="color: #000000 !important;">業務を構造化できる粒度まで分解し、再設計可能な状態を作ります。</p>
-                <a href="{{ route('services') }}" class="service-link">詳細を見る →</a>
+                <a href="{{ route('services') }}#consulting" class="service-link">詳細を見る →</a>
             </div>
             <div class="service-card">
                 <div class="card-bg-image">
@@ -308,7 +308,7 @@
                 </div>
                 <h3 class="service-title">生成AI研修・セミナー</h3>
                 <p class="service-description" style="color: #000000 !important;">業務構造の再設計に必要な思考と手法を伝えます。</p>
-                <a href="{{ route('services') }}" class="service-link">詳細を見る →</a>
+                <a href="{{ route('services') }}#training" class="service-link">詳細を見る →</a>
             </div>
             <div class="service-card">
                 <div class="card-bg-image">
@@ -316,7 +316,7 @@
                 </div>
                 <h3 class="service-title">生成AIシステム開発</h3>
                 <p class="service-description" style="color: #000000 !important;">業務構造に組み込まれるシステムを構築します。</p>
-                <a href="{{ route('services') }}" class="service-link">詳細を見る →</a>
+                <a href="{{ route('services') }}#development" class="service-link">詳細を見る →</a>
             </div>
         </div>
         <div class="section-actions">

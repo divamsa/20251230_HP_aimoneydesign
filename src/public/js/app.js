@@ -224,11 +224,162 @@ function initServiceTabs() {
     
     if (!tabs.length || !indicator) return;
     
-    // 初期位置を設定
-    const activeTab = document.querySelector('.service-tab.active');
-    if (activeTab) {
-        updateTabIndicator(activeTab, indicator);
+    // タブを切り替える関数
+    function switchToTab(tabId) {
+        const targetTab = document.querySelector(`.service-tab[data-tab="${tabId}"]`);
+        const targetContent = document.getElementById(tabId);
+        
+        if (!targetTab || !targetContent) {
+            return false;
+        }
+        
+        const targetColor = targetTab.dataset.color;
+        
+        // タブのアクティブ状態を更新
+        tabs.forEach(t => t.classList.remove('active'));
+        contents.forEach(c => c.classList.remove('active'));
+        
+        targetTab.classList.add('active');
+        targetContent.classList.add('active');
+        targetContent.classList.add('animated');
+        
+        // インジケーターを更新
+        updateTabIndicator(targetTab, indicator);
+        
+        // カードの背景色を変更（オプション）
+        const card = document.querySelector(`.service-card-3d[data-service="${tabId}"]`);
+        if (card) {
+            card.style.borderTop = `4px solid ${targetColor}`;
+        }
+        
+        // スクロール処理（要素が表示されるまで待ってからスクロール）
+        setTimeout(() => {
+            const element = document.getElementById(tabId);
+            if (element) {
+                // 要素が表示されるまで待つ（最大20回、1秒）
+                let attempts = 0;
+                const maxAttempts = 20;
+                const checkElement = setInterval(() => {
+                    attempts++;
+                    const isActive = element.classList.contains('active');
+                    const isVisible = element.offsetParent !== null;
+                    const computedStyle = window.getComputedStyle(element);
+                    const isDisplayed = computedStyle.display !== 'none';
+                    
+                    if (isActive && isVisible && isDisplayed) {
+                        clearInterval(checkElement);
+                        // さらに少し待ってからスクロール（レイアウトが確定するまで）
+                        setTimeout(() => {
+                            const elementPosition = element.getBoundingClientRect().top;
+                            const offsetPosition = elementPosition + window.pageYOffset - 100;
+                            window.scrollTo({
+                                top: offsetPosition,
+                                behavior: 'smooth'
+                            });
+                        }, 100);
+                    } else if (attempts >= maxAttempts) {
+                        clearInterval(checkElement);
+                        // タイムアウト時も強制的にスクロール
+                        const elementPosition = element.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - 100;
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                }, 50);
+            }
+        }, 300);
+        
+        return true;
     }
+    
+    // URLハッシュに基づいてタブを切り替え（初期読み込み時）
+    function handleHashChange() {
+        const hash = window.location.hash.replace('#', '');
+        // servicesというIDがページタイトルにあるため、それを除外
+        if (hash === 'services') {
+            return;
+        }
+        if (hash === 'consulting' || hash === 'training' || hash === 'development') {
+            switchToTab(hash);
+        } else {
+            // 初期位置を設定
+            const activeTab = document.querySelector('.service-tab.active');
+            if (activeTab) {
+                updateTabIndicator(activeTab, indicator);
+            }
+        }
+    }
+    
+    // 初期読み込み時にハッシュをチェック（複数のタイミングで確実に実行）
+    // 1. 即座にチェック（関数が呼ばれた時点で）
+    const initialHash = window.location.hash.replace('#', '');
+    if (initialHash === 'consulting' || initialHash === 'training' || initialHash === 'development') {
+        // ブラウザのデフォルトのスクロール動作を防ぐ
+        window.scrollTo(0, 0);
+        setTimeout(() => {
+            handleHashChange();
+        }, 50);
+    }
+    
+    // 2. DOMContentLoadedの後
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => {
+            const hash = window.location.hash.replace('#', '');
+            if (hash === 'consulting' || hash === 'training' || hash === 'development') {
+                window.scrollTo(0, 0);
+                setTimeout(() => {
+                    handleHashChange();
+                }, 200);
+            }
+        });
+    } else {
+        // DOMContentLoadedが既に発火している場合
+        const hash = window.location.hash.replace('#', '');
+        if (hash === 'consulting' || hash === 'training' || hash === 'development') {
+            window.scrollTo(0, 0);
+            setTimeout(() => {
+                handleHashChange();
+            }, 200);
+        }
+    }
+    
+    // 3. ページ読み込み完了時
+    window.addEventListener('load', () => {
+        const hash = window.location.hash.replace('#', '');
+        if (hash === 'consulting' || hash === 'training' || hash === 'development') {
+            window.scrollTo(0, 0);
+            setTimeout(() => {
+                switchToTab(hash);
+            }, 100);
+        }
+    });
+    
+    // 4. ハッシュ変更イベントを監視（同じページ内での変更）
+    window.addEventListener('hashchange', () => {
+        const hash = window.location.hash.replace('#', '');
+        if (hash === 'consulting' || hash === 'training' || hash === 'development') {
+            window.scrollTo(0, 0);
+            setTimeout(() => {
+                handleHashChange();
+            }, 50);
+        }
+    });
+    
+    // 5. 念のため、少し遅れて再度チェック（複数回）
+    [500, 1000, 1500].forEach(delay => {
+        setTimeout(() => {
+            const hash = window.location.hash.replace('#', '');
+            if (hash === 'consulting' || hash === 'training' || hash === 'development') {
+                const targetContent = document.getElementById(hash);
+                if (targetContent && !targetContent.classList.contains('active')) {
+                    window.scrollTo(0, 0);
+                    switchToTab(hash);
+                }
+            }
+        }, delay);
+    });
     
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {
@@ -499,7 +650,66 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // サービスページ専用の初期化
     if (document.querySelector('.service-tabs')) {
+        // タブシステムを初期化
         initServiceTabs();
+        
+        // ページ遷移時のハッシュ処理：対応するタブボタンを自動的にクリック
+        const hash = window.location.hash.replace('#', '');
+        if (hash === 'consulting' || hash === 'training' || hash === 'development') {
+            // ブラウザのデフォルトのスクロール動作を防ぐ
+            window.scrollTo(0, 0);
+            
+            // タブボタンを自動的にクリック（高速化）
+            const clickTab = () => {
+                const targetTab = document.querySelector(`.service-tab[data-tab="${hash}"]`);
+                if (targetTab) {
+                    // タブボタンをクリック
+                    targetTab.click();
+                    
+                    // クリック後、すぐにスクロール処理を開始（高速化）
+                    setTimeout(() => {
+                        const targetContent = document.getElementById(hash);
+                        if (targetContent) {
+                            // 要素が表示されるまで待つ（高速化：チェック間隔を短縮）
+                            let scrollAttempts = 0;
+                            const maxScrollAttempts = 20; // 30から20に短縮
+                            const checkAndScroll = setInterval(() => {
+                                scrollAttempts++;
+                                const computedStyle = window.getComputedStyle(targetContent);
+                                const isDisplayed = computedStyle.display !== 'none';
+                                const isVisible = targetContent.offsetParent !== null;
+                                
+                                if (isDisplayed && isVisible && targetContent.classList.contains('active')) {
+                                    clearInterval(checkAndScroll);
+                                    // スクロール処理を即座に実行（遅延を削減）
+                                    const elementPosition = targetContent.getBoundingClientRect().top;
+                                    const offsetPosition = elementPosition + window.pageYOffset - 100;
+                                    window.scrollTo({
+                                        top: offsetPosition,
+                                        behavior: 'smooth'
+                                    });
+                                } else if (scrollAttempts >= maxScrollAttempts) {
+                                    clearInterval(checkAndScroll);
+                                    // タイムアウト時も強制的にスクロール
+                                    const elementPosition = targetContent.getBoundingClientRect().top;
+                                    const offsetPosition = elementPosition + window.pageYOffset - 100;
+                                    window.scrollTo({
+                                        top: offsetPosition,
+                                        behavior: 'smooth'
+                                    });
+                                }
+                            }, 30); // 50msから30msに短縮
+                        }
+                    }, 100); // 300msから100msに短縮
+                }
+            };
+            
+            // 最初のクリックを早く実行（高速化）
+            setTimeout(clickTab, 50); // 100msから50msに短縮
+            // 念のため、もう一度実行（確実性のため）
+            setTimeout(clickTab, 200); // 300msから200msに短縮
+        }
+        
         initServiceScrollAnimation();
         init3DCardEffect();
         initTimeline();
